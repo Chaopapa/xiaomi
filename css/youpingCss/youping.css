@@ -1,0 +1,204 @@
+
+/* 公共样式 */
+.w1080 {
+  width: 1080px;
+  margin: 0 auto;
+}
+body, html {
+  width: 100%;
+  height: 6000px;
+}
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.m-icons {
+  display: inline-block;
+  background-image: url('../../images/youpingImage/icons.png');
+  background-repeat: no-repeat;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+/* z-headerWrap S */
+
+.z-headerWrap {
+  height: 48px;
+  background-color: #333;
+}
+.header {
+  height: 48px;
+}
+
+/* 分隔线 */
+.header .m-line {
+  display: inline-block;
+  height: 16px;
+  margin: 17px 3px 0 6px;
+  vertical-align: middle;
+  border-right: 1px solid #e7e7e7;
+  border-color: #666;
+}
+
+/* 登录注册 */
+.header .m-login {
+  padding: 0 8px;
+  height: 48px;
+  line-height: 48px;
+}
+.header .m-login a {
+  margin-left: 8px;
+  font-size: 16px;
+  color: #e7e7e7;
+}
+.header .m-login a:hover {
+  color: white;
+}
+
+/* 帮助中心 */
+.header .m-help {
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+  margin: 0 8px 0 11px;
+}
+.m-help a {
+  font-size: 16px;
+  color: #e7e7e7;
+}
+.m-help a:hover {
+  color: white;
+}
+
+/* 下载 */
+.header .m-download {
+  height: 48px;
+  line-height: 48px;
+  margin-right: 5px;
+}
+.m-download a {
+  font-size: 16px;
+  color: #e7e7e7;
+}
+.m-download a:hover {
+  color: white;
+}
+.m-download span.m-icons {
+  background-position: 0px -1016px;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-top: -3px;
+}
+
+/* 资质 */
+.header .m-rules {
+  height: 48px;
+  line-height: 48px;
+  padding: 0 12px 0 11px;
+  position: relative;
+}
+.m-rules .m-clause a {
+  font-size: 16px;
+  color: #e7e7e7;
+}
+.m-rules .m-clause a:hover {
+  color: white;
+}
+.m-rules .m-clause span {
+  width: 30px;
+  height: 8px;
+  background-position:  8px -90px;
+}
+.m-rules .m-clause-con {
+  display: none;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .3);
+  width: 184px;
+  cursor: pointer;
+}
+.m-rules .m-clause-con li {
+  padding: 0 10px;
+  color: #bbb;
+  font-size: 14px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+}
+.m-rules .m-clause-con li:hover {
+  background-color: #845f3f;
+  color: #fff;
+}
+/* z-headerWrap E */
+
+/* z-navWrap S */
+
+.z-navWrap {
+  padding-top: 24px;
+  height: 51px;
+}
+.z-navWrap .navC {
+  height: 51px;
+  background-color: pink;
+}
+/* logo */
+.z-navWrap .logo {
+  width: 152px;
+  height: 51px;
+  background: url('../../images/youpingImage/logo.png') no-repeat center;
+  background-size: contain;
+}
+.z-navWrap .logo h1 {
+  display: none;
+}
+.z-navWrap .navUl {
+  width: 420px;
+  height: 51px;
+  margin-left: 108px;
+}
+.z-navWrap .navUl li {
+  height: 51px;
+  line-height: 51px;
+  font-size: 18px;
+  color: #666;
+  margin-right: 32px;
+}
+/* 搜索框 */
+.z-navWrap .searchCon {
+  height: 51px;
+} 
+.searchCon .search_form {
+  height: 36px;
+  border-bottom: 1px solid #efefef;
+}
+.searchCon .search_form .searchIcon {
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+  background-position: 3px -1452px;
+}
+.searchCon .search_form .searchIcon:hover {
+  background-position: 3px -1418px;
+}
+.searchCon .search_form .searchIpt {
+  font-size: 14px;
+  vertical-align: middle;
+  margin-top: 4px;
+  color: #e7e7e7;
+}
+.z-navWrap .searchCon .cartIcon {
+  
+}
+/* z-navWrap E */
+
+
