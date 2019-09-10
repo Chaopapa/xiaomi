@@ -116,8 +116,63 @@
 
 .cmp-banner>img+ {}
 
-.cmp-content {}
+.cmp-content {
+    /* height: 614px; */
+    background-color: #000;
+    /* margin-bottom: 10px; */
+}
 
 .cmp-banner img {
     height: 120px;
+}
+
+.cmpc-ad {
+    width: 236px;
+}
+
+.cmpc-ad {
+    float: left;
+}
+
+.cmpc-ad img {
+    width: 236px;
+    height: 614px;
+}
+
+.cmpc-goodsList {
+    float: left;
+    width: 990px;
+}
+
+.cmpc-goodsList ul li {
+    width: 232px;
+    height: 260px;
+    padding: 20px 0;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    float: left;
+    background: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.goods-pic img {
+    width: 160px;
+    height: 160px;
+}
+
+.goods-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.desc {
+    margin-top: 13px;
+    margin-bottom: 20px;
+    color: #b7b7cb;
+}
+
+.price {
+    font-size: 14px;
+    color: #ff6700;
 }
