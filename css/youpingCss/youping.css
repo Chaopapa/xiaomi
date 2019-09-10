@@ -149,7 +149,7 @@ input {
 }
 .z-navWrap .navC {
   height: 51px;
-  background-color: pink;
+  background-color: #fff;
 }
 /* logo */
 .z-navWrap .logo {
@@ -157,6 +157,7 @@ input {
   height: 51px;
   background: url('../../images/youpingImage/logo.png') no-repeat center;
   background-size: contain;
+  cursor: pointer;
 }
 .z-navWrap .logo h1 {
   display: none;
@@ -173,6 +174,9 @@ input {
   color: #666;
   margin-right: 32px;
 }
+.z-navWrap .navUl li:hover {
+  color: #845f3f;
+}
 /* 搜索框 */
 .z-navWrap .searchCon {
   height: 51px;
@@ -180,6 +184,7 @@ input {
 .searchCon .search_form {
   height: 36px;
   border-bottom: 1px solid #efefef;
+  width: 282px;
 }
 .searchCon .search_form .searchIcon {
   width: 36px;
@@ -194,11 +199,31 @@ input {
   font-size: 14px;
   vertical-align: middle;
   margin-top: 4px;
-  color: #e7e7e7;
 }
+/* 改变 input 中提示信息的默认字体颜色 */
+.searchIpt:-moz-placeholder,   
+textarea:-moz-placeholder {   
+  color: #e7e7e7;   
+}   
+.searchIpt:-ms-input-placeholder,   
+textarea:-ms-input-placeholder {   
+  color: #e7e7e7;   
+}   
+.searchIpt::-webkit-input-placeholder,   
+textarea::-webkit-input-placeholder {   
+  color: #e7e7e7;   
+}
+
 .z-navWrap .searchCon .cartIcon {
-  
+  margin-top: 20px;
+  width: 56px;
+  height: 30px;
+  background-position: 20px -948px;
 }
+.z-navWrap .searchCon .cartIcon:hover {
+  background-position: 20px -1186px;
+}
+
 /* z-navWrap E */
 
 

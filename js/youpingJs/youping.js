@@ -17,4 +17,15 @@ showClause()
 
 // z-navWrap S
 
+// 当点击 searchIpt 的时候 border-bottom 颜色变成 #845f3f
+function changeColor() {
+  $('.searchIpt').on('focus',function() {
+    $('.search_form').css('border-color', '#845f3f')
+  })
+  $('.searchIpt').on('blur',function() {
+    $('.search_form').css('border-color', '#efefef')
+  })
+}
+changeColor()
+
 // z-navWrap E
