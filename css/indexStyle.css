@@ -67,7 +67,7 @@
 /*  */
 
 .c-main {
-    min-height: 1000px;
+    min-height: 3200px;
     background: #f5f5f5;
 }
 
@@ -139,7 +139,8 @@
     margin-left: 20px;
 }
 
-.mobile .pro-nav ul li a:hover {
+.mobile .pro-nav ul li a:hover,
+.video .pro-nav ul li a:hover {
     border: 0;
 }
 
@@ -252,3 +253,29 @@
 
 
 /* 视频部分 */
+
+.video-content {}
+
+.video-content ul li {
+    float: left;
+    width: 296px;
+    height: 285px;
+    margin-right: 12px;
+    background-color: #fff;
+}
+
+.video .video-content ul li:last-child {
+    margin-right: 0;
+}
+
+.video-content ul li img {
+    width: 296px;
+    height: 180px;
+}
+
+.video-content ul li p {
+    font-size: 14px;
+    margin: 28px 14px 6px;
+    text-align: center;
+    cursor: pointer;
+}
