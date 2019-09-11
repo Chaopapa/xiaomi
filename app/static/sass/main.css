@@ -68,7 +68,7 @@
     height: 56px;
     width: 56px;
     margin-top: 17px;
-    background-color: #ff6700;
+    background: #ff6700 url(../images/mi-logo.png) no-repeat 50% 50%;
     color: #fff;
     float: left;
     cursor: pointer;
@@ -100,27 +100,36 @@
 }
 
 .all-header-search form {
-    width: 295px;
+    /* width: 293px; */
     height: 48px;
     margin-top: 25px;
-    border: 1px solid #e0e0e0;
     overflow: hidden;
+    border: 1px solid #e0e0e0;
 }
 
 .all-header-search form input[type="text"] {
-    border: 1px solid #e0e0e0;
-    width: 243px;
+    float: left;
+    width: 242px;
     height: 48px;
     outline: none;
     border: 0;
+    border-right: 1px solid #e0e0e0;
 }
 
 .all-header-search form input[type="submit"] {
-    width: 48px;
+    float: left;
+    width: 50px;
     height: 48px;
     border: 0;
     outline: none;
     cursor: pointer;
+    background-color: #fff;
+    color: #686161;
+}
+
+.all-header-search form input[type="submit"]:hover {
+    color: #fff;
+    background: #ff6700;
 }
 
 
