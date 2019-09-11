@@ -250,14 +250,14 @@ textarea::-webkit-input-placeholder {
 }
 .navListCon .listItem {
   width: 222px;
-  height: 34px;
+  height: 37px;
   /* position: relative; */
 }
 /* 导航列表显示的部分 */
 .navListCon .listItem .h3Item {
   width: 222px;
-  height: 34px;
-  line-height: 34px;
+  height: 37px;
+  line-height: 37px;
   padding: 0 28px;
   width: 166px;
   overflow: hidden;
@@ -287,10 +287,10 @@ textarea::-webkit-input-placeholder {
   left: 222px;
   width: 858px;
   height: 360px;
+  box-sizing: border-box;
   overflow: auto;
   background-color: #fff;
-  box-sizing: border-box;
-  padding: 10px 50px 60px 28px;
+  padding: 10px 40px 60px 28px;
   display: none;
 }
 .navListCon .conItem h5 {
@@ -301,7 +301,7 @@ textarea::-webkit-input-placeholder {
 }
 .navListCon .conItem li {
   float: left;
-  width: 195px;
+  width: 193px;
   height: 40px;
   margin-bottom: 30px;
 }
