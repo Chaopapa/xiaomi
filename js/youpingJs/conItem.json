@@ -1,8 +1,6 @@
-[
-  {
+[{
     "title": "有品推荐",
-    "listItem":[
-      {
+    "listItem": [{
         "imgUrl": "images/youpingImage/navItem1.png",
         "spanCon": "销量榜单"
       },
@@ -54,8 +52,7 @@
   },
   {
     "title": "有品推荐",
-    "listItem":[
-      {
+    "listItem": [{
         "imgUrl": "images/youpingImage/navItem1.png",
         "spanCon": "销量榜单"
       },
