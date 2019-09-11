@@ -27,6 +27,7 @@ input {
   outline: none;
 }
 
+
 /* z-headerWrap S */
 
 .z-headerWrap {
@@ -245,11 +246,12 @@ textarea::-webkit-input-placeholder {
   height: 350px;
   padding-top: 10px;
   background-color: #845f3f;
+  position: relative;
 }
 .navListCon .listItem {
   width: 222px;
   height: 34px;
-  position: relative;
+  /* position: relative; */
 }
 /* 导航列表显示的部分 */
 .navListCon .listItem .h3Item {
@@ -281,12 +283,12 @@ textarea::-webkit-input-placeholder {
 /* 导航列表隐藏的部分 */
 .navListCon .listItem .conItem {
   position: absolute;
-  top: -10px;
+  top: 0px;
   left: 222px;
   width: 858px;
   height: 360px;
   overflow: auto;
-  background-color: skyblue;
+  background-color: #fff;
   box-sizing: border-box;
   padding: 10px 50px 60px 28px;
   display: none;
@@ -312,6 +314,11 @@ textarea::-webkit-input-placeholder {
 .navListCon .conItem li > span {
   font-size: 14px;
   color: #666;
+}
+
+/* 当经过每个 li 的时候显示隐藏的内容 */
+.navListCon .listItem:hover .conItem {
+  display: block;
 }
 
 /* banner 图 */

@@ -34,6 +34,7 @@ changeColor()
 
 // navList 动态渲染
 renderNavList()
+// hoverNavList()
 
 function renderNavList() {
   let conItem = []
@@ -41,6 +42,8 @@ function renderNavList() {
   let tmpStr = ''
   let $navListUl = $('.navListUl')
 
+
+  // 这里形成了回调地狱，需要改进，后面用 promise 改进
   // 请求 conItem 数据
   $.ajax({
     url: 'js/youpingJs/conItem.json',
@@ -100,10 +103,12 @@ function renderNavList() {
 
   })
 
-
-
-
 }
 
+// function hoverNavList() {
+//   let $navListUl = $('.navListUl')
+//   // 注册委托事件
+//   $navListUl.on('')
+// }
 
 // z-bannerWrap E
