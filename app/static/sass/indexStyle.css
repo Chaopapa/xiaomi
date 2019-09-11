@@ -14,18 +14,104 @@
     overflow: hidden;
 }
 
+.c-banner .container {
+    position: relative;
+}
+
 .banner-nav {
     width: 236px;
     height: 460px;
     float: left;
-    background: #ccc;
+    background: rgba(105, 101, 101, .6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+.banner-nav ul {
+    padding: 20px 0;
+}
+
+.banner-nav ul li {
+    height: 42px;
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+.banner-nav ul li:hover {
+    background: #ff6700;
+}
+
+.banner-nav ul li a {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color: #fff;
 }
 
 .banner-carousel {
-    width: 990px;
-    float: left;
+    width: 1226px;
     background: #000;
     height: 460px;
+    position: relative;
+}
+
+.banner-carousel img {
+    width: 1226px;
+    height: 460px;
+}
+
+.b-left,
+.b-right {
+    width: 41px;
+    height: 69px;
+    margin-top: -34px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.b-left {
+    left: 238px;
+    top: 50%;
+    background: url(../images/icon-slides.png) no-repeat -84px 0;
+}
+
+.b-left:hover {
+    background: url(../images/icon-slides.png) no-repeat 0 0;
+}
+
+.b-right {
+    right: 0;
+    top: 50%;
+    background: url(../images/icon-slides.png) no-repeat -126px 0;
+}
+
+.b-right:hover {
+    background: url(../images/icon-slides.png) no-repeat -44px 0;
+}
+
+.b-num {
+    position: absolute;
+    width: 400px;
+    left: auto;
+    right: 30px;
+    bottom: 20px;
+    z-index: 10;
+    text-align: right;
+}
+
+.b-num a {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 4px;
+    border: 2px solid #fff;
+    border-color: hsla(0, 0%, 100%, .3);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .4);
+    opacity: 1;
 }
 
 
