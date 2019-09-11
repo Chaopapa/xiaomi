@@ -44,9 +44,9 @@ function renderNavList() {
 
 
   // 这里形成了回调地狱，需要改进，后面用 promise 改进
-  // 请求 conItem 数据
+  // 请求 conItem 数据 地址相对于网页而来
   $.ajax({
-    url: 'js/youpingJs/conItem.json',
+    url: '../static/scripts/youpingJs/conItem.json',
     type: 'get',
     dataType: 'json',
     success: function (json) {
@@ -55,7 +55,7 @@ function renderNavList() {
 
       // 请求 h3Item 数据
       $.ajax({
-        url: 'js/youpingJs/h3Item.json',
+        url: '../static/scripts/youpingJs/h3Item.json',
         type: 'get',
         dataType: 'json',
         success: function (json) {
