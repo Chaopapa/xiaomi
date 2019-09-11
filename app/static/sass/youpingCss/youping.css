@@ -402,3 +402,51 @@ textarea::-webkit-input-placeholder {
 }
 
 /* z-bannerWrap E */
+
+/* z-newPro S */
+
+.z-newPro {
+  height: 187px;
+}
+.z-newPro .newPro {
+  height: 187px;
+  border-bottom: 2px solid #f4f4f4;
+}
+.z-newPro .newPro ul {
+  padding-top: 30px;
+  height: 157px;
+}
+.z-newPro .newPro li {
+  width: 190px;
+  float: left;
+  padding-left: 26px;
+}
+.z-newPro .newPro .imgBox {
+  width: 130px;
+  height: 130px;
+  position: relative;
+  cursor: pointer;
+}
+.z-newPro .newPro .imgBox img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.z-newPro .newPro p {
+  width: 130px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #bbb;
+  text-align: center;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+/* z-newPro E */
+
