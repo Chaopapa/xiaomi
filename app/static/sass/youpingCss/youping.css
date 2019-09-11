@@ -285,6 +285,7 @@ textarea::-webkit-input-placeholder {
   position: absolute;
   top: 0px;
   left: 222px;
+  z-index: 33;
   width: 858px;
   height: 360px;
   box-sizing: border-box;
@@ -325,5 +326,79 @@ textarea::-webkit-input-placeholder {
 .bannerCon {
   width: 858px;
   height: 360px;
+  position: relative;
 }
+/* 轮播图片 */
+.bannerCon .main {
+  width: 858px;
+  height: 360px;
+  overflow: hidden;
+  /* overflow-x: auto; */
+}
+.bannerCon .imgs {
+  width: 10000px;
+  height: 360px;
+}
+.bannerCon .imgs img{
+  width: 858px;
+  height: 360px;
+  display: block;
+  float: left;
+} 
+/* 左右箭头 */
+.bannerCon .left, .bannerCon .right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  z-index: 22;
+  cursor: pointer;
+}
+.bannerCon .left {
+  background-position: 0 -1924px;
+  left: 9px;
+}
+.bannerCon .left:hover {
+  background-position: 0 -1798px;
+}
+.bannerCon .right {
+  background-position: 0 -1840px;
+  right: 9px;
+}
+.bannerCon .right:hover {
+  background-position: 0 -1882px;
+}
+/* 小圆点 */
+.bannerCon .nums {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 22;
+  height: 18px;
+  line-height: 18px;
+  font-size: 0;
+}
+.bannerCon .nums li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #eee;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.bannerCon .nums li.now {
+  background-color: #a6926c;
+  border: 4px solid #cfd8db;
+  vertical-align: middle;
+}
+
 /* z-bannerWrap E */

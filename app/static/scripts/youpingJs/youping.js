@@ -34,7 +34,6 @@ changeColor()
 
 // navList 动态渲染
 renderNavList()
-// hoverNavList()
 
 function renderNavList() {
   let conItem = []
@@ -85,7 +84,7 @@ function renderNavList() {
             tmpStr += `</div></li>`
           }
 
-          console.log(tmpStr);
+          // console.log(tmpStr);
           $navListUl.html(tmpStr)
 
         },
@@ -93,11 +92,9 @@ function renderNavList() {
           console.log(code)
         }
       })
-
-
     },
     error: function (code) {
-      console.log(code)
+      // console.log(code)
     }
 
 
@@ -105,10 +102,112 @@ function renderNavList() {
 
 }
 
-// function hoverNavList() {
-//   let $navListUl = $('.navListUl')
-//   // 注册委托事件
-//   $navListUl.on('')
-// }
+// banner 轮播图
+(function () {
+
+  // 先获取元素
+  let $main = $('.main')
+  let $imgs = $('.imgs img')
+  let $left = $('.left')
+  let $right = $('.right')
+  let $lis = $('.nums li')
+  let img1W = $imgs.eq(0).width()
+  let imgIndex = 1 // 默认从第一张开始
+  let numIndex = 0 // imgIndex 比 numIndex + 1
+  let timer1, timer2
+
+  // 首先图片会停留在第一张
+  $main[0].scrollLeft = img1W
+  $lis.eq(0).addClass('now')
+
+  // 自动轮播
+  autoMove()
+
+  function autoMove() {
+    clearInterval(timer1)
+    timer1 = setInterval(function () {
+      imgIndex++
+      if (imgIndex >= $imgs.length) {
+        imgIndex = 2
+      }
+
+      numIndex++
+      if (numIndex >= $lis.length) {
+        numIndex = 0
+      }
+
+      $lis.eq(numIndex).addClass('now').siblings().removeClass('now')
+      // $main[0].scrollLeft = img1W * imgIndex
+      $main.animate({
+        scrollLeft: img1W * imgIndex
+      }, 10, 'swing')
+
+    }, 3000)
+  }
+
+  // 左箭头点击
+  $left.click(function() {
+    clearInterval(timer1)
+    
+    imgIndex --
+    if (imgIndex < 0) {
+      imgIndex = $imgs.length -3
+    }
+
+    numIndex --
+    if (numIndex < 0) {
+      numIndex = $lis.length - 1
+    }
+
+    $lis.eq(numIndex).addClass('now').siblings().removeClass('now')
+    $main.animate({
+      scrollLeft: img1W * imgIndex
+    }, 10, 'swing')
+
+    autoMove()
+  })
+
+    // 右箭头点击
+    $right.click(function() {
+      clearInterval(timer1)
+      
+      imgIndex++
+      if (imgIndex >= $imgs.length) {
+        imgIndex = 2
+      }
+
+      numIndex++
+      if (numIndex >= $lis.length) {
+        numIndex = 0
+      }
+  
+      $lis.eq(numIndex).addClass('now').siblings().removeClass('now')
+      $main.animate({
+        scrollLeft: img1W * imgIndex
+      }, 10, 'swing')
+  
+      autoMove()
+    })
+
+    // 点击小圆点切换
+    $lis.click(function() {
+
+      clearInterval(timer1)
+
+      numIndex = $(this).index()
+      imgIndex = numIndex + 1
+
+      $lis.eq(numIndex).addClass('now').siblings().removeClass('now')
+      $main.animate({
+        scrollLeft: img1W * imgIndex
+      }, 10, 'swing')
+
+      autoMove()
+      
+    })
+
+})()
+
 
 // z-bannerWrap E
+
