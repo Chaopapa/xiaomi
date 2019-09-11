@@ -32,9 +32,9 @@
 }
 
 .userInfo {
-    float: right;
+    float: left;
     line-height: 42px;
-    margin-right: 8px;
+    margin-left: 226px;
 }
 
 .userInfo a {
@@ -47,10 +47,13 @@
 }
 
 .shoppingCart {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin-left: 18px;
     color: #b0b0b0;
-    margin-left: 10px;
-    padding: 0 6px;
-    background-color: #ccc;
+    /* padding: 0 6px; */
+    background-color: #424242;
     cursor: pointer;
 }
 
@@ -118,4 +121,21 @@
     border: 0;
     outline: none;
     cursor: pointer;
+}
+
+
+/* 公用底部 */
+
+.all-footer {
+    height: 192px;
+    padding: 40px 0;
+    background: #fff;
+}
+
+
+/* 公用底部信息 */
+
+.all-info {
+    height: 228px;
+    background-color: #fafafa;
 }
