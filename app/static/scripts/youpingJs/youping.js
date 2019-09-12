@@ -32,9 +32,11 @@ changeColor();
 // 当滚动到一定高度时,z-navWrap 板块变成了粘性定位
 $(window).scroll(function(e) {
   let $navWrap = $('.z-navWrap');
+  let $classify = $('.classify')
   let scrollT = $(this).scrollTop();
-  if (scrollT > 484) { // 当 >= 判断的时候，元素会闪烁
+  if (scrollT > 484) { // 临界值元素会闪烁
     $navWrap.addClass('stickyWrap'); 
+    $classify.css('display', 'block');
   }else {
     $navWrap.removeClass('stickyWrap');
   }

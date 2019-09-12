@@ -164,6 +164,7 @@ input {
   position: absolute;
   top: 48px;
   left: 0;
+  z-index: 88;
   background-color: #fff;
   box-shadow: 0 0 3px rgba(0, 0, 0, .3);
   width: 184px;
@@ -198,6 +199,7 @@ input {
 .z-navWrap .navC {
   height: 51px;
   background-color: #fff;
+  position: relative;
 }
 /* logo */
 .z-navWrap .logo {
@@ -211,10 +213,48 @@ input {
 .z-navWrap .logo h1 {
   display: none;
 }
+
+/* 分类板块 */
+.z-navWrap .classify {
+  width: 60px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border: 1px solid #eee;
+  margin: 13px  0 0 6px;
+  position: relative;
+  display: none;
+}
+.classify .types {
+  width: 60px;
+  height: 26px;
+  font-size: 14px;
+  color: #333;
+}
+.classify .types  span.m-icons {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-position: 1px -86px;
+  vertical-align: middle;
+}
+.classify .navListCon {
+  position: absolute;
+  top: 37px;
+  left: -162px;
+  z-index: 77;
+  display: none;
+}
+.classify:hover .navListCon{
+  display: block;
+}
+
 .z-navWrap .navUl {
   width: 420px;
   height: 51px;
-  margin-left: 108px;
+  position: absolute;
+  left: 290px;
+  bottom: -4px;
 }
 .z-navWrap .navUl li {
   height: 51px;
