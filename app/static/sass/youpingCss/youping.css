@@ -1,5 +1,5 @@
 
-/* 公共样式 */
+/* 公共样式 S*/
 .w1080 {
   width: 1080px;
   margin: 0 auto;
@@ -26,6 +26,47 @@ input {
   border: none;
   outline: none;
 }
+
+
+/* 公共的标题头部 */
+.commonTitle {
+  height: 72px;
+  padding-top: 18px;
+}
+.commonTitle > h4 {
+  height: 72px;
+  line-height: 72px;
+  font-size: 30px;
+  color: #333;
+  float: left;
+  font-weight: normal;
+}
+.commonTitle > h4 > span {
+  color: #a6a6a6;
+  font-size: 14px;
+}
+.commonTitle .more {
+  color: #a6a6a6;
+  font-size: 14px;
+  height: 72px;
+  line-height: 72px;
+  float: right;
+  cursor: pointer;
+}
+.commonTitle .more span {
+  width: 14px;
+  height: 14px;
+  background-position: -12px -1128px;
+  vertical-align: middle;
+}
+.commonTitle .more:hover {
+  color: #845f3f;
+}
+.commonTitle .more:hover span{
+  background-position: -12px -1094px;
+}
+
+/* 公共样式 E */
 
 
 /* z-headerWrap S */
@@ -449,4 +490,130 @@ textarea::-webkit-input-placeholder {
 }
 
 /* z-newPro E */
+
+/* z-crowdFunding S */
+.z-crowdFunding {
+  height: 346px;
+}
+.crowdFunding {
+  height: 346px;
+}
+
+/* 中间内容 */
+.procenter {
+  height: 216px;
+}
+.procenter > div {
+  float: left;
+  position: relative;
+  cursor: pointer;
+}
+.procenter > div > p:nth-of-type(1) {
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 28px;
+}
+.procenter > div > p:nth-of-type(2) {
+  font-size: 16px;
+  color: #d0cfcc;
+  margin-top: 10px;
+}
+.procenter > div > p.proPrice {
+ font-size: 18px;
+ color: #bc544b;
+ font-weight: bold;
+ margin-top: 16px;
+}
+.procenter .item-1 {
+  width: 516px;
+  height: 216px;
+  margin-right: 2px;
+  background: #f9f3e9 url('../../images/youpingImage/bar.jpg') no-repeat bottom left;
+  padding-left: 22px;
+}
+.procenter .item-1 img {
+  width: 215px;
+  height: 215px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.procenter .item-2 {
+  width: 253px;
+  height: 215px;
+  margin-right: 2px;
+  background: #f8f8f8 url('../../images/youpingImage/bar.jpg') no-repeat bottom left;
+  padding-left: 15px;
+}
+.procenter .item-2 img, .procenter .item-3 img{
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  right: 4px;
+  top: 80px;
+}
+.procenter .item-3 {
+  width: 255px;
+  height: 216px;
+  background: #f8f8f8 url('../../images/youpingImage/bar.jpg') no-repeat bottom left;
+  padding-left: 15px;
+}
+
+/* 下面的内容 */
+.pItem-1, .pItem-2, .pItem-3 {
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  padding: 0 16px;
+  color: #999;
+}
+.pItem-1 .baifengbi, .pItem-2 .baifengbi, .pItem-3 .baifengbi {
+  font-size: 16px;
+  color: #bd5348;
+  float: right;
+}
+
+.pItem-1 .perNum, .pItem-2 .perNum, .pItem-3 .perNum {
+  font-size: 16px;
+  color: #bd5348;
+  margin-right: 4px;
+}
+.pItem-1 {
+  width: 502px;
+  margin-right: 2px;
+  
+}
+.pItem-2 {
+  width: 236px;
+  margin-right: 2px;
+}
+.pItem-3 {
+  width: 238px;
+}
+
+span.yellowS, span.redS {
+  display: inline-block;
+  width: 26px;
+  height: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  line-height: 20px;
+  margin: 3px;
+}
+span.yellowS {
+  background-color: #fecb00;
+}
+span.redS {
+  background-color: #f62700;
+}
+
+/* 下面的图标等 */
+
+/* z-crowdFunding E  */
+
+
+
 
