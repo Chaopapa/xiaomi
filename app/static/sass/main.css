@@ -148,3 +148,20 @@
     height: 228px;
     background-color: #fafafa;
 }
+
+
+/* 基本轮播图 */
+
+.c-carousel {
+    position: relative;
+}
+
+.c-carousel img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.c-carousel-show {
+    background: #333;
+}
