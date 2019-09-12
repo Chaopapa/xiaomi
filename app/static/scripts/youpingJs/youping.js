@@ -29,6 +29,16 @@ function changeColor() {
 }
 changeColor();
 
+// 当滚动到一定高度时,z-navWrap 板块变成了粘性定位
+$(window).scroll(function(e) {
+  let $navWrap = $('.z-navWrap');
+  let scrollT = $(this).scrollTop();
+  if (scrollT > 484) { // 当 >= 判断的时候，元素会闪烁
+    $navWrap.addClass('stickyWrap'); 
+  }else {
+    $navWrap.removeClass('stickyWrap');
+  }
+})
 // z-navWrap E
 
 // z-bannerWrap S

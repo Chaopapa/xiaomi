@@ -189,6 +189,12 @@ input {
   padding-top: 24px;
   height: 51px;
 }
+.stickyWrap {
+  position: sticky;
+  top: 0;
+  padding-top: 0; 
+  z-index: 66
+}
 .z-navWrap .navC {
   height: 51px;
   background-color: #fff;
