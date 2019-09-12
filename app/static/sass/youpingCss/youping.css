@@ -216,11 +216,10 @@ input {
 
 /* 分类板块 */
 .z-navWrap .classify {
-  width: 60px;
-  height: 26px;
+  width: 62px;
+  height: 36px;
   line-height: 26px;
   text-align: center;
-  border: 1px solid #eee;
   margin: 13px  0 0 6px;
   position: relative;
   display: none;
@@ -230,6 +229,8 @@ input {
   height: 26px;
   font-size: 14px;
   color: #333;
+  border: 1px solid #eee;
+  display: inline-block;
 }
 .classify .types  span.m-icons {
   display: inline-block;

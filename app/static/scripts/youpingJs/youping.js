@@ -39,6 +39,7 @@ $(window).scroll(function(e) {
     $classify.css('display', 'block');
   }else {
     $navWrap.removeClass('stickyWrap');
+    $classify.css('display', 'none');
   }
 })
 // z-navWrap E
