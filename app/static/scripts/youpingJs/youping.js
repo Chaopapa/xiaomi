@@ -321,10 +321,14 @@ function drawContent() {
     switch (type) {
       case 'timeLimited':
         jsonUrl = '../static/scripts/youpingJs/timeItem.json';
-        getData(jsonUrl, $mainBox.eq(i));  
+        getData(jsonUrl, $mainBox.eq(i));
         break;
       case 'newPro':
         jsonUrl = '../static/scripts/youpingJs/newPro.json';
+        getData2(jsonUrl, $mainBox.eq(i));
+        break;
+      case 'hot':
+        jsonUrl = '../static/scripts/youpingJs/hotItem.json';
         getData2(jsonUrl, $mainBox.eq(i));
         break;
     }
@@ -502,5 +506,9 @@ drawContent()
 
 // 每日新品
 // Z-newPro S
-  // 以上渲染过
+// 以上渲染过
 // Z-newPro E
+
+// Z-hot S
+// 以上渲染过
+// Z-hot E

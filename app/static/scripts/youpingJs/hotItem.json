@@ -1,0 +1,38 @@
+[
+  {
+    "imgUrl": "../static/images/youpingImage/hotImg1.jpg",
+    "tit": "声波电动牙刷 青春版",
+    "into": "四色彩环，37200次/分钟 高频震动，三种清洁模式，USB",
+    "price": "￥599"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/hotImg2.jpg",
+    "tit": "素士无线便携冲牙器 ",
+    "into": "餐后冲牙,冲走齿间残渣,牙套清洁搭档,无线便携",
+    "price": "￥799"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/hotImg3.jpg",
+    "tit": "舒适黑框防蓝光光学眼镜 中性Pro",
+    "into": "双重防护，树脂镜片，可配度数，60%阻隔率，耐磨损",
+    "price": "￥399"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/hotImg4.jpg",
+    "tit": "云米对开门冰箱 545L",
+    "into": "全直流变频，风冷无霜，545L超大容量，APP智能控温",
+    "price": "￥1999"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/hotImg5.jpg",
+    "tit": "米家洗烘一体机10kg",
+    "into": "国标A+级洗净能力 1级能效 21种洗烘模式 智能空气洗 烘干除菌率达99.9%",
+    "price": "￥69.9"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/hotImg6.jpg",
+    "tit": "Redmi Note 8 Pro",
+    "into": "6400万旗舰级全场景四摄 / 前置2000万 AI美颜相机 / G90T专业游戏处理器 / 6.53英寸水滴全面屏 / 4500mAh大电量 / 标配18W快充 / 康宁大猩猩保护玻璃 / 多功能NFC / 红外遥控功能 / Game Turbo2.0游戏加速",
+    "price": "￥67"
+  }
+]
