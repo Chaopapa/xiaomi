@@ -143,4 +143,113 @@
         });
     };
     window._carousel = Carousel.prototype.carouselFactory;
+
+
+    /**
+     * 鼠标放上收起和折叠效果
+     * @param {*目标元素} $target 
+     * @param {*展开目标高度} height 
+     * @param {*所需时间} time 
+     */
+    function MouseShow($target, targetHeight, time) {
+
+        this.$target = $target;
+        this.targetHeight = targetHeight;
+        this.time = time;
+        this.timer = null;
+        this.nowHeight = 0;
+    }
+    //对象初始化
+    MouseShow.prototype.init = function() {
+        this.expand();
+        this.collapse();
+    }
+
+    //展开
+    MouseShow.prototype.expand = function() {
+        this.$target.parent().mouseover(function() {
+            this.move(this.targetHeight);
+        }.bind(this));
+    };
+    //收起
+    MouseShow.prototype.collapse = function() {
+        this.$target.parent().mouseout(function() {
+            this.move(0);
+        }.bind(this));
+    };
+
+    //高度移动
+    MouseShow.prototype.move = function(targetH) {
+        clearInterval(this.timer);
+        this.timer = setInterval(() => {
+            var speed = 5;
+            console.log(this.$target);
+            speed = this.nowHeight >= targetH ? speed : (-speed);
+
+            if (Math.abs(speed) >= Math.abs(targetH - this.nowHeight)) {
+                this.nowHeight = targetH;
+                this.$target.css('height', targetH + 'px');
+                console.log(this.nowHeight);
+                clearInterval(this.timer);
+                return;
+            }
+
+            this.nowHeight -= speed;
+            this.$target.css('height', this.nowHeight + 'px');
+            console.log(this.nowHeight);
+
+        }, this.time);
+    };
+
+    //高度改变测试用例 OK
+    MouseShow.prototype.testMove = function(targetH) {
+        this.time = 60;
+        this.nowHeight = 100;
+        this.move(0);
+    };
+    //对象工厂
+    MouseShow.prototype.mouseShowFactory = function($target, targetHeight, time) {
+        return new MouseShow($target, targetHeight, time).init();
+    };
+    window._mouseShow = MouseShow.prototype.mouseShowFactory;
+
+
+
+    //购物车效果 shoppingCart-hover
+    function ShoppingCart($target, targetHeight, time) {
+        MouseShow.call($target, targetHeight, time);
+        this.$target = $target;
+        this.targetHeight = targetHeight;
+        this.time = time;
+        this.timer = null;
+        this.nowHeight = 0;
+
+    }
+    //继承MouseShow类
+    ShoppingCart.prototype = Object.create(MouseShow.prototype);
+    //手动指正构造器
+    ShoppingCart.prototype.constructor = ShoppingCart;
+    ShoppingCart.prototype.expand = function() {
+        this.$target.parent().mouseover(function() {
+            this.move(this.targetHeight);
+            this.$target.prev().addClass('shoppingCart-hover');
+        }.bind(this));
+    };
+
+    ShoppingCart.prototype.collapse = function() {
+            this.$target.parent().mouseout(function() {
+                this.move(0);
+                this.$target.prev().removeClass('shoppingCart-hover');
+            }.bind(this));
+        }
+        //对象工厂
+    ShoppingCart.prototype.shoppingCartFactory = function($target, targetHeight, time) {
+        return new ShoppingCart($target, targetHeight, time).init();
+    };
+    window._shoppingCart = ShoppingCart.prototype.shoppingCartFactory;
+
+    _shoppingCart($('.cart-show'), 80, 20);
+    //二维码下载效果
+
+
 })();
