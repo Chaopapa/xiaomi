@@ -5,7 +5,7 @@
     //鼠标放上浮动特效
     /**
      * 单页轮播图效果
-     * @param {*图片dom数组} imgs 
+     * @param {*图片jquery数组} imgs 
      * @param {*左按钮jquery} left 
      * @param {*右按钮jquery} right 
      * @param {*面包屑jquery} nums 
@@ -57,6 +57,7 @@
             }
             _this.isDisplay(true, _this.index);
 
+            console.log(_this.imgs[_this.index]);
             _this.imgMove(_this.imgs[_this.index], 100);
 
         }, this.time);
@@ -65,7 +66,8 @@
     Carousel.prototype.isDisplay = function(flag, index) {
         if (!flag) {
             if (this.nums != null) {
-                $(this.nums[this.index]).removeClass = 'show';
+                console.log(this.nums[this.index]);
+                $(this.nums[this.index]).removeClass('c-carousel-show');
             }
             // this.imgs[this.index].style.zIndex = 1;
             // this.imgs[this.index].style.opacity = 0.1;
@@ -75,7 +77,7 @@
             });
         } else {
             if (this.nums != null) {
-                $(this.nums[this.index]).addClass = 'show';
+                $(this.nums[this.index]).addClass('c-carousel-show');
             }
             $(this.imgs[this.index]).css('z-index', 18);
         }
@@ -95,19 +97,19 @@
         this.rightClick();
     };
     Carousel.prototype.clickNum = function() {
-
-        for (var i = 0; i < this.nums.length; i++) {
-            this.nums[i].n = i;
-            var _this = this;
-            this.nums[i].onclick = function() {
+        var _this = this;
+        this.nums.each(function(index, item) {
+            console.log(item);
+            item.onclick = function() {
                 clearInterval(_this.timer2);
                 _this.isDisplay(false, _this.index);
-                _this.index = this.n;
+                _this.index = index;
                 _this.isDisplay(true, _this.index);
                 _this.imgMove(_this.imgs[_this.index], 100);
                 _this.autoMove();
             }
-        }
+
+        });
     };
     Carousel.prototype.rightClick = function() {
         var _this = this;
