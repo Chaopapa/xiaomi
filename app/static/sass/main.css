@@ -162,6 +162,7 @@
     top: 0;
 }
 
-.c-carousel-show {
-    background: #333;
+.c-carousel-lip .c-carousel-show {
+    background: hsla(0, 0%, 100%, .4);
+    border-color: rgba(0, 0, 0, .4);
 }
