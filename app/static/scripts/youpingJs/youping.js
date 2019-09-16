@@ -280,23 +280,23 @@ function renderNavList() {
 
       let intervalTime = endDate - nowDateTime; // 间隔时间
 
-     if (intervalTime >= 0) {
-  
-      let hours = parseInt(intervalTime / (60 * 60 * 1000)); // 小时
-      let minutes = parseInt((intervalTime - (hours * 60 * 60 * 1000)) / (60 * 1000)); // 分钟
-      let seconds = 60 - nowDate.getSeconds(); // 秒钟
+      if (intervalTime >= 0) {
 
-      hours = hours > 9 ? hours : '0' + hours;
-      minutes = minutes > 9 ? minutes : '0' + minutes;
-      seconds = seconds > 9 ? seconds : '0' + seconds;
+        let hours = parseInt(intervalTime / (60 * 60 * 1000)); // 小时
+        let minutes = parseInt((intervalTime - (hours * 60 * 60 * 1000)) / (60 * 1000)); // 分钟
+        let seconds = 60 - nowDate.getSeconds(); // 秒钟
 
-      $hour.text(hours);
-      $minutes.text(minutes);
-      $seconds.text(seconds);
+        hours = hours > 9 ? hours : '0' + hours;
+        minutes = minutes > 9 ? minutes : '0' + minutes;
+        seconds = seconds > 9 ? seconds : '0' + seconds;
 
-     }else {
-      clearInterval(timer);
-     }
+        $hour.text(hours);
+        $minutes.text(minutes);
+        $seconds.text(seconds);
+
+      } else {
+        clearInterval(timer);
+      }
 
     }, 1000);
   }
@@ -304,93 +304,202 @@ function renderNavList() {
 
 
 // 动态渲染列表  点击时候的样式还有些问题，暂时先这样吧
-(function() {
 
+function drawContent() {
   let $mainBox = $('.mainBox');
-  let $imgsBox = $('.imgsBox');
-  let $leftT = $('.leftT');
-  let $rightT = $('.rightT');
-  let sroLeft = 0;
+  // let $imgsBox = $('.imgsBox');
+  // let $leftT = $('.leftT');
+  // let $rightT = $('.rightT');
+  // let sroLeft = 0;
+  // let jsonUrl = '';
 
-  if (sroLeft == 0) {
-    $leftT.mouseenter(function() {
-      $(this).css('background-position', '0 -1924px'); // 默认左边是不会显示可点击的图片的
-    })
+  for (let i = 0; i < $mainBox.length; i++) {
+    // 获取 $mainBox 上的自定义属性，判断 url
+    let type = $mainBox.eq(i).attr('data-type');
+
+    // 相当于是路由分配
+    switch (type) {
+      case 'timeLimited':
+        jsonUrl = '../static/scripts/youpingJs/timeItem.json';
+        getData(jsonUrl, $mainBox.eq(i));  
+        break;
+      case 'newPro':
+        jsonUrl = '../static/scripts/youpingJs/newPro.json';
+        getData2(jsonUrl, $mainBox.eq(i));
+        break;
+    }
   }
 
-  // 发送 ajax 请求获取数据
-  $.ajax({
-    type: 'get',
-    url: '../static/scripts/youpingJs/timeItem.json',
-    dataType: 'json',
-    success: function (json) {
-      let tmpStr = '';
-      for(let i = 0; i < json.length; i ++) {
-        tmpStr += ` <li class="timeItem">
+
+  // 限时抢购类型的路由
+  function getData(jsonUrl, dom) {
+
+    let $imgsBox = dom.children('.imgsBox');
+    let $leftT = dom.parent().children('.leftT');
+    let $rightT = dom.parent().children('.rightT');
+    let sroLeft = 0;
+
+    if (sroLeft == 0) {
+      $leftT.mouseenter(function () {
+        $(this).css('background-position', '0 -1924px'); // 默认左边是不会显示可点击的图片的
+      })
+    }
+
+    // 发送 ajax 请求获取数据
+    $.ajax({
+      type: 'get',
+      url: jsonUrl,
+      dataType: 'json',
+      success: function (json) {
+        let tmpStr = '';
+        for (let i = 0; i < json.length; i++) {
+          tmpStr += ` <li class="timeItem">
         <img src="${json[i].imgUrl}" alt="" class="conImg">
         <div class="con">
           <h6 class="tit">${json[i].tit}</h6>
           <p class="nowPrice">${json[i].nowPrice}<i class="oldPrice">${json[i].oldPrice}</i></p>
         </div>
       </li>`;
-      }
-      $imgsBox.html(tmpStr); // 动态渲染到页面上
+        }
+        $imgsBox.html(tmpStr); // 动态渲染到页面上
 
-      // 点击左右按钮，每次偏移 timeItem 的长度为 270 px
-      // 点击左边，每次 $main 的 scrollLeft - 270
-      // 当 scrollLeft 为 0 时，禁止点击，显示蒙层 / return false
-      // 点击右边，每次 $main 的 scrollLeft + 270
-      // 当 scrollLeft 为 最大长度时(json.length * 270) 时，禁止点击，显示蒙层 return false
+        // 点击左右按钮，每次偏移 timeItem 的长度为 270 px
+        // 点击左边，每次 $main 的 scrollLeft - 270
+        // 当 scrollLeft 为 0 时，禁止点击，显示蒙层 / return false
+        // 点击右边，每次 $main 的 scrollLeft + 270
+        // 当 scrollLeft 为 最大长度时(json.length * 270) 时，禁止点击，显示蒙层 return false
 
-      $leftT.click(function() {
-        // 先判断，再减
-        console.log(sroLeft);
-        if (sroLeft == 0) {
-          $leftT.mouseenter(function() {
+        $leftT.click(function () {
+          // 先判断，再减 
+          if (sroLeft == 0) {
+            $leftT.mouseenter(function () {
+              $(this).css('background-position', '0 -1798px'); // 不是 0 则显示可点击
+            });
+            return false;
+          }
+          sroLeft -= 270;
+          dom.animate({
+            scrollLeft: sroLeft
+          });
+        });
+
+
+        $rightT.click(function () {
+
+          $leftT.mouseenter(function () {
             $(this).css('background-position', '0 -1798px'); // 不是 0 则显示可点击
           });
-          return false;
-        }
-        sroLeft -= 270;
-        $mainBox.animate({
-          scrollLeft: sroLeft
-        });
-        console.log(sroLeft);
-      });
+          $leftT.mouseout(function () {
+            $(this).css('background-position', '0 -1924px'); // 不是 0 则显示可点击
+          });
 
-
-      $rightT.click(function() {
-
-        $leftT.mouseenter(function() {
-          $(this).css('background-position', '0 -1798px'); // 不是 0 则显示可点击
-        });
-        $leftT.mouseout(function() {
-          $(this).css('background-position', '0 -1924px'); // 不是 0 则显示可点击
+          // 先判断，再加
+          if (sroLeft == (json.length - 4) * 270) {
+            $rightT.css('background-position', '0 -1840px');
+            return false;
+          }
+          sroLeft += 270;
+          dom.animate({
+            scrollLeft: sroLeft
+          });
         });
 
-         // 先判断，再加
-        if (sroLeft == (json.length - 4) * 270) {
-          $rightT.css('background-position', '0 -1840px');
-          return false;
-        }
-        sroLeft += 270;
-        $mainBox.animate({
-          scrollLeft: sroLeft
-        });
-        console.log(sroLeft);
-      });
+      },
+      error: function (err) {
+        console.log(err);
+      }
+    });
+
+  }
 
 
+  function getData2(jsonUrl, dom) {
 
+    let $imgsBox = dom.children('.imgsBox');
+    let $leftT = dom.parent().children('.leftT');
+    let $rightT = dom.parent().children('.rightT');
+    let sroLeft = 0;
 
-
-    },
-    error: function (err) {
-      console.log(err);
+    if (sroLeft == 0) {
+      $leftT.mouseenter(function () {
+        $(this).css('background-position', '0 -1924px'); // 默认左边是不会显示可点击的图片的
+      })
     }
-  });
+
+    // 发送 ajax 请求获取数据
+    $.ajax({
+      type: 'get',
+      url: jsonUrl,
+      dataType: 'json',
+      success: function (json) {
+        let tmpStr = '';
+        for (let i = 0; i < json.length; i++) {
+          tmpStr += ` <li class="timeItem">
+        <img src="${json[i].imgUrl}" alt="" class="conImg">
+        <div class="con">
+          <h6 class="tit">${json[i].tit}</h6>
+          <p class="nowPrice">${json[i].nowPrice}<i class="oldPrice">${json[i].oldPrice}</i></p>
+        </div>
+      </li>`;
+        }
+        $imgsBox.html(tmpStr); // 动态渲染到页面上
+
+        // 点击左右按钮，每次偏移 timeItem 的长度为 270 px
+        // 点击左边，每次 $main 的 scrollLeft - 270
+        // 当 scrollLeft 为 0 时，禁止点击，显示蒙层 / return false
+        // 点击右边，每次 $main 的 scrollLeft + 270
+        // 当 scrollLeft 为 最大长度时(json.length * 270) 时，禁止点击，显示蒙层 return false
+
+        $leftT.click(function () {
+          // 先判断，再减 
+          if (sroLeft == 0) {
+            $leftT.mouseenter(function () {
+              $(this).css('background-position', '0 -1798px'); // 不是 0 则显示可点击
+            });
+            return false;
+          }
+          sroLeft -= 270;
+          dom.animate({
+            scrollLeft: sroLeft
+          });
+        });
 
 
-})();
+        $rightT.click(function () {
+
+          $leftT.mouseenter(function () {
+            $(this).css('background-position', '0 -1798px'); // 不是 0 则显示可点击
+          });
+          $leftT.mouseout(function () {
+            $(this).css('background-position', '0 -1924px'); // 不是 0 则显示可点击
+          });
+
+          // 先判断，再加
+          if (sroLeft == (json.length - 4) * 270) {
+            $rightT.css('background-position', '0 -1840px');
+            return false;
+          }
+          sroLeft += 270;
+          dom.animate({
+            scrollLeft: sroLeft
+          });
+        });
+
+      },
+      error: function (err) {
+        console.log(err);
+      }
+    });
+
+  }
+
+}
+
+drawContent()
 
 // Z-timeLimited E
+
+// 每日新品
+// Z-newPro S
+  // 以上渲染过
+// Z-newPro E

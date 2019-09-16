@@ -1,0 +1,38 @@
+[
+  {
+    "imgUrl": "../static/images/youpingImage/newPro1.jpg",
+    "tit": "多亲AI助手 /4G电话",
+    "nowPrice": "￥49.5",
+    "oldPrice": "￥99"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/newPro2.jpg",
+    "tit": "谷小酒 青年酒豪·茅台镇53度酱香型白酒",
+    "nowPrice": "￥399",
+    "oldPrice": "￥799"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/newPro3.jpg",
+    "tit": "石墨烯自发热阳绒被",
+    "nowPrice": "￥199",
+    "oldPrice": "￥399"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/newPro4.jpg",
+    "tit": "晨曦美妆镜",
+    "nowPrice": "￥1699",
+    "oldPrice": "￥1999"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/newPro5.jpg",
+    "tit": "琴岛美式电热多用盖毯",
+    "nowPrice": "￥39.9",
+    "oldPrice": "￥69.9"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/newPro6.jpg",
+    "tit": "欧伟士电热毛巾架",
+    "nowPrice": "￥98",
+    "oldPrice": "￥67"
+  }
+]

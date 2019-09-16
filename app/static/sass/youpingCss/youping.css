@@ -766,11 +766,11 @@ span.redS {
 
 /* 限时抢购 */
 /* Z-timeLimited S */
-.Z-timeLimited {
+.Z-timeLimited, .Z-newPro {
   margin-top: 14px;
 }
 
-.timeLimited {
+.timeLimited, .newPro {
   /* background-color: pink; */
 }
 
@@ -905,3 +905,10 @@ span.redS {
 }
 
 /* Z-timeLimited E */
+
+/* Z-newPro S */
+
+
+/* Z-newPro E */
+
+
