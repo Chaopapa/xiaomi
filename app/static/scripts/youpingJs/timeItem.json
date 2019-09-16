@@ -1,0 +1,68 @@
+[
+  {
+    "imgUrl": "../static/images/youpingImage/timewrap1.jpg",
+    "tit": "食用旋藻片",
+    "nowPrice": "￥49.5",
+    "oldPrice": "￥99"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/timewrap2.jpg",
+    "tit": "男士羽绒服",
+    "nowPrice": "￥399",
+    "oldPrice": "￥799"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/timewrap3.jpg",
+    "tit": "休闲外套",
+    "nowPrice": "￥199",
+    "oldPrice": "￥399"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/timewrap4.jpg",
+    "tit": "微波炉",
+    "nowPrice": "￥1699",
+    "oldPrice": "￥1999"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/timewrap5.jpg",
+    "tit": "宝宝纸巾",
+    "nowPrice": "￥39.9",
+    "oldPrice": "￥69.9"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/timewrap6.jpg",
+    "tit": "卧室吊灯",
+    "nowPrice": "￥98",
+    "oldPrice": "￥67"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/timewrap7.jpg",
+    "tit": "声波洁面仪",
+    "nowPrice": "￥89起",
+    "oldPrice": "￥99"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/timewrap8.jpg",
+    "tit": "行李箱",
+    "nowPrice": "￥199",
+    "oldPrice": "￥399"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/timewrap9.jpg",
+    "tit": "吹风机",
+    "nowPrice": "￥39.5",
+    "oldPrice": "￥68"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/timewrap10.jpg",
+    "tit": "拖把",
+    "nowPrice": "￥32",
+    "oldPrice": "￥56"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/timewrap11.jpg",
+    "tit": "冰箱",
+    "nowPrice": "￥699",
+    "oldPrice": "￥998"
+  }
+]
