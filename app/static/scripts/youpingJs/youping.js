@@ -434,13 +434,14 @@ function drawContent() {
       success: function (json) {
         let tmpStr = '';
         for (let i = 0; i < json.length; i++) {
-          tmpStr += ` <li class="timeItem">
-        <img src="${json[i].imgUrl}" alt="" class="conImg">
-        <div class="con">
-          <h6 class="tit">${json[i].tit}</h6>
-          <p class="nowPrice">${json[i].nowPrice}<i class="oldPrice">${json[i].oldPrice}</i></p>
-        </div>
-      </li>`;
+          tmpStr += `  <li class="timeItem">
+          <img src="${json[i].imgUrl}" alt="" class="conImg">
+          <div class="con">
+            <h6 class="tit">${json[i].tit}</h6>
+            <p class="into">${json[i].into}</p>
+            <p class="nowPrice">${json[i].price}</p>
+          </div>
+        </li>`;
         }
         $imgsBox.html(tmpStr); // 动态渲染到页面上
 
