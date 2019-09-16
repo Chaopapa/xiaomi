@@ -7,7 +7,6 @@
 body,
 html {
   width: 100%;
-  height: 6000px;
 }
 
 .fl {
@@ -952,6 +951,10 @@ span.redS {
 
 /* Z-advice S */
 
+.Z-advice {
+  position: relative;
+  margin-top: 14px;
+}
 .Z-advice .timeWrap {
   width: 1080px;
   height: auto !important;
@@ -967,6 +970,8 @@ span.redS {
   width: 1080px;
   height: auto !important;
   min-height: 356px;
+  /* 这句很重要，上面设置了定位脱离了文档流，导致父级盒子高度为 0 */
+  position: static;
 }
 .Z-advice .timeItem {
   width: 262px;
@@ -983,5 +988,21 @@ span.redS {
   background-color: #f8f8f8;
 }
 /* Z-advice E */
+
+/* Z-footer S */
+.Z-footer {
+  margin-top: 60px;
+  border-top: #eee;
+  height: 138px;
+}
+.footer {
+  background-color: pink;
+  height: 138px;
+}
+
+/* Z-footer E */
+
+
+
 
 

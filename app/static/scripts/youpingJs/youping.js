@@ -520,3 +520,7 @@ drawContent()
 // Z-advice S
 // 以上渲染过
 // Z-advice E
+
+/* Z-footer S */
+// 底部栏
+/* Z-footer E */
