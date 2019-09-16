@@ -950,4 +950,38 @@ span.redS {
 /* 在以上写好了 */
 /* Z-hot E */
 
+/* Z-advice S */
+
+.Z-advice .timeWrap {
+  width: 1080px;
+  height: auto !important;
+  min-height: 356px;
+}
+.Z-advice .mainBox {
+  width: 1080px;
+  height: auto !important;
+  min-height: 356px;
+  overflow: visible;
+}
+.Z-advice .imgsBox {
+  width: 1080px;
+  height: auto !important;
+  min-height: 356px;
+}
+.Z-advice .timeItem {
+  width: 262px;
+  border: 1px solid #eee;
+  margin: 0 5px 6px 0;
+}
+.Z-advice .timeItem .conImg {
+  width: 262px;
+  display: block;
+}
+.Z-advice .timeItem .con {
+  height: 89px;
+  width: 262px;
+  background-color: #f8f8f8;
+}
+/* Z-advice E */
+
 

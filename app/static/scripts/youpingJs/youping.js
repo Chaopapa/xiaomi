@@ -331,6 +331,10 @@ function drawContent() {
         jsonUrl = '../static/scripts/youpingJs/hotItem.json';
         getData2(jsonUrl, $mainBox.eq(i));
         break;
+      case 'advice':
+        jsonUrl = '../static/scripts/youpingJs/advice.json';
+        getData(jsonUrl, $mainBox.eq(i));
+        break;
     }
   }
 
@@ -512,3 +516,7 @@ drawContent()
 // Z-hot S
 // 以上渲染过
 // Z-hot E
+
+// Z-advice S
+// 以上渲染过
+// Z-advice E
