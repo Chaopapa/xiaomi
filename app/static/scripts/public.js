@@ -42,7 +42,7 @@
             opa += speed;
             $(dom).css('opacity', opa / 100);
 
-        }, 120);
+        }, 70);
     };
 
     //图片自动播放
@@ -51,13 +51,13 @@
         var _this = this;
         this.timer2 = setInterval(function() {
             _this.isDisplay(false, _this.index);
+
             _this.index++;
             if (_this.index >= _this.imgs.length) {
                 _this.index = 0;
             }
             _this.isDisplay(true, _this.index);
 
-            console.log(_this.imgs[_this.index]);
             _this.imgMove(_this.imgs[_this.index], 100);
 
         }, this.time);
@@ -66,7 +66,6 @@
     Carousel.prototype.isDisplay = function(flag, index) {
         if (!flag) {
             if (this.nums != null) {
-                console.log(this.nums[this.index]);
                 $(this.nums[this.index]).removeClass('c-carousel-show');
             }
             // this.imgs[this.index].style.zIndex = 1;
@@ -99,7 +98,6 @@
     Carousel.prototype.clickNum = function() {
         var _this = this;
         this.nums.each(function(index, item) {
-            console.log(item);
             item.onclick = function() {
                 clearInterval(_this.timer2);
                 _this.isDisplay(false, _this.index);

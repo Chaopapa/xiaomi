@@ -160,9 +160,16 @@
     position: absolute;
     left: 0;
     top: 0;
+    opacity: 0.1;
+    z-index: 1;
 }
 
 .c-carousel-lip .c-carousel-show {
     background: hsla(0, 0%, 100%, .4);
     border-color: rgba(0, 0, 0, .4);
+}
+
+.c-carousel .c-carousel-imgShow {
+    opacity: 1;
+    z-index: 18;
 }
