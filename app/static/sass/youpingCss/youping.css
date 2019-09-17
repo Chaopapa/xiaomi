@@ -992,12 +992,44 @@ span.redS {
 /* Z-footer S */
 .Z-footer {
   margin-top: 60px;
-  border-top: #eee;
-  height: 138px;
+  border-top: 1px solid #eee;
+  height: 90px;
+  padding-top: 48px;
 }
 .footer {
-  background-color: pink;
-  height: 138px;
+  height: 90px;
+}
+/* 底部 log 部分 */
+.footer .footLog {
+}
+.footer .footLog img {
+  height: 34px;
+}
+/* 底部信息部分 */
+.footer .footInfo {
+  margin-left: 298px;
+}
+.footer .footInfo p {
+  line-height: 20px;
+  color: #333;
+  font-size: 12px;
+}
+.footer .footInfo .police {
+  height: 14px;
+  margin-left: 4px;
+}
+.footer .footInfo p span {
+  margin: 0 3px;
+}
+.footer .footInfo p a {
+  margin: 0 3px;
+}
+/* 底部诚信经营部分 */
+.footer .honestyIcon {
+  display: block;
+}
+.footer .honestyIcon img {
+  height: 40px;
 }
 
 /* Z-footer E */
