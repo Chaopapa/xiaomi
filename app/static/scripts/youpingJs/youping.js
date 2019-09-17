@@ -350,6 +350,10 @@ function renderNavList() {
 
   // 倒计时函数
   function countdown(expectedHour) {
+
+    // 首先查看本地缓存中有没有缓存的数据
+    
+
     let startDate = new Date().getTime(); // 开始时间
     let endDate = new Date(startDate + expectedHour * 60 * 60 * 1000).getTime(); // 结束时间
 
