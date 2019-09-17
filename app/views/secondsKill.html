@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../static/sass/layout.css">
+  <link rel="stylesheet" href="../static/sass/secondsKillCss/secondsKill.css">
+  <script src="../static/scripts/jquery-1.8.3/jquery-1.8.3.js" defer></script>
+  <script src="../static/scripts/secondsKillJs/secondsKill.js" defer></script>
+</head>
+
+<body>
+  <!-- 只写小米秒杀部分 -->
+  <div class="Z-secondsKillWrap">
+
+    <!-- tab 切换头部 -->
+    <div class="secondsKillHeader">
+      <ul class="tabsHeader clearfix w1226">
+      <!-- 渲染模板 -->
+      <!--   <li>
+          <span class="time">00:00</span>
+          <span class="info">活动已结束</span>
+        </li>
+        <li class="now">
+          <span class="time">10:00</span>
+          <span class="info">正在抢购</span>
+        </li>
+        <li>
+          <span class="time">14:00</span>
+          <span class="info">未开始</span>
+        </li>
+        <li>
+          <span class="time">18:00</span>
+          <span class="info">未开始</span>
+        </li>
+        <li>
+          <span class="time">20:00</span>
+          <span class="info">未开始</span>
+        </li> -->
+      </ul>
+    </div>
+
+    <!-- tab 切换内容 -->
+    <ul class="secondsKillContent w1226 clearfix">
+      <!-- 渲染模板 -->
+
+      <!-- 已经结束的模板 -->
+      <li class="clearfix">
+        <img src="../static/images/secondsKillImage/tabItem1.jpg" class="tabImg fl">
+        <div class="tabConWrap fr">
+          <h4 class="tit">小米蓝牙耳机</h4>
+          <span class="intro">尽享无限音乐</span>
+          <p class="percent"><span class="percentBar"><i></i></span><span class="percentNum">100%</span></p>
+          <p class="price"><span class="nowPrice">69.00元</span><span class="oldPrice">99元</span></p>
+          <a href="javascript:;" class="over">已结束</a>
+          <!-- <p class="remind">已有<span class="remindNum">33</span>人设置提醒</p> -->
+        </div>
+      </li>
+
+      <!-- 正在抢购的模板 -->
+      <li class="clearfix">
+          <img src="../static/images/secondsKillImage/tabItem1.jpg" class="tabImg fl">
+          <div class="tabConWrap fr">
+            <h4 class="tit">小米蓝牙耳机</h4>
+            <span class="intro">尽享无限音乐</span>
+            <!-- <span class="percent"><span class="percentBar"><i></i></span><span class="percentNum">100%</span></p> -->
+            <p class="price"><span class="nowPrice">69.00元</span><span class="oldPrice">99元</span></p>
+            <a href="javascript:;" class="now">登录后抢购</a>
+            <!-- <p class="remind">已有<span class="remindNum">33</span>人设置提醒</p> -->
+          </div>
+        </li>
+
+      <!-- 未开始的模板 -->
+      <li class="clearfix">
+          <img src="../static/images/secondsKillImage/tabItem1.jpg" class="tabImg fl">
+          <div class="tabConWrap fr">
+            <h4 class="tit">小米蓝牙耳机</h4>
+            <span class="intro">尽享无限音乐</span>
+            <!-- <span class="percent"><span class="percentBar"><i></i></span><span class="percentNum">100%</span></p> -->
+            <p class="price"><span class="nowPrice">69.00元</span><span class="oldPrice">99元</span></p>
+            <a href="javascript:;" class="future">未开始</a>
+            <p class="remind">已有<span class="remindNum">33</span>人设置提醒</p>
+          </div>
+        </li>
+
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+  </div>
+</body>
+
+</html>
