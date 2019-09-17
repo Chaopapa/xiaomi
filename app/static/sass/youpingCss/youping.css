@@ -307,6 +307,7 @@ input {
 /* 搜索框 */
 .z-navWrap .searchCon {
   height: 51px;
+  position: relative;
 }
 
 .searchCon .search_form {
@@ -357,6 +358,46 @@ textarea::-webkit-input-placeholder {
 
 .z-navWrap .searchCon .cartIcon:hover {
   background-position: 20px -1186px;
+}
+
+/* 搜索框关键字 */
+.searchCon .searchKeyCon {
+  position: absolute;
+  top: 42px;
+  left: 0;
+  z-index: 99;
+  border: 1px solid #eee;
+  width: 282px;
+  display: none;
+}
+.searchCon .searchKeyCon li {
+  font-size: 12px;
+  line-height: 30px; 
+  color: #333;
+  background-color: #fff;
+  padding-left: 6px;
+}
+.searchCon .searchKeyCon li:hover {
+  font-size: 12px;
+  line-height: 30px;
+  color: #fff;
+  background-color: #684b34;
+}
+
+.searchCon .searchKeyCon .noData {
+  height: 200px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 200px;
+  color: #ddd;
+  background-color: #fff;
+}
+.searchCon .searchKeyCon .noData:hover {
+  font-size: 16px;
+  text-align: center;
+  line-height: 200px;
+  color: #ddd;
+  background-color: #fff;
 }
 
 /* z-navWrap E */

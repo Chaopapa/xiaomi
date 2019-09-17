@@ -29,6 +29,88 @@ function changeColor() {
 }
 changeColor();
 
+// 关键字搜索
+(function () {
+
+  // 当点击了搜索框，输入文字时，发送 ajax 请求，当有匹配的元素中,增加到 ul 中
+  //   百度关键词：
+  // url地址:http://suggestion.baidu.com/su
+
+  // -----请求参数-----
+  //    cb      回调函数
+  //    wd      关键词
+
+  // -----返回数据-----
+  // JSON返回示例：
+  // {
+  //    q: "123",
+  //    p: false,
+  //    s: [
+  //       0: "12306"
+  //       1: "12306铁路客户服务中心"
+  //       2: "12306火车票网上订票官网"
+  //       3: "12333"
+  //       4: "12333社保查询网"
+  //       5: "12306验证码识别"
+  //       6: "123网址之家"
+  //       7: "12345"
+  //       8: "123456hd"
+  //       9: "12308"
+  //    ]
+  // }
+
+  let $input = $('.search_form .searchIpt');
+  let $searchKeyCon = $('.searchCon .searchKeyCon');
+
+  $input.keyup(function () {
+
+    let value = $input.val();
+
+    if (value == '') {
+      $searchKeyCon.css('display', 'none');
+      return false;
+    }
+
+    // 当输入框 输入时
+    // 发送 ajax 获取到数据，动态添加到 searchKeyCon 中，再显示 searchKeyCon
+    $.ajax({
+      type: 'get',
+      url: 'http://suggestion.baidu.com/su',
+      dataType: 'jsonp',
+      jsonp: 'cb',
+      jsonpCallback: 'myCallback',
+      timeout: 4000,
+      data: `wd=${value}`,
+      success: function (json) {
+        let tmpStr = '';
+        // 如果没有关键字
+        if (json.s.length == 0) {
+          console.log(1)
+          // 不能直接写在页面上，不然会被覆盖
+          tmpStr += `<li class="noData">小主，暂无数据哦 ~</li>`;
+        } else {
+          for (let i = 0; i < json.s.length; i++) {
+            tmpStr += `<li>${json.s[i]}</li>`;
+          }
+        }
+
+        $searchKeyCon.html(tmpStr);
+        $searchKeyCon.css('display', 'block');
+
+      },
+      error: function (err) {
+        console.log(err);
+      }
+    });
+
+  });
+
+
+
+
+
+})();
+
 // 当滚动到一定高度时,z-navWrap 板块变成了粘性定位
 $(window).scroll(function (e) {
   let $navWrap = $('.z-navWrap');
@@ -527,19 +609,19 @@ drawContent();
 
 // Z-sideBar S
 
-(function() {
+(function () {
 
   // 点击回到顶部： 一： 锚点链接 二： 定时器
 
-// 点击回到顶部的时候，获取当前页面的滚动条
-// 设置一个定时器，每次减去多少，知道页面的 scrollTop 等于 0 清除定时器
-// 直接使用动画了，不封装函数了
-// 注意: 使用 html, 不要使用 document 和 window ，也不要使用 body
+  // 点击回到顶部的时候，获取当前页面的滚动条
+  // 设置一个定时器，每次减去多少，知道页面的 scrollTop 等于 0 清除定时器
+  // 直接使用动画了，不封装函数了
+  // 注意: 使用 html, 不要使用 document 和 window ，也不要使用 body
 
   let timer; // 设置定时器
   let $toTop = $('.toTop');
 
-  $toTop.click(function() {
+  $toTop.click(function () {
     if ($('html').scrollTop() <= 0) {
       return false;
     }
@@ -547,8 +629,7 @@ drawContent();
       scrollTop: 0
     });
   });
-  
+
 })();
 
 // Z-sideBar E
-
