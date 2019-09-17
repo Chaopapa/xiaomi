@@ -26,28 +26,89 @@
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 20;
+    z-index: 21;
 }
 
-.banner-nav ul {
+.banner-nav ul.bn-list {
     padding: 20px 0;
+    position: relative;
 }
 
-.banner-nav ul li {
+.banner-nav .bn-list>li {
     height: 42px;
     padding-left: 30px;
     font-size: 14px;
 }
 
-.banner-nav ul li:hover {
+.banner-nav .bn-list>li:hover {
     background: #ff6700;
 }
 
-.banner-nav ul li a {
+.banner-nav .bn-list>li a {
     display: block;
     height: 42px;
     line-height: 42px;
     color: #fff;
+}
+
+.bn-show {
+    height: 458px;
+    position: absolute;
+    left: 234px;
+    top: 0;
+    z-index: 30;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .18);
+    display: none;
+}
+
+.show-col-2 {
+    width: 530px;
+}
+
+.show-col-3 {
+    width: 795px;
+}
+
+.show-col-4 {
+    width: 992px;
+}
+
+.bn-show ul {
+    width: 248px;
+    height: 458px;
+    float: left;
+}
+
+.bn-show ul li {
+    width: 225px;
+    height: 40px;
+    padding: 18px 20px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.bn-show ul li img {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+.bn-show ul li span {
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.bn-show ul li span:hover {
+    color: #ff6700;
 }
 
 .banner-carousel {
@@ -211,12 +272,50 @@
 .fc-time {
     float: left;
     width: 236px;
-    height: 342px;
+    height: 303px;
     background-color: #f1eded;
+    padding-top: 39px;
     text-align: center;
 }
 
-.fc-time .fct-round {}
+.fc-time .fct-round {
+    font-size: 21px;
+    color: #ef3a3b;
+    padding-top: 15px;
+}
+
+.fc-time img {
+    margin: 25px 0;
+}
+
+.fc-time .fct-desc {
+    color: rgba(0, 0, 0, .54);
+    font-size: 15px;
+}
+
+.fc-time .fct-time {
+    width: 168px;
+    margin: 28px auto 0;
+}
+
+.fc-time .fct-time span {
+    width: 46px;
+    height: 46px;
+    background: #605751;
+    color: #fff;
+    font-size: 24px;
+    line-height: 46px;
+    float: left;
+}
+
+.fc-time .fct-time i {
+    width: 15px;
+    height: 46px;
+    line-height: 46px;
+    color: #605751;
+    font-size: 28px;
+    float: left;
+}
 
 .fc-goodsBox {
     float: left;
