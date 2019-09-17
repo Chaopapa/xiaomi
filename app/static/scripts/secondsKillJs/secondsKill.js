@@ -71,13 +71,72 @@ function timeRange(beginTime, endTime, nowTime) {
     });
   }
 
+  // 传入 json 数据 和 判断字符，返回渲染的字符串
+  function renderStr(num, json, i) {
+    let tmpBStrNow = ''; // 现在抢购的内容
+    let tmpBStrOver = ''; // 抢购结束的内容
+    let tmpBStrFuture = ''; // 抢购未开始的内容
+
+
+    // 当点击事件发生时会进行的判断
+    if (num == 1) {
+      for (let j = 0; j < json[i].content.length; j++) {
+        tmpBStrNow += `
+            <li class="clearfix">
+            <img src="${json[i].content[j].imgUrl}" class="tabImg fl">
+            <div class="tabConWrap fr">
+              <h4 class="tit">${json[i].content[j].tit}</h4>
+              <span class="intro">${json[i].content[j].intro}</span>
+              <p class="price"><span class="nowPrice">${json[i].content[j].nowPrice}元</span><span class="oldPrice">${json[i].content[j].oldPrice}元</span></p>
+              <a href="javascript:;" class="now">登录后抢购</a>
+            </div>
+          </li>`;
+      }
+    } else if (num == 3) {
+      for (let j = 0; j < json[i].content.length; j++) {
+        tmpBStrOver += `
+            <li class="clearfix">
+            <img src="${json[i].content[j].imgUrl}" class="tabImg fl">
+            <div class="tabConWrap fr">
+              <h4 class="tit">${json[i].content[j].tit}</h4>
+              <span class="intro">${json[i].content[j].intro}</span>
+              <p class="percent"><span class="percentBar"><i></i></span><span class="percentNum">100%</span></p>
+              <p class="price"><span class="nowPrice">${json[i].content[j].nowPrice}元</span><span class="oldPrice">${json[i].content[j].oldPrice}元</span></p>
+              <a href="javascript:;" class="over">已结束</a>
+            </div>
+          </li>`;
+      }
+    } else if (num == 4) {
+      for (let j = 0; j < json[i].content.length; j++) {
+        tmpBStrOver += `
+            <li class="clearfix">
+            <img src="${json[i].content[j].imgUrl}" class="tabImg fl">
+            <div class="tabConWrap fr">
+              <h4 class="tit">${json[i].content[j].tit}</h4>
+              <span class="intro">${json[i].content[j].intro}</span>
+              <p class="price"><span class="nowPrice">${json[i].content[j].nowPrice}元</span><span class="oldPrice">${json[i].content[j].oldPrice}元</span></p>
+              <a href="javascript:;" class="future">未开始</a>
+              <p class="remind">已有<span class="remindNum">33</span>人设置提醒</p>
+            </div>
+          </li>`;
+      }
+    }
+
+    return {
+      tmpBStrNow,
+      tmpBStrOver,
+      tmpBStrOver
+    }
+
+  }
+
+
+
   // 渲染头部
   getData()
     .then(function (json) {
       let tmpHStr = ''; // 头部的渲染字符串
-      let tmpBStrNow = ''; // 现在抢购的内容
-      let tmpBStrOver = ''; // 抢购结束的内容
-      let tmpBStrFuture = ''; // 抢购未开始的内容
+      let tmpBStrArr = []; // 存放调用函数返回的对象
       let d = new Date();
       let h = d.getHours() > 9 ? d.getHours() : '0' + d.getHours();
       let m = d.getMinutes() > 9 ? d.getMinutes() : '0' + d.getMinutes();
@@ -109,48 +168,6 @@ function timeRange(beginTime, endTime, nowTime) {
             break;
         }
 
-        if (num == 1) {
-          for (let j = 0; j < json[i].content.length; j++) {
-            tmpBStrNow += `
-            <li class="clearfix">
-            <img src="${json[i].content[j].imgUrl}" class="tabImg fl">
-            <div class="tabConWrap fr">
-              <h4 class="tit">${json[i].content[j].tit}</h4>
-              <span class="intro">${json[i].content[j].intro}</span>
-              <p class="price"><span class="nowPrice">${json[i].content[j].nowPrice}元</span><span class="oldPrice">${json[i].content[j].oldPrice}元</span></p>
-              <a href="javascript:;" class="now">登录后抢购</a>
-            </div>
-          </li>`;
-          }
-        } else if (num == 3) {
-          for (let j = 0; j < json[i].content.length; j++) {
-            tmpBStrOver += `
-            <li class="clearfix">
-            <img src="${json[i].content[j].imgUrl}" class="tabImg fl">
-            <div class="tabConWrap fr">
-              <h4 class="tit">${json[i].content[j].tit}</h4>
-              <span class="intro">${json[i].content[j].intro}</span>
-              <p class="percent"><span class="percentBar"><i></i></span><span class="percentNum">100%</span></p>
-              <p class="price"><span class="nowPrice">${json[i].content[j].nowPrice}元</span><span class="oldPrice">${json[i].content[j].oldPrice}元</span></p>
-              <a href="javascript:;" class="over">已结束</a>
-            </div>
-          </li>`;
-          }
-        } else if (num == 4) {
-          for (let j = 0; j < json[i].content.length; j++) {
-            tmpBStrFuture += `
-            <li class="clearfix">
-            <img src="${json[i].content[j].imgUrl}" class="tabImg fl">
-            <div class="tabConWrap fr">
-              <h4 class="tit">${json[i].content[j].tit}</h4>
-              <span class="intro">${json[i].content[j].intro}</span>
-              <p class="price"><span class="nowPrice">${json[i].content[j].nowPrice}元</span><span class="oldPrice">${json[i].content[j].oldPrice}元</span></p>
-              <a href="javascript:;" class="future">未开始</a>
-              <p class="remind">已有<span class="remindNum">33</span>人设置提醒</p>
-            </div>
-          </li>`;
-          }
-        }
 
         // 如果 num 等于 1 ，说明正在抢购，添加类 
         // 显示正在抢购的页面数据，默认是第一个数据的内容
@@ -159,15 +176,21 @@ function timeRange(beginTime, endTime, nowTime) {
           <span class="time">${startTime}</span>
           <span class="info">${tmpInfo}</span>
         </li>`;
+
         } else {
           tmpHStr += `<li>
       <span class="time">${startTime}</span>
       <span class="info">${tmpInfo}</span>
     </li>`;
         }
+
+        // 存入数组中
+        tmpBStrArr.push(renderStr(num, json, i));
+
       }
 
       $tabsHeader.html(tmpHStr);
+      console.log(tmpBStrArr);
 
     }, function (err) {
       console.log(err);
