@@ -250,6 +250,6 @@
 
     _shoppingCart($('.cart-show'), 80, 20);
     //二维码下载效果
-
+    _mouseShow($('.app-code'), 148, 20);
 
 })();
