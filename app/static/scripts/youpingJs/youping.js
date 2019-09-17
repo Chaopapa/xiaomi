@@ -1,4 +1,34 @@
 // 公共
+
+// 查找 cookie
+
+function getCookie(key) {
+  let arr1 = document.cookie.split(';');
+  for(let i = 0; i < arr1.length; i ++) {
+    let arr2 = arr1[i].split('=');
+    if (arr2[0] == key) {
+      return unescape(arr2[1]);
+    }
+  }
+  return '';
+}
+
+// 设置 cookie
+function setCookie(key, val, hours) {
+  if (hours) {
+    let d = new Date();
+    d.setHours(d.getHours() + hours);
+    document.cookie = `${key}=${escape(val)};expires=${d}`;
+  }else {
+    document.cookie = `${key}=${escape(val)}`;
+  }
+}
+
+// 删除 cookie
+function deleteCookie(key) {
+  setCookie(key, '123', -10);
+}
+
 // 'use strict'
 
 //  z-headerWrap S
@@ -351,11 +381,18 @@ function renderNavList() {
   // 倒计时函数
   function countdown(expectedHour) {
 
-    // 首先查看本地缓存中有没有缓存的数据
-    
+    // 首先查看本地缓存中有没有结束时间的数据 
+    // 如果有，取出，赋值
+    // 如果没有，设置 cookie
 
     let startDate = new Date().getTime(); // 开始时间
     let endDate = new Date(startDate + expectedHour * 60 * 60 * 1000).getTime(); // 结束时间
+
+    if (getCookie('endDate')) {
+      endDate = getCookie('endDate');
+    }else {
+      setCookie('endDate', endDate, expectedHour);
+    }
 
     // 设置一个定时器，每秒都去获取
     clearInterval(timer);
