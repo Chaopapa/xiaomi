@@ -111,29 +111,75 @@
     height: 56px;
     width: 56px;
     margin-top: 17px;
-    background: #ff6700 url(../images/mi-logo.png) no-repeat 50% 50%;
     color: #fff;
     float: left;
     cursor: pointer;
+    background-color: #ff6700;
+    position: relative;
+}
+
+.slider:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 55px;
+    height: 55px;
+    content: "";
+    transform: translateZ(0);
+    background: url(../images/mi-logo.png) no-repeat 50% 50%;
+    opacity: 1;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.slider:hover:before {
+    transform: translate3d(55px, 0, 0);
+}
+
+.slider:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 55px;
+    height: 55px;
+    content: "";
+    background: url(../images/mi-home.png) no-repeat 50% 50%;
+    margin-left: -55px;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.slider:hover:after {
+    transform: translate3d(55px, 0, 0);
 }
 
 .all-header-nav {
     float: left;
     margin-left: 179px;
-    line-height: 100px;
 }
 
-.all-header-nav ul {
+.all-header-nav .ahn-list {
     overflow: hidden;
 }
 
-.all-header-nav ul li {
+.all-header-nav .ahn-list li {
     float: left;
-    padding: 0 10px;
     font-size: 16px;
 }
 
-.all-header-nav ul li a:hover {
+.all-header-nav .ahn-list li a {
+    display: block;
+    padding: 0 10px;
+    line-height: 100px;
+}
+
+.all-header-nav .ahn-list li a:hover {
     color: #ff6700;
 }
 
@@ -173,6 +219,40 @@
 .all-header-search form input[type="submit"]:hover {
     color: #fff;
     background: #ff6700;
+}
+
+.ah-list {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    background-color: #fff;
+    z-index: 22;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    display: none;
+}
+
+.ah-list .ac-list li {
+    width: 180px;
+    padding: 35px 12px 0;
+    text-align: center;
+    float: left;
+}
+
+.ah-list .ac-list li img {
+    width: 160px;
+    height: 110px;
+    margin-bottom: 16px;
+}
+
+.ah-list .ac-list li .title {
+    line-height: 20px;
+}
+
+.ah-list .ac-list li .price {
+    line-height: 20px;
+    font-size: 12px;
 }
 
 

@@ -183,20 +183,17 @@
         clearInterval(this.timer);
         this.timer = setInterval(() => {
             var speed = 5;
-            console.log(this.$target);
             speed = this.nowHeight >= targetH ? speed : (-speed);
 
             if (Math.abs(speed) >= Math.abs(targetH - this.nowHeight)) {
                 this.nowHeight = targetH;
                 this.$target.css('height', targetH + 'px');
-                console.log(this.nowHeight);
                 clearInterval(this.timer);
                 return;
             }
 
             this.nowHeight -= speed;
             this.$target.css('height', this.nowHeight + 'px');
-            console.log(this.nowHeight);
 
         }, this.time);
     };
@@ -251,5 +248,36 @@
     _shoppingCart($('.cart-show'), 80, 20);
     //二维码下载效果
     _mouseShow($('.app-code'), 148, 20);
+
+    /**
+     * 写头部展开效果
+     */
+    var headerExpand = {
+        //操作目标
+        list: $('.ahn-list'),
+
+        //事件初始化
+        eventInit: function() {
+            this.expandEvent();
+            this.collapseEvent();
+        },
+        //展开事件
+        expandEvent: function() {
+            //使用事件委托
+            this.list.mouseover(function(event) {
+                var target = event.target;
+                console.log(target);
+            });
+        },
+        //收起事件
+        collapseEvent: function() {
+            this.list.mouseout(function(event) {
+                var target = event.target;
+                console.log(target);
+            });
+        }
+
+    };
+    headerExpand.eventInit();
 
 })();
