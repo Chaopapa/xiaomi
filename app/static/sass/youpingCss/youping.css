@@ -7,6 +7,9 @@
 body,
 html {
   width: 100%;
+  /* 不让用户选中 */
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .fl {
@@ -470,6 +473,7 @@ textarea::-webkit-input-placeholder {
   width: 858px;
   height: 360px;
   position: relative;
+  z-index: 0;
 }
 
 /* 轮播图片 */
@@ -767,6 +771,8 @@ span.redS {
 /* Z-timeLimited S */
 .Z-timeLimited, .Z-newPro {
   margin-top: 14px;
+  z-index: 0;
+  position: relative;
 }
 
 .timeLimited, .newPro {
@@ -993,11 +999,11 @@ span.redS {
 .Z-footer {
   margin-top: 60px;
   border-top: 1px solid #eee;
-  height: 90px;
+  height: 95px;
   padding-top: 48px;
 }
 .footer {
-  height: 90px;
+  height: 95px;
 }
 /* 底部 log 部分 */
 .footer .footLog {
@@ -1033,6 +1039,166 @@ span.redS {
 }
 
 /* Z-footer E */
+
+/* Z-sideBar S */
+.sideBar {
+  width: 82px;
+  position: fixed;
+  right: 10px;
+  top: 220px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .1);
+}
+.sideBar > li {
+  width: 82px;
+  position: relative;
+}
+.sideHeader {
+  padding-bottom: 8px;
+}
+.sideBar > li .sideHeader {
+  width: 74px;
+  border-bottom: 1px solid #efefef;
+  margin-left: 4px;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+}
+
+.sideBar > li .sideHeader:hover {
+  color: #845f3f;
+}
+
+.sideBar > li .sideIcon {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 8px 22px 0px;
+}
+
+
+/* 每个位置的 icon */
+.contactUs .sideIcon {
+  background-position: 0 -1628px;
+}
+
+.upload .sideIcon {
+  background-position: 0 -1254px;
+}
+
+.personGifts .sideIcon {
+  background-position: 0 -778px;
+}
+
+.weixin .sideIcon {
+  background-position: 0 -982px;
+}
+
+.toTop .sideIcon {
+  background-position: 0 -1288px;
+}
+/* 经过时改变图标的位置 */
+.contactUs .sideHeader:hover .sideIcon{
+  background-position: 0 -1594px;
+}
+.upload .sideHeader:hover .sideIcon{
+  background-position: 0 -1220px;
+}
+.personGifts .sideHeader:hover .sideIcon{
+  background-position: 0 -744px;
+}
+.weixin .sideHeader:hover .sideIcon{
+  background-position: 0 -1764px;
+}
+.toTop .sideHeader:hover .sideIcon{
+  background-position: 0 -1322px;
+}
+
+
+/* 经过时显示隐藏的内容 */
+
+.sideBar > li .sideContent {
+  position: absolute;
+  right: 92px;
+  top: 0;
+  z-index: 99;
+  border: 1px solid #eee;
+  padding: 10px 18px;
+  display: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #333;
+  text-align: center;
+  background-color: #fff;
+}
+
+.sideBar > li:hover > .sideContent {
+  display: block;
+}
+/* 联系我们 */
+.contactUs .sideContent p {
+  text-align: center;
+  width: 202px;
+}
+.contactUs .sideInfo {
+  width: 192px;
+  margin: 8px 0 10px;
+}
+.contactUs .sidePhone {
+  font-size: 16px;
+  color: #845f3f;
+}
+.contactUs .sideDay {
+  font-size: 12px;
+  color: #666;
+}
+
+/* 下载 APP */
+.upload .sideContent img {
+  width: 88px;
+  height: 88px;
+}
+.upload .sideContent p {
+  width: 100px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* 新人礼包 */
+.personGifts .sideContent{
+  text-align: center;
+}
+.personGifts .giftsImg{
+  width: 190px;
+  height: 152px;
+  background: url('../../images/youpingImage/giftsImg.png') no-repeat center;
+  background-size: contain;
+}
+.personGifts img {
+  width: 88px;
+  height: 88px;
+  margin-top: 15px;
+}
+.personGifts p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* 关注微信 */
+.weixin .sideContent img {
+  width: 88px;
+  height: 88px;
+}
+.weixin .sideContent p {
+  width: 190px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* 回到首页 */
+
+/* Z-sideBar E */
 
 
 

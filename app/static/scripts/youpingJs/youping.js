@@ -7,10 +7,10 @@
 function showClause() {
   $('.m-rules').on('mouseover', function () {
     $('.m-clause-con').show();
-  })
+  });
   $('.m-rules').on('mouseout', function () {
     $('.m-clause-con').hide();
-  })
+  });
 }
 showClause();
 
@@ -22,10 +22,10 @@ showClause();
 function changeColor() {
   $('.searchIpt').on('focus', function () {
     $('.search_form').css('border-color', '#845f3f');
-  })
+  });
   $('.searchIpt').on('blur', function () {
     $('.search_form').css('border-color', '#efefef');
-  })
+  });
 }
 changeColor();
 
@@ -41,7 +41,7 @@ $(window).scroll(function (e) {
     $navWrap.removeClass('stickyWrap');
     $classify.css('display', 'none');
   }
-})
+});
 // z-navWrap E
 
 // z-bannerWrap S
@@ -112,7 +112,7 @@ function renderNavList() {
     }
 
 
-  })
+  });
 
 }
 
@@ -504,7 +504,7 @@ function drawContent() {
 
 }
 
-drawContent()
+drawContent();
 
 // Z-timeLimited E
 
@@ -524,3 +524,31 @@ drawContent()
 /* Z-footer S */
 // 底部栏
 /* Z-footer E */
+
+// Z-sideBar S
+
+(function() {
+
+  // 点击回到顶部： 一： 锚点链接 二： 定时器
+
+// 点击回到顶部的时候，获取当前页面的滚动条
+// 设置一个定时器，每次减去多少，知道页面的 scrollTop 等于 0 清除定时器
+// 直接使用动画了，不封装函数了
+// 注意: 使用 html, 不要使用 document 和 window ，也不要使用 body
+
+  let timer; // 设置定时器
+  let $toTop = $('.toTop');
+
+  $toTop.click(function() {
+    if ($('html').scrollTop() <= 0) {
+      return false;
+    }
+    $('html').animate({
+      scrollTop: 0
+    });
+  });
+  
+})();
+
+// Z-sideBar E
+
