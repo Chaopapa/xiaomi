@@ -255,6 +255,10 @@
     var headerExpand = {
         //操作目标
         list: $('.ahn-list'),
+        //状态
+        status: 'collapse',
+        //操作目标
+        target: $('.ah-list'),
 
         //事件初始化
         eventInit: function() {
@@ -264,18 +268,94 @@
         //展开事件
         expandEvent: function() {
             //使用事件委托
+            var self = this;
             this.list.mouseover(function(event) {
                 var target = event.target;
-                console.log(target);
+                if ($(target).parent().attr('data-index') < 7) {
+                    if (self.status == 'collapse') {
+                        console.log('展开');
+                        self.expand();
+                        self.status = 'expand';
+                        // $(self.target).mouseover(function() {
+                        //     $(self.target).mouseout(function(e) {
+                        //         var toE = event.relatedTarget;
+                        //         while (toE) {
+                        //             console.log(toE);
+
+                        //             if ($(toE).hasClass('ah-list')) {
+                        //                 return;
+                        //             }
+                        //             toE = toE.parentNode;
+                        //         }
+                        //         self.collapse();
+                        //         self.status = 'collapse';
+                        //     });
+                        // })
+                    }
+                    //TODO:ajax请求,tab切换
+
+                } else {
+                    console.log('收起');
+                    self.collapse();
+                    self.status = 'collapse';
+                }
             });
         },
         //收起事件
         collapseEvent: function() {
+            var self = this;
             this.list.mouseout(function(event) {
-                var target = event.target;
-                console.log(target);
+                var toE = event.relatedTarget;
+                while (toE) {
+                    if ($(toE).hasClass('ah-list')) {
+                        $(self.target).mouseout(function(e) {
+
+                            var toE = e.relatedTarget;
+                            while (toE) {
+                                if ($(toE).hasClass('ah-list')) {
+                                    return;
+                                }
+                                toE = toE.parentNode;
+                            }
+                            console.log(1);
+                            self.collapse();
+                            self.status = 'collapse';
+                        });
+                        return;
+                    }
+                    toE = toE.parentNode;
+                }
+                self.collapse();
+                self.status = 'collapse'
             });
-        }
+        },
+
+        //展开操作
+        expand: function() {
+            $(this.target).css('display', 'block');
+            $(this.target).addClass('ahl-active');
+            $(this.target).removeClass('ahl-up');
+            $(this.target).addClass('ahl-down');
+
+
+        },
+
+        //收起操作
+        collapse: function() {
+            $(this.target).addClass('ahl-up');
+            $(this.target).removeClass('ahl-down');
+            $(this.target).removeClass('ahl-active');
+            $(this.target).css('display', 'none');
+        },
+
+        // //listEvent
+        // listEvent: function() {
+        //     var self = this;
+        //     $(this.target).mouseout(function() {
+        //         self.collapse();
+        //         self.status = 'collapse';
+        //     })
+        // }
 
     };
     headerExpand.eventInit();

@@ -107,6 +107,11 @@
     height: 100px;
 }
 
+.all-header .container {
+    position: relative;
+    z-index: 1;
+}
+
 .slider {
     height: 56px;
     width: 56px;
@@ -223,14 +228,26 @@
 
 .ah-list {
     width: 100%;
-    height: 0;
     position: absolute;
     background-color: #fff;
     z-index: 22;
     border-top: 1px solid #e0e0e0;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
     overflow: hidden;
     display: none;
+    height: 0;
+}
+
+.ahl-active {
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+    transition: box-shadow .2s, height .3s, -webkit-box-shadow .2s;
+}
+
+.ahl-up {
+    height: 0;
+}
+
+.ahl-down {
+    height: 299px;
 }
 
 .ah-list .ac-list li {
@@ -238,6 +255,7 @@
     padding: 35px 12px 0;
     text-align: center;
     float: left;
+    cursor: pointer;
 }
 
 .ah-list .ac-list li img {
