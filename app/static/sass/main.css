@@ -93,6 +93,7 @@
     overflow: hidden;
     right: 0;
     top: 42px;
+    z-index: 19;
 }
 
 .cart-show span {

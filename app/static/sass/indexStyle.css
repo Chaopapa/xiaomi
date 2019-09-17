@@ -213,7 +213,10 @@
     width: 236px;
     height: 342px;
     background-color: #f1eded;
+    text-align: center;
 }
+
+.fc-time .fct-round {}
 
 .fc-goodsBox {
     float: left;
