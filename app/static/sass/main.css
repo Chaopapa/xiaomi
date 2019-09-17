@@ -278,17 +278,159 @@
 /* 公用底部 */
 
 .all-footer {
-    height: 192px;
-    padding: 40px 0;
     background: #fff;
+}
+
+.af-nav {
+    padding: 27px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.af-nav ul li {
+    float: left;
+    width: 19.8%;
+    height: 25px;
+    line-height: 25px;
+    font-size: 16px;
+    text-align: center;
+    border-left: 1px solid #e0e0e0;
+}
+
+.af-nav ul li:first-child {
+    border-left: 0;
+}
+
+.af-nav ul li a {
+    transition: color .2s;
+}
+
+.af-nav ul li a:hover {
+    color: #FF6700;
+}
+
+.af-list {
+    padding: 40px 0;
+}
+
+.af-list dl {
+    float: left;
+    width: 160px;
+    height: 112px;
+}
+
+.af-list dl dt {
+    margin: -1px 0 26px;
+    font-size: 14px;
+    line-height: 1.25;
+    color: #424242;
+}
+
+.af-list dl dd {
+    margin: 10px 0 0;
+}
+
+.af-list dl dd:hover {
+    color: #FF6700;
+    cursor: pointer;
+}
+
+.afl-info {
+    float: right;
+    width: 251px;
+    height: 112px;
+    border-left: 1px solid #e0e0e0;
+    text-align: center;
+    color: #616161;
+}
+
+.afi-phone {
+    margin: 0 0 5px;
+    font-size: 22px;
+    line-height: 1;
+    color: #ff6700;
+}
+
+.afi-time {
+    margin: 0 0 16px;
+    font-size: 12px;
+}
+
+.afi-btn {
+    display: inline-block;
+    width: 118px;
+    height: 28px;
+    font-size: 12px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid #FF6700;
+    color: #FF6700;
+    background-color: #fff;
+    transition: all .4s;
+}
+
+.afi-btn:hover {
+    background-color: #F25807;
+    color: #fff;
 }
 
 
 /* 公用底部信息 */
 
 .all-info {
-    height: 228px;
+    height: 172px;
+    padding: 30px 0;
     background-color: #fafafa;
+}
+
+.all-info .container {
+    position: relative;
+}
+
+.ai-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 57px;
+    height: 57px;
+    background: url(../images/logo-footer.png) no-repeat;
+}
+
+.ai-text {
+    height: 91px;
+    padding-left: 67px;
+}
+
+.ai-text ul li {
+    float: left;
+    font-size: 12px;
+    color: #757575;
+    padding: 0 1px;
+    line-height: 14px;
+    cursor: pointer;
+}
+
+.ai-text ul li:hover {
+    color: #F25807;
+}
+
+.ai-text p {
+    line-height: 18px;
+    color: #b0b0b0;
+}
+
+.ai-link {
+    padding-left: 67px;
+}
+
+.ai-link img {
+    height: 28px;
+}
+
+.ai-topic {
+    margin: 30px auto 0;
+    width: 267px;
+    height: 19px;
+    background: url('../images/slogan2016.png') center 0 no-repeat;
 }
 
 
