@@ -262,7 +262,37 @@
 /* 小米闪购 */
 
 .flashBuy {
+    position: relative;
     height: 402px;
+}
+
+.f-control {
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 24px;
+}
+
+.f-control span {
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    padding: 3px 5px;
+    margin-left: -1px;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 16px;
+    -webkit-transition: color .5s;
+    transition: color .5s;
+    color: #b0b0b0;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none
+}
+
+.f-control span:hover {
+    color: #ff6700;
 }
 
 .f-content {
@@ -272,10 +302,11 @@
 .fc-time {
     float: left;
     width: 236px;
-    height: 303px;
+    height: 300px;
     background-color: #f1eded;
     padding-top: 39px;
     text-align: center;
+    border-top: 1px solid #e53935;
 }
 
 .fc-time .fct-round {
@@ -317,19 +348,62 @@
     float: left;
 }
 
-.fc-goodsBox {
+.f-carousel {
+    width: 976px;
+    margin-left: 14px;
     float: left;
-    width: 990px;
     overflow: hidden;
+}
+
+.fc-goodsBox {
+    width: 10000px;
 }
 
 .fcg-goods {
     float: left;
     width: 234px;
-    height: 342px;
-    margin-left: 13px;
+    height: 339px;
+    /* height: 322px; */
+    margin-right: 14px;
+    min-height: 1px;
     background: #fff;
+    border-top: 1px solid #fff;
+    text-align: center;
     cursor: pointer;
+}
+
+.fcg-goods img {
+    width: 160px;
+    height: 160px;
+    margin: 39px 0 22px;
+}
+
+.fcg-g-title {
+    font-size: 14px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    color: #212121;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.fcg-g-desc {
+    height: 18px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    color: #b0b0b0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.fcg-goods p {
+    font-size: 13px;
+    color: #ff6709;
+}
+
+.fcg-goods p del {
+    color: #b0b0b0;
 }
 
 

@@ -1,0 +1,110 @@
+[{
+        "color": "#fff",
+        "picture": "../static/images/flashBuy/router-f.jpg",
+        "title": "小米路由器4C 白色",
+        "desc": "300M单频，高增益4天线",
+        "nowPrice": 59,
+        "beforePrice": "99元"
+    },
+    {
+        "color": "#fff",
+        "picture": "../static/images/flashBuy/yingxiang-f.jpg",
+        "title": "小米AI音箱",
+        "desc": "听音乐、语音遥控家电",
+        "nowPrice": 229,
+        "beforePrice": "299元"
+    },
+    {
+        "color": "#fff",
+        "picture": "../static/images/flashBuy/computer-f.jpg",
+        "title": "小米笔记本电脑 15.6\" i3 4G 256G 集显 白色",
+        "desc": "全面均衡的国民轻薄本",
+        "nowPrice": 2999,
+        "beforePrice": "3699元"
+    },
+    {
+        "color": "#fff",
+        "picture": "../static/images/flashBuy/jinghua-f.jpg",
+        "title": "净化器滤芯 通用版",
+        "desc": "3层高效净化悬浮物",
+        "nowPrice": 129,
+        "beforePrice": "149元"
+    },
+
+
+
+    {
+        "color": "#fff",
+        "picture": "../static/images/flashBuy/blue-f.jpg",
+        "title": "小米蓝牙音频接收器 通用",
+        "desc": "尽享无线音乐",
+        "nowPrice": 69,
+        "beforePrice": "99元"
+    },
+    {
+        "color": "#fff",
+        "picture": "../static/images/flashBuy/yingxiang2-f.jpg",
+        "title": "小米小爱音箱 Play（白色）量产版 白色",
+        "desc": "听音乐、语音遥控家电",
+        "nowPrice": 99,
+        "beforePrice": "169元"
+    },
+    {
+        "color": "#fff",
+        "picture": "../static/images/flashBuy/watch-f.jpg",
+        "title": "米兔儿童电话手表2 蓝色",
+        "desc": "6 天使用，10 天待机",
+        "nowPrice": 299,
+        "beforePrice": "399元"
+    },
+
+    {
+        "color": "#fff",
+        "picture": "../static/images/flashBuy/erji-f.jpg",
+        "title": "高品质多功能头戴耳机",
+        "desc": "我的私人KTV",
+        "nowPrice": 199,
+        "beforePrice": "249元"
+    },
+
+
+
+    {
+        "color": "#fff",
+        "picture": "../static/images/flashBuy/router2-f.jpg",
+        "title": "小米路由器Pro 星空灰",
+        "desc": "全新一代智能家庭中心",
+        "nowPrice": 399,
+        "beforePrice": "499元"
+    },
+    {
+        "color": "#fff",
+        "picture": "../static/images/flashBuy/lock-f.jpg",
+        "title": "小米米家智能门锁 磨砂金 霸王锁体 磨砂金",
+        "desc": "听音乐、语音遥控家电",
+        "nowPrice": 1599,
+        "beforePrice": "1799元"
+    },
+    {
+        "color": "#fff",
+        "picture": "../static/images/flashBuy/computer02-f.jpg",
+        "title": "小米游戏本15.6\"  8代i7 GTX1060 16G 512G SSD 灰色",
+        "desc": "性能怪兽 信仰级游戏体验",
+        "nowPrice": 7499,
+        "beforePrice": "8999元"
+    },
+
+    {
+        "color": "#fff",
+        "picture": "../static/images/flashBuy/wind-f.jpg",
+        "title": "追觅智能温控吹风机 白色",
+        "desc": "头发艺术家",
+        "nowPrice": 1099,
+        "beforePrice": "1299元"
+    }
+
+
+
+
+
+]
