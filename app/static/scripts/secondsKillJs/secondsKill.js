@@ -92,6 +92,11 @@ function timeRange(beginTime, endTime, nowTime) {
             </div>
           </li>`;
       }
+
+      return {
+        tmpBStrNow
+      }
+
     } else if (num == 3) {
       for (let j = 0; j < json[i].content.length; j++) {
         tmpBStrOver += `
@@ -106,9 +111,14 @@ function timeRange(beginTime, endTime, nowTime) {
             </div>
           </li>`;
       }
+
+      return {
+        tmpBStrOver
+      }
+
     } else if (num == 4) {
       for (let j = 0; j < json[i].content.length; j++) {
-        tmpBStrOver += `
+        tmpBStrFuture += `
             <li class="clearfix">
             <img src="${json[i].content[j].imgUrl}" class="tabImg fl">
             <div class="tabConWrap fr">
@@ -120,23 +130,23 @@ function timeRange(beginTime, endTime, nowTime) {
             </div>
           </li>`;
       }
-    }
 
-    return {
-      tmpBStrNow,
-      tmpBStrOver,
-      tmpBStrOver
+      return {
+        tmpBStrFuture
+      }
+     
     }
 
   }
 
 
 
-  // 渲染头部
+  // 渲染头部 和 默认的页面部分
   getData()
     .then(function (json) {
       let tmpHStr = ''; // 头部的渲染字符串
-      let tmpBStrArr = []; // 存放调用函数返回的对象
+      let tmpBStr = ''; // 内容的字符串
+      let num0 = 1;
       let d = new Date();
       let h = d.getHours() > 9 ? d.getHours() : '0' + d.getHours();
       let m = d.getMinutes() > 9 ? d.getMinutes() : '0' + d.getMinutes();
@@ -168,6 +178,92 @@ function timeRange(beginTime, endTime, nowTime) {
             break;
         }
 
+        if (i == 0) {
+          num0 = num; // 保存 num 的值
+        }
+
+
+        // 如果 num 等于 1 ，说明正在抢购，添加类 
+        // 显示正在抢购的页面数据，默认是第一个数据的内容
+        if (num == 1) {
+          tmpHStr += `<li class="now">
+          <span class="time">${startTime}</span>
+          <span class="info">${tmpInfo}</span>
+        </li>`;
+
+          tmpBStr = renderStr(num, json, i).tmpBStrNow;
+
+        } else {
+          tmpHStr += `<li>
+      <span class="time">${startTime}</span>
+      <span class="info">${tmpInfo}</span>
+    </li>`;
+
+         
+        }
+
+      }
+
+      if (!tmpBStr) { // 如果有正在抢购的就显示正在抢购的，否则就进入这里
+        tmpBStr = renderStr(num0, json, 0).tmpBStrFuture ? renderStr(num0, json, 0).tmpBStrFuture : renderStr(num0, json, 0).tmpBStrOver;
+      }
+
+      $tabsHeader.html(tmpHStr);
+      $secondsKillContent.html(tmpBStr);
+      
+
+    }, function (err) {
+      console.log(err);
+    })
+    .catch(function (err) {
+      console.log(err);
+    });
+
+  // 当用户点击了头部的时候
+
+  $tabsHeader.on('click', 'li', function () {
+    let index = $(this).index();
+
+    getData()
+    .then(function (json) {
+      let tmpHStr = ''; // 头部的渲染字符串
+      let tmpBStr = ''; // 内容的字符串
+      let num0 = 1;
+      let d = new Date();
+      let h = d.getHours() > 9 ? d.getHours() : '0' + d.getHours();
+      let m = d.getMinutes() > 9 ? d.getMinutes() : '0' + d.getMinutes();
+      let nowTime = `${h}:${m}`;
+      for (let i = 0; i < json.length; i++) {
+
+        let e = new Date();
+        let startTime = json[i].time;
+        let arr1 = startTime.split(':');
+        let eH = (parseInt(arr1[0]) + 3) > 9 ? (parseInt(arr1[0]) + 3) : '0' + (parseInt(arr1[0]) + 3);
+        let endTime = `${eH}:00`;
+        // 进行判断
+        let num = timeRange(startTime, endTime, nowTime);
+
+        let tmpInfo = '';
+        // 根据返回的数字进行判断 // 正在抢购: 1  即将开始: 2  活动已结束: 3  活动未开始: 4
+        switch (num) {
+          case 1:
+            tmpInfo = '正在抢购';
+            break;
+          case 2:
+            tmpInfo = '即将开始';
+            break;
+          case 3:
+            tmpInfo = '活动已结束';
+            break;
+          case 4:
+            tmpInfo = '活动未开始';
+            break;
+        }
+
+        if (i == index) {
+          num0 = num; // 保存 index 对应的num值
+        }
+
 
         // 如果 num 等于 1 ，说明正在抢购，添加类 
         // 显示正在抢购的页面数据，默认是第一个数据的内容
@@ -182,15 +278,27 @@ function timeRange(beginTime, endTime, nowTime) {
       <span class="time">${startTime}</span>
       <span class="info">${tmpInfo}</span>
     </li>`;
-        }
 
-        // 存入数组中
-        tmpBStrArr.push(renderStr(num, json, i));
+         
+        }
 
       }
 
+      let objS = renderStr(num0, json, index);
+
+      if (objS.tmpBStrNow) {
+        tmpBStr = objS.tmpBStrNow;
+      }else if (objS.tmpBStrFuture) {
+        tmpBStr = objS.tmpBStrFuture;
+      }else if (objS.tmpBStrOver) {
+        tmpBStr = objS.tmpBStrOver;
+      }else {
+        console.log('没有符合的数据');
+      }
+
       $tabsHeader.html(tmpHStr);
-      console.log(tmpBStrArr);
+      $secondsKillContent.html(tmpBStr);
+      
 
     }, function (err) {
       console.log(err);
@@ -198,6 +306,8 @@ function timeRange(beginTime, endTime, nowTime) {
     .catch(function (err) {
       console.log(err);
     });
+
+  });
 
 
 
