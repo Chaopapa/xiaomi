@@ -1,0 +1,193 @@
+/* 公共样式 */
+.w1226 {
+  width: 1226px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* 小米秒杀部分 */
+.Z-secondsKillWrap {
+  margin-top: 50px;
+  min-height: 1430px;
+  background-color: #f5f5f5;
+}
+
+/* 小米秒杀的头部 */
+.secondsKillHeader {
+  height: 70px;
+  padding-top: 102px;
+  background: url('../../images/secondsKillImage/bgc.jpg') no-repeat top center;
+  background-size: 1226px 102px;
+}
+
+.tabsHeader {}
+
+.tabsHeader>li {
+  width: 245px;
+  height: 70px;
+  background-color: #414141;
+  text-align: center;
+  line-height: 70px;
+  float: left;
+  cursor: pointer;
+}
+
+.tabsHeader>li span {
+  font-size: 16px;
+  color: #f8f8f0;
+  margin: 0 8px;
+}
+
+/* 正在抢购 */
+.tabsHeader>li.now {
+  background-color: #f1393a;
+}
+
+/* 小米秒杀的内容 */
+.secondsKillContent {
+  margin-top: 20px;
+}
+
+.secondsKillContent>li {
+  width: 402px;
+  height: 194px;
+  background-color: skyblue;
+  margin-right: 10px;
+  float: left;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.secondsKillContent>li:hover {
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  -webkit-transform: translate3d(0, -2px, 0);
+  transform: translate3d(0, -2px, 0);
+}
+
+.secondsKillContent>li:nth-of-type(3n) {
+  margin-right: 0;
+}
+
+/* 商品图片 */
+.secondsKillContent .tabImg {
+  display: block;
+  width: 190px;
+  height: 194px;
+}
+
+/* 商品信息 */
+.secondsKillContent .tabConWrap {
+  width: 192px;
+  height: 194px;
+  background-color: #fff;
+  padding-left: 20px;
+}
+
+.tabConWrap .tit {
+  margin-top: 22px;
+  font-size: 16px;
+  line-height: 32px;
+  font-style: normal;
+  color: #333;
+}
+
+.tabConWrap .intro {
+  color: #666;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 25px;
+}
+
+.tabConWrap .percentBar {
+  display: inline-block;
+  width: 150px;
+  height: 6px;
+  background-color: #fff;
+  position: relative;
+  top: 0;
+  left: 0;
+  vertical-align: top;
+}
+
+.tabConWrap .percentBar i {
+  display: inline-block;
+  font-style: normal;
+  width: 100%;
+  height: 6px;
+  background-color: #f01b1c;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tabConWrap .percentNum {
+  font-size: 12px;
+  line-height: 12px;
+  color: #666;
+  margin-left: 4px;
+  vertical-align: top;
+}
+
+.price {
+  margin: 10px 0 18px 2px;
+}
+
+.tabConWrap .nowPrice {
+  font-size: 18px;
+  line-height: 18px;
+  color: #ef555c;
+}
+
+.tabConWrap .oldPrice {
+  font-size: 12px;
+  color: #777;
+  text-decoration: line-through;
+  margin-left: 12px;
+}
+
+.tabConWrap a {
+  display: block;
+  width: 120px;
+  height: 30px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+.tabConWrap .remind {
+  font-size: 12px;
+  color: #777;
+  line-height: 12px;
+  margin-top: 10px;
+}
+
+/* 已经结束的 a */
+.tabConWrap a.over {
+  background-color: #f2f2f2;
+}
+
+/* 正在抢购中的 a */
+.tabConWrap a.now {
+  background-color: #f01b1c;
+}
+
+.tabConWrap a.future {
+  background-color: #83c44E;
+}

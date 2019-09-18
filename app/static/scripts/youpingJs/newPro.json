@@ -1,0 +1,38 @@
+[
+  {
+    "imgUrl": "../static/images/youpingImage/newPro1.jpg",
+    "tit": "多亲AI助手 /4G电话",
+    "into": "全面屏，内置小爱同学，微信聊天",
+    "price": "￥599"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/newPro2.jpg",
+    "tit": "谷小酒 青年酒豪·茅台镇53度酱香型白酒",
+    "into": "酱酒核心产区，五年坤沙基酒，百元硬核产品",
+    "price": "￥799"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/newPro3.jpg",
+    "tit": "石墨烯自发热阳绒被",
+    "into": "用科技“墨”默守护你的睡眠",
+    "price": "￥399"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/newPro4.jpg",
+    "tit": "晨曦美妆镜",
+    "into": "轻盈温暖，干爽不闷热，抗沾湿...",
+    "price": "￥1999"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/newPro5.jpg",
+    "tit": "琴岛美式电热多用盖毯",
+    "into": "西班牙小羊皮，羊毛保暖内里，全掌触控科技，柔软细腻",
+    "price": "￥69.9"
+  },
+  {
+    "imgUrl": "../static/images/youpingImage/newPro6.jpg",
+    "tit": "欧伟士电热毛巾架",
+    "into": "科学养生，每日一包，美国直邮",
+    "price": "￥67"
+  }
+]
