@@ -2,6 +2,60 @@
  * 主页JS
  */
 $(function() {
+    //html添加位置选择
+
+
+    //加载主要渲染内容
+    var loadMain = {
+        afterNode: $('mobile'),
+        //初始化
+        init: function() {
+            this.loadData();
+        },
+
+        //获取数据
+        loadData: function() {
+            var self = this;
+            $.ajax({
+                type: 'get',
+                dataType: 'json',
+                url: '../static/api/indexApi/main.json',
+                cache: false,
+                success: function(data) {
+                    var text = '';
+                    $.each(data, function(index, item) {
+                        var $box = $('<div class="cm-product other-product"><div>');
+
+                        var $banner = $('<div class="cmp-banner"<a href=""><img src="' + data.banner + '" alt=" "> </a></div>');
+                        var $nav = $('<div class="pro-nav"><ul class="pro-nav-list"><li>' + data.moreDesc[0] + '</li> <li>' + data.moreDesc[1] + '</li></ul></div>');
+                        var $main_title = $('  <h3 class="c-main-title ">' + data.main_title + '</h3>');
+                        var $content = $(' <div class="cmp-content"></div>');
+                        var $ad = $(' <div class="cmpc-ad"><img src="../static/images/c_products/jdb01.jpg" alt=""><img src="../static/images/c_products/jdb01.jpg" alt=""></div>');
+                        var $list = $('<div class="cmpc-goodsList"><ul class="clearfix"></ul></div>');
+                        for (var i = 0; i < 8; i++) {
+
+                        }
+
+
+
+                    })
+                }
+            });
+        },
+
+        //渲染页面
+        rendering: function(data) {
+
+        },
+
+        //添加盒子
+        addBox: function() {
+
+        }
+
+    }
+    loadMain.init();
+
     //广告图轮播
     var imgs = $('.banner-carousel img');
     var left = $('.b-left');

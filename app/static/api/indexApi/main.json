@@ -1,0 +1,16 @@
+[
+
+    {
+        "main_title": "家电",
+        "banner": "../static/images/c_products/jdBanner.jpg",
+        "ad": ["../static/images/c_products/jdb01.jpg", "../static/images/c_products/jdb02.jpg"],
+        "pic": ["../static/images/c_products/jdp01.jpg"],
+        "title": ["Redmi Note 8 Pro"],
+        "desc": ["6400万全场景四摄"],
+        "price": ["1399元起"],
+        "lastDesc": ["Air 13.3\" 2019款"],
+        "lastPrice": ["4699元起"],
+        "lastPic": ["../static/images/c_products/jdlast01.jpg"],
+        "moreDesc": ["热门", "电视影音"]
+    }
+]

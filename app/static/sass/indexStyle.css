@@ -440,6 +440,7 @@
 .pro-nav ul li {
     float: left;
     margin-left: 20px;
+    cursor: pointer;
 }
 
 .mobile .pro-nav ul li a:hover,
@@ -448,6 +449,10 @@
 }
 
 .pro-nav ul li a:hover {
+    color: #ff6700;
+}
+
+.pro-nav ul.pro-nav-list li:hover {
     color: #ff6700;
     border-bottom: 2px solid #ff6700;
 }
