@@ -1,0 +1,147 @@
+/* 公共样式 */
+.w1080 {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+html,
+body {
+  width: 100%;
+  height: 3000px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@mixin arr {
+  display: inline-block;
+  width: 88px;
+  height: 16px;
+  background-color: rgba(0, 0, 0, .6);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 33;
+  text-align: center;
+  line-height: 16px;
+  display: none;
+}
+
+
+/* 商品支持部分 */
+.Z-supportWrap {
+  height: 614px;
+  padding-top: 60px;
+
+  // 支持的盒子
+  .supportWrap {
+    height: 674px;
+    background-color: pink;
+
+
+    // 左边图片详情
+    .detailImgWrap {
+      width: 470px;
+      height: 378px;
+      background-color: #fff;
+      position: relative;
+
+      // 显示的图片详情
+      .showImg {
+        width: 378px;
+        height: 378px;
+
+        img {
+          width: 378px;
+          height: 378px;
+          display: block;
+        }
+
+      }
+
+
+      // 选择图片的容器
+      .selectWrap {
+        width: 88px;
+        height: 378px;
+
+        // 定位父元素
+        .mainWrap {
+          width: 88px;
+          height: 378px;
+          position: relative;
+          overflow: hidden;
+          overflow-y: auto;
+
+          // 上箭头
+          .top {
+            @include arr;
+            top: 0px;
+          }
+          &:hover .top,  &:hover .bottom {
+            display: block;
+          }
+
+          // 下箭头
+          .bottom {
+            @include arr;
+            bottom: 0px;
+          }
+
+          // 图片容器
+          .imgsWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1200px;
+
+            // 每个 li 元素
+            li {
+              width: 88px;
+              height: 88px;
+              border: 1px solid transparent;
+              margin-bottom: 10px;
+              cursor: pointer;
+
+              &.show {
+                border: 1px solid #a2907f;
+              }
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+
+              img {
+                display: block;
+                width: 88px;
+                height: 88px;
+              }
+
+            }
+          }
+
+        }
+      }
+
+    }
+
+    // 右边支持情况
+    .detailConWrap {
+      width: 568px;
+      height: 674px;
+      background-color: skyblue;
+    }
+
+  }
+
+}

@@ -1,0 +1,124 @@
+@charset "UTF-8";
+/* 公共样式 */
+.w1080 {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+html,
+body {
+  width: 100%;
+  height: 3000px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* 商品支持部分 */
+.Z-supportWrap {
+  height: 614px;
+  padding-top: 60px;
+}
+.Z-supportWrap .supportWrap {
+  height: 674px;
+  background-color: pink;
+}
+.Z-supportWrap .supportWrap .detailImgWrap {
+  width: 470px;
+  height: 378px;
+  background-color: #fff;
+  position: relative;
+}
+.Z-supportWrap .supportWrap .detailImgWrap .showImg {
+  width: 378px;
+  height: 378px;
+}
+.Z-supportWrap .supportWrap .detailImgWrap .showImg img {
+  width: 378px;
+  height: 378px;
+  display: block;
+}
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap {
+  width: 88px;
+  height: 378px;
+}
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap {
+  width: 88px;
+  height: 378px;
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap .top {
+  display: inline-block;
+  width: 88px;
+  height: 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 33;
+  text-align: center;
+  line-height: 16px;
+  display: none;
+  top: 0px;
+}
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap:hover .top, .Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap:hover .bottom {
+  display: block;
+}
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap .bottom {
+  display: inline-block;
+  width: 88px;
+  height: 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  z-index: 33;
+  text-align: center;
+  line-height: 16px;
+  display: none;
+  bottom: 0px;
+}
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap .imgsWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1200px;
+}
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap .imgsWrap li {
+  width: 88px;
+  height: 88px;
+  border: 1px solid transparent;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap .imgsWrap li.show {
+  border: 1px solid #a2907f;
+}
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap .imgsWrap li:last-child {
+  margin-bottom: 0;
+}
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap .imgsWrap li img {
+  display: block;
+  width: 88px;
+  height: 88px;
+}
+.Z-supportWrap .supportWrap .detailConWrap {
+  width: 568px;
+  height: 674px;
+  background-color: skyblue;
+}

@@ -376,6 +376,7 @@ textarea::-webkit-input-placeholder {
   color: #333;
   background-color: #fff;
   padding-left: 6px;
+  cursor: pointer;
 }
 .searchCon .searchKeyCon li:hover {
   font-size: 12px;
