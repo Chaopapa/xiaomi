@@ -146,7 +146,8 @@ function timeRange(beginTime, endTime, nowTime) {
     .then(function (json) {
       let tmpHStr = ''; // 头部的渲染字符串
       let tmpBStr = ''; // 内容的字符串
-      let num0 = 1;
+      let num0 = 1; // 保存第一个 li 的判断值
+      let noShopping = false; // 默认有正在抢购的数据
       let d = new Date();
       let h = d.getHours() > 9 ? d.getHours() : '0' + d.getHours();
       let m = d.getMinutes() > 9 ? d.getMinutes() : '0' + d.getMinutes();
@@ -183,33 +184,42 @@ function timeRange(beginTime, endTime, nowTime) {
         }
 
 
-        // 如果 num 等于 1 ，说明正在抢购，添加类 
+        // 如果 num 等于 1 
         // 显示正在抢购的页面数据，默认是第一个数据的内容
+       
+
         if (num == 1) {
+
           tmpHStr += `<li class="now">
           <span class="time">${startTime}</span>
           <span class="info">${tmpInfo}</span>
         </li>`;
 
           tmpBStr = renderStr(num, json, i).tmpBStrNow;
+        }else {
 
-        } else {
           tmpHStr += `<li>
-      <span class="time">${startTime}</span>
-      <span class="info">${tmpInfo}</span>
-    </li>`;
+          <span class="time">${startTime}</span>
+          <span class="info">${tmpInfo}</span>
+        </li>`;
 
-         
         }
 
       }
 
       if (!tmpBStr) { // 如果有正在抢购的就显示正在抢购的，否则就进入这里
         tmpBStr = renderStr(num0, json, 0).tmpBStrFuture ? renderStr(num0, json, 0).tmpBStrFuture : renderStr(num0, json, 0).tmpBStrOver;
+
+        // 说明没有正在抢购的数据 就给第一个 li 的头部添加类
+        noShopping = true;
       }
 
       $tabsHeader.html(tmpHStr);
       $secondsKillContent.html(tmpBStr);
+
+      if (noShopping) {
+        $tabsHeader.children(':first').addClass('now'); // 没有正在抢购的，则默认给第一个子元素添加 now 样式
+      }
       
 
     }, function (err) {
@@ -267,20 +277,11 @@ function timeRange(beginTime, endTime, nowTime) {
 
         // 如果 num 等于 1 ，说明正在抢购，添加类 
         // 显示正在抢购的页面数据，默认是第一个数据的内容
-        if (num == 1) {
-          tmpHStr += `<li class="now">
-          <span class="time">${startTime}</span>
-          <span class="info">${tmpInfo}</span>
-        </li>`;
 
-        } else {
-          tmpHStr += `<li>
+        tmpHStr += `<li>
       <span class="time">${startTime}</span>
       <span class="info">${tmpInfo}</span>
     </li>`;
-
-         
-        }
 
       }
 
@@ -299,6 +300,11 @@ function timeRange(beginTime, endTime, nowTime) {
       $tabsHeader.html(tmpHStr);
       $secondsKillContent.html(tmpBStr);
       
+
+      // 给当前点击的元素添加 now 类，其他元素去电 now 这个类
+      let $lis = $tabsHeader.children();
+      $lis.eq(index).addClass('now').siblings().removeClass('now');
+
 
     }, function (err) {
       console.log(err);
