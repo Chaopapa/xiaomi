@@ -37,6 +37,14 @@ body {
   display: none;
 }
 
+// 标识红色
+$red: #c00000;
+
+// 距离
+$marginR: 35px;
+
+// 小图标的在线地址:url(https://shop.io.mi-img.com/static/h5/static3/media/yp-icons.2bf57ccf.png)
+
 
 /* 商品支持部分 */
 .Z-supportWrap {
@@ -144,6 +152,223 @@ body {
       width: 568px;
       height: 674px;
       background-color: skyblue;
+
+      // 标题部分
+      .title {
+        font-size: 20px;
+        font-weight: normal;
+        line-height: 20px;
+        color: #333;
+        .mark {
+          display: inline-block;
+          font-size: 12px;
+          width: 46px;
+          height: 18px;
+          line-height: 18px;
+          text-align: center;
+          color: #fff;
+          background-color: $red;
+          border-radius: 4px;
+          vertical-align: middle;
+        }
+      }
+      // 说明部分
+      .info {
+        font-size: 12px;
+        color: $red;
+        line-height: 12px;
+        margin: 9px 0 22px;
+
+        a {
+          text-decoration: underline;
+          color: $red;
+        }
+      }
+
+      // 价格部分
+      .priceWrap {
+        width: 558px;
+        height: 168px;
+        background-color: #f9f9f9;
+        padding-left: 10px;
+
+        // 价格
+        .sale {
+          height: 73px;
+          line-height: 73px;
+          font-size: 12px;
+          color: #333;
+          .price {
+            color: $red;
+            font-size: 24px;
+            margin-left: 27px;
+          }
+        }
+
+        // 服务区域
+        .serverWrap {
+          // 左边
+          .serverLeft {
+            width: 60px;
+            height: 95px;
+
+            p {
+              font-size: 12px;
+              color: #333;
+
+              span {
+                width: 12px;
+                height: 12px;
+                display: inline-block;
+                border-radius: 50%;
+                border: 1px solid $red;
+                text-align: center;
+                line-height: 14px;
+                color: $red;
+                vertical-align: text-bottom;
+                margin-left: 4px; 
+              }
+            }
+          }
+          // 右边
+          .serverRight {
+            width: 495px;
+            height: 95px;
+
+            p {
+              width: 493px;
+              margin-bottom: 8px;
+              font-size: 16px;
+              .right {
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                text-align: center;
+                line-height: 18px;
+                color: $red;
+                border: 1px solid $red;
+                border-radius: 50%;
+                margin: 0 8px;
+              }
+              .look {
+                font-size: 2px;
+                color: #c2ae92;
+                cursor: pointer;
+                font-size: 16px;
+                margin-left: 4px;
+              }
+            }
+
+          }
+        }
+
+      }
+
+      // 物流部分
+      .car {
+        font-size: 12px;
+        color: #333;
+        line-height: 30px;
+        margin-top: 17px;
+
+        .tit {
+          margin-right: $marginR;
+        }
+      }
+
+      // 百分比部分
+      .percentWrap {
+        width: 568px;
+        height: 94px;
+        color: #333;
+        background-color: pink;
+      }
+
+      // 型号部分
+      .model {
+        height: 34px;
+        line-height: 34px;
+        color: #333;
+        .tit {
+          margin-right: $marginR;
+        }
+        a {
+          display: inline-block;
+          width: 162px;
+          height: 32px;
+          border: 1px solid #e4e4e4;
+          background-color: #fff;
+          text-align: center;
+          line-height: 32px;
+          color: #333;
+          font-size: 12px;
+          border-radius: 3px;
+        }
+        .white {
+          margin-right: 12px;
+        }
+
+      }
+
+      // 方式部分
+      .way {
+        margin: 14px 0 25px;
+        height: 34px;
+        line-height: 34px;
+        color: #333;
+
+        .tit {
+          margin-right: $marginR;
+        }
+
+        .all {
+          display: inline-block;
+          width: 102px;
+          height: 34px;
+          border: 1px solid #a48a73;
+          background-color: #fff;
+          text-align: center;
+          line-height: 32px;
+          color: #a48a73;
+          font-size: 12px;
+          border-radius: 3px;
+        }
+
+      }
+
+      // 数量部分
+      .num {
+        height: 34px;
+        line-height: 34px;
+        color: #333;
+
+        .tit {
+          margin-right: $marginR;
+        }
+
+        .reduce {
+          display: inline-block;
+          width: 36px;
+          height: 34px;
+          border: 1px solid #e6e6e6;
+          border-right: none;
+        }
+        .number {
+          display: inline-block;
+          width: 61px;
+          height: 32px;
+          border: 1px solid #e6e6e6;
+        }
+        .add {
+          display: inline-block;
+          width: 36px;
+          height: 34px;
+          border: 1px solid #e6e6e6;
+          border-left: none;
+        }
+
+      }
+
     }
 
   }
