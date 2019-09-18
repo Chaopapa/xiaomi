@@ -4,7 +4,7 @@
 
 function getCookie(key) {
   let arr1 = document.cookie.split(';');
-  for(let i = 0; i < arr1.length; i ++) {
+  for (let i = 0; i < arr1.length; i++) {
     let arr2 = arr1[i].split('=');
     if (arr2[0] == key) {
       return unescape(arr2[1]);
@@ -19,7 +19,7 @@ function setCookie(key, val, hours) {
     let d = new Date();
     d.setHours(d.getHours() + hours);
     document.cookie = `${key}=${escape(val)};expires=${d}`;
-  }else {
+  } else {
     document.cookie = `${key}=${escape(val)}`;
   }
 }
@@ -390,7 +390,7 @@ function renderNavList() {
 
     if (getCookie('endDate')) {
       endDate = getCookie('endDate');
-    }else {
+    } else {
       setCookie('endDate', endDate, expectedHour);
     }
 
@@ -628,6 +628,15 @@ function drawContent() {
 }
 
 drawContent();
+
+(function () {
+  // 获取 元素，当点击限时抢购中的元素时 实现页面跳转 限时抢购页面
+  let $imgsBox = $('.Z-timeLimited .imgsBox');
+  $imgsBox.on('click', 'li', function() {
+    window.open('./secondsKill.html'); 
+    // window.location.href = './secondsKill.html';
+  });
+})();
 
 // Z-timeLimited E
 

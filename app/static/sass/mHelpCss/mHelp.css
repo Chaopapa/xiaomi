@@ -66,6 +66,7 @@ html, body {
 .toolServer {
   height: 110px;
   padding-top: 20px;
+  cursor: pointer;
 }
 .toolServer .tools {
   width: 148px;

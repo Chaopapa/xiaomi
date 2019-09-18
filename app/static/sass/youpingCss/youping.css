@@ -1092,6 +1092,7 @@ span.redS {
 .sideBar > li {
   width: 82px;
   position: relative;
+  background-color: #fff;
 }
 .sideHeader {
   padding-bottom: 8px;
