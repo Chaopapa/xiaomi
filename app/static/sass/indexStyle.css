@@ -14,18 +14,167 @@
     overflow: hidden;
 }
 
+.c-banner .container {
+    position: relative;
+}
+
 .banner-nav {
     width: 236px;
     height: 460px;
     float: left;
-    background: #ccc;
+    background: rgba(105, 101, 101, .6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 21;
+}
+
+.banner-nav ul.bn-list {
+    padding: 20px 0;
+    position: relative;
+}
+
+.banner-nav .bn-list>li {
+    height: 42px;
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+.banner-nav .bn-list>li:hover {
+    background: #ff6700;
+}
+
+.banner-nav .bn-list>li a {
+    display: block;
+    height: 42px;
+    line-height: 42px;
+    color: #fff;
+}
+
+.bn-show {
+    height: 458px;
+    position: absolute;
+    left: 234px;
+    top: 0;
+    z-index: 30;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .18);
+    display: none;
+}
+
+.show-col-2 {
+    width: 530px;
+}
+
+.show-col-3 {
+    width: 795px;
+}
+
+.show-col-4 {
+    width: 992px;
+}
+
+.bn-show ul {
+    width: 248px;
+    height: 458px;
+    float: left;
+}
+
+.bn-show ul li {
+    width: 225px;
+    height: 40px;
+    padding: 18px 20px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.bn-show ul li img {
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+.bn-show ul li span {
+    float: left;
+    width: 172px;
+    line-height: 40px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.bn-show ul li span:hover {
+    color: #ff6700;
 }
 
 .banner-carousel {
-    width: 990px;
-    float: left;
+    width: 1226px;
     background: #000;
     height: 460px;
+    position: relative;
+}
+
+.banner-carousel img {
+    width: 1226px;
+    height: 460px;
+}
+
+.b-left,
+.b-right {
+    width: 41px;
+    height: 69px;
+    margin-top: -34px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 20;
+}
+
+.b-left {
+    left: 238px;
+    top: 50%;
+    background: url(../images/icon-slides.png) no-repeat -84px 0;
+}
+
+.b-left:hover {
+    background: url(../images/icon-slides.png) no-repeat 0 0;
+}
+
+.b-right {
+    right: 0;
+    top: 50%;
+    background: url(../images/icon-slides.png) no-repeat -126px 0;
+}
+
+.b-right:hover {
+    background: url(../images/icon-slides.png) no-repeat -44px 0;
+}
+
+.b-num {
+    position: absolute;
+    width: 400px;
+    left: auto;
+    right: 30px;
+    bottom: 20px;
+    z-index: 10;
+    text-align: right;
+    z-index: 20;
+}
+
+.b-num li {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 4px;
+    border: 2px solid #fff;
+    border-color: hsla(0, 0%, 100%, .3);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .4);
+    opacity: 1;
+    cursor: pointer;
 }
 
 
@@ -38,9 +187,42 @@
 
 .a-logo {
     float: left;
-    height: 170px;
-    width: 236px;
-    background-color: #ccc;
+    height: 164px;
+    width: 230px;
+    padding: 3px;
+    background-color: #5f5750;
+}
+
+.a-logo ul {}
+
+.a-logo ul li {
+    float: left;
+    width: 70px;
+    height: 82px;
+    padding: 0 3px;
+    text-align: center;
+}
+
+.a-logo ul li a {
+    display: block;
+    padding-top: 18px;
+    text-overflow: ellipsis;
+    color: #fff;
+    opacity: .7;
+}
+
+.a-logo ul li a:hover {
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.a-logo ul li a img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 0 auto 4px;
 }
 
 .a-imgBox {
@@ -55,6 +237,12 @@
     margin-left: 14px;
     float: left;
     background: #000;
+}
+
+.a-img img {
+    width: 316px;
+    height: 170px;
+    cursor: pointer;
 }
 
 
@@ -74,7 +262,37 @@
 /* 小米闪购 */
 
 .flashBuy {
+    position: relative;
     height: 402px;
+}
+
+.f-control {
+    height: 25px;
+    position: absolute;
+    right: 0;
+    top: 24px;
+}
+
+.f-control span {
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    padding: 3px 5px;
+    margin-left: -1px;
+    border: 1px solid #e0e0e0;
+    font-size: 16px;
+    line-height: 16px;
+    -webkit-transition: color .5s;
+    transition: color .5s;
+    color: #b0b0b0;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none
+}
+
+.f-control span:hover {
+    color: #ff6700;
 }
 
 .f-content {
@@ -84,22 +302,108 @@
 .fc-time {
     float: left;
     width: 236px;
-    height: 342px;
+    height: 300px;
     background-color: #f1eded;
+    padding-top: 39px;
+    text-align: center;
+    border-top: 1px solid #e53935;
+}
+
+.fc-time .fct-round {
+    font-size: 21px;
+    color: #ef3a3b;
+    padding-top: 15px;
+}
+
+.fc-time img {
+    margin: 25px 0;
+}
+
+.fc-time .fct-desc {
+    color: rgba(0, 0, 0, .54);
+    font-size: 15px;
+}
+
+.fc-time .fct-time {
+    width: 168px;
+    margin: 28px auto 0;
+}
+
+.fc-time .fct-time span {
+    width: 46px;
+    height: 46px;
+    background: #605751;
+    color: #fff;
+    font-size: 24px;
+    line-height: 46px;
+    float: left;
+}
+
+.fc-time .fct-time i {
+    width: 15px;
+    height: 46px;
+    line-height: 46px;
+    color: #605751;
+    font-size: 28px;
+    float: left;
+}
+
+.f-carousel {
+    width: 976px;
+    margin-left: 14px;
+    float: left;
+    overflow: hidden;
 }
 
 .fc-goodsBox {
-    float: left;
-    width: 990px;
-    overflow: hidden;
+    width: 10000px;
 }
 
 .fcg-goods {
     float: left;
     width: 234px;
-    height: 342px;
-    margin-left: 13px;
+    height: 339px;
+    /* height: 322px; */
+    margin-right: 14px;
+    min-height: 1px;
     background: #fff;
+    border-top: 1px solid #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fcg-goods img {
+    width: 160px;
+    height: 160px;
+    margin: 39px 0 22px;
+}
+
+.fcg-g-title {
+    font-size: 14px;
+    font-weight: 400;
+    text-overflow: ellipsis;
+    color: #212121;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.fcg-g-desc {
+    height: 18px;
+    margin-bottom: 12px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    color: #b0b0b0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.fcg-goods p {
+    font-size: 13px;
+    color: #ff6709;
+}
+
+.fcg-goods p del {
+    color: #b0b0b0;
 }
 
 

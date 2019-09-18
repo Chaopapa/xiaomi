@@ -48,15 +48,9 @@ body {
 .Z-supportWrap .supportWrap .detailImgWrap .selectWrap {
   width: 88px;
   height: 378px;
-}
-.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap {
-  width: 88px;
-  height: 378px;
   position: relative;
-  overflow: hidden;
-  overflow-y: auto;
 }
-.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap .top {
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .top {
   display: inline-block;
   width: 88px;
   height: 16px;
@@ -73,10 +67,10 @@ body {
   display: none;
   top: 0px;
 }
-.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap:hover .top, .Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap:hover .bottom {
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap:hover .top, .Z-supportWrap .supportWrap .detailImgWrap .selectWrap:hover .bottom {
   display: block;
 }
-.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap .bottom {
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .bottom {
   display: inline-block;
   width: 88px;
   height: 16px;
@@ -93,11 +87,18 @@ body {
   display: none;
   bottom: 0px;
 }
+.Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap {
+  width: 88px;
+  height: 378px;
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+}
 .Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap .imgsWrap {
   position: absolute;
   top: 0;
   left: 0;
-  height: 1200px;
+  height: 578px;
 }
 .Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap .imgsWrap li {
   width: 88px;

@@ -74,6 +74,24 @@ body {
       .selectWrap {
         width: 88px;
         height: 378px;
+        position: relative;
+
+        // 上箭头
+        .top {
+          @include arr;
+          top: 0px;
+        }
+
+        &:hover .top,
+        &:hover .bottom {
+          display: block;
+        }
+
+        // 下箭头
+        .bottom {
+          @include arr;
+          bottom: 0px;
+        }
 
         // 定位父元素
         .mainWrap {
@@ -83,27 +101,12 @@ body {
           overflow: hidden;
           overflow-y: auto;
 
-          // 上箭头
-          .top {
-            @include arr;
-            top: 0px;
-          }
-          &:hover .top,  &:hover .bottom {
-            display: block;
-          }
-
-          // 下箭头
-          .bottom {
-            @include arr;
-            bottom: 0px;
-          }
-
           // 图片容器
           .imgsWrap {
             position: absolute;
             top: 0;
             left: 0;
-            height: 1200px;
+            height: 578px;
 
             // 每个 li 元素
             li {
@@ -128,6 +131,7 @@ body {
               }
 
             }
+
           }
 
         }
