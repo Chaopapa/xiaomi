@@ -34,7 +34,7 @@
   margin: 0 35px 0 42px;
   border: 1px solid #e0e0e0;
 }
-.login-main-form-tab a:hover {
+.login-main-form-tab .nav-active {
   color: #f56600;
 }
 .login-main-form-main .n-l {
@@ -100,6 +100,24 @@
 }
 .login-main-form-main .c-l {
   display: none;
+  padding-top: 50px;
+}
+.login-main-form-main .c-l-code {
+  text-align: center;
+  vertical-align: middle;
+}
+.login-main-form-main .c-l-code img {
+  width: 180px;
+  height: 180px;
+}
+.login-main-form-main .c-l-desc {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #757575;
+  text-align: center;
+}
+.login-main-form-main .c-l-desc span {
+  color: #FF6700;
 }
 .login-main-form-main .l-show {
   display: block;

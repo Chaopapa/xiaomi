@@ -20,9 +20,9 @@
         <div class="login-container">
             <div class="login-main-form">
                 <div class="login-main-form-tab">
-                    <a class="number-login" href="javascript:void(0)">帐号登录</a>
+                    <a cls="number-login" class="nav-active" href="javascript:void(0)">帐号登录</a>
                     <span class="line"></span>
-                    <a class="code-login" href="javascript:void(0)">扫描登录</a>
+                    <a cls="code-login" href="javascript:void(0)">扫码登录</a>
                 </div>
                 <div class="login-main-form-main">
                     <div class="n-l l-show">
@@ -66,7 +66,15 @@
                             </div>
                         </form>
                     </div>
-                    <div class="c-l"></div>
+                    <div class="c-l">
+                        <div class="c-l-code">
+                            <img src="../static/images/logincode.png" alt="">
+                        </div>
+                        <div class="c-l-desc">
+                            <p>使用<span>小米商城APP</span>扫一扫</p>
+                            <p>小米手机可打开「设置」>「小米帐号」扫码登录</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,6 +91,8 @@
         </div>
         <div class="login-bottom-copy">小米公司版权所有-京ICP备10046444-&copy;-京ICP证110507号</div>
     </div>
+    <script src="../static/scripts/jquery-1.8.3/jquery-1.8.3.min.js"></script>
+    <script src="../static/scripts/login.js"></script>
 </body>
 
 </html>

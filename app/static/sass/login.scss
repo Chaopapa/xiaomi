@@ -34,7 +34,7 @@
                 margin: 0 35px 0 42px;
                 border: 1px solid #e0e0e0;
             }
-            a:hover {
+            .nav-active {
                 color: #f56600;
             }
         }
@@ -102,6 +102,24 @@
             }
             .c-l {
                 display: none;
+                padding-top: 50px;
+                &-code {
+                    text-align: center;
+                    vertical-align: middle;
+                    img {
+                        width: 180px;
+                        height: 180px;
+                    }
+                }
+                &-desc {
+                    font-size: 14px;
+                    margin-top: 20px;
+                    color: #757575;
+                    text-align: center;
+                    span {
+                        color: #FF6700;
+                    }
+                }
             }
             .l-show {
                 display: block;
