@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAW;EACP,MAAM,EAAC,IAAI;EACX,WAAW,EAAE,IAAI;EACjB,gBAAM;IACF,KAAK,EAAC,IAAI;EAEd,iBAAO;IACH,KAAK,EAAC,KAAK",
+"sources": ["../../sass/serverStyle/prod_view1.scss"],
+"names": [],
+"file": "prod_view1.css"
+}
