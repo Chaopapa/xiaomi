@@ -16,6 +16,9 @@
     let imgH = $('.imgsWrap li img').eq(0).width();
     let lis = $('.imgsWrap li');
     let index = 0; // 保存当前选中的 li
+    let liMB = lis.eq(0).css('margin-bottom'); // 获取元素的 margin-bottom 返回字符串 10px
+    let limitH = imgH * 3 + parseInt(liMB) * 2; // 保存元素开始滚动的长度
+    let imgsWrapH = $imgsWrap.height(); // 保存图片容器的高度
 
     // 事件委托，点击图片
     $imgsWrap.on('click', 'li', function () {
@@ -34,13 +37,10 @@
     // 判断，如果滚动条的 scrollTop 为 0 不移动
     // 判断，如果滚动条的 screenTop >= imgsWrap 的长度，则不移动
 
+    // 点击上箭头
     $top.click(function () {
 
       let scrollT = $mainWrap.scrollTop(); // 获取当前元素滚动条的 scrollTop
-
-      $mainWrap.animate({
-        scrollTop: scrollT - imgH
-      });
 
       index--;
       if (index <= 0) {
@@ -49,15 +49,18 @@
 
       lis.eq(index).addClass('show').siblings().removeClass('show');
 
+      if (index <= lis.length - 4) {
+        $mainWrap.animate({
+          scrollTop: scrollT - imgH
+        });
+      }
+
     });
 
+    // 点击下箭头
     $bottom.click(function () {
 
       let scrollT = $mainWrap.scrollTop(); // 获取当前元素滚动条的 scrollTop
-
-      $mainWrap.animate({
-        scrollTop: scrollT + imgH
-      });
 
       index++;
       if (index >= lis.length - 1) {
@@ -65,6 +68,12 @@
       }
 
       lis.eq(index).addClass('show').siblings().removeClass('show');
+
+      if (index >= 3) {
+        $mainWrap.animate({
+          scrollTop: scrollT + imgH
+        });
+      }
 
     });
 

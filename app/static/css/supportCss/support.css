@@ -91,7 +91,6 @@ body {
   height: 378px;
   position: relative;
   overflow: hidden;
-  overflow-y: auto;
 }
 .Z-supportWrap .supportWrap .detailImgWrap .selectWrap .mainWrap .imgsWrap {
   position: absolute;
