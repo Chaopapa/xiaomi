@@ -452,7 +452,12 @@
     color: #ff6700;
 }
 
-.pro-nav ul.pro-nav-list li:hover {
+.pro-nav ul.pro-nav-list li {
+    position: relative;
+    z-index: 4;
+}
+
+.pro-nav ul.pro-nav-list .c-active {
     color: #ff6700;
     border-bottom: 2px solid #ff6700;
 }

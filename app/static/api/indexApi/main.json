@@ -1,16 +1,86 @@
 [
 
     {
+        "data_index": "0",
+        "nav_title": ["0", "1"],
+        "className": "c_jd",
         "main_title": "家电",
         "banner": "../static/images/c_products/jdBanner.jpg",
         "ad": ["../static/images/c_products/jdb01.jpg", "../static/images/c_products/jdb02.jpg"],
-        "pic": ["../static/images/c_products/jdp01.jpg"],
-        "title": ["Redmi Note 8 Pro"],
-        "desc": ["6400万全场景四摄"],
-        "price": ["1399元起"],
-        "lastDesc": ["Air 13.3\" 2019款"],
-        "lastPrice": ["4699元起"],
-        "lastPic": ["../static/images/c_products/jdlast01.jpg"],
+        "pic": ["../static/images/c_products/jdp01.jpg", "../static/images/c_products/jdp02.jpg"],
+        "title": ["Redmi Note 8 Pro", "小米电视4A 32 英寸 "],
+        "desc": ["6400万全场景四摄", "人工智能系统，高清液晶屏"],
+        "price": ["1399元起", "699元起"],
+        "lastDesc": ["Air 13.3\" 2019款", "小米盒子"],
+        "lastPrice": ["4699元起", "299元"],
+        "lastPic": ["../static/images/c_products/jdlast01.jpg", "../static/images/c_products/jdlast02.jpg"],
         "moreDesc": ["热门", "电视影音"]
+    },
+
+    {
+        "data_index": "1",
+        "nav_title": ["0", "1"],
+        "className": "c_zn",
+        "main_title": "智能",
+        "banner": "../static/images/c_products/znBanner.jpg",
+        "ad": ["../static/images/c_products/znb01.jpg", "../static/images/c_products/znb02.jpg"],
+        "pic": ["../static/images/c_products/znp01.jpg", "../static/images/c_products/znp02.jpg"],
+        "title": ["Redmi Note 8 Pro", "小米电视4A 32 英寸 "],
+        "desc": ["6400万全场景四摄", "人工智能系统，高清液晶屏"],
+        "price": ["1399元起", "699元起"],
+        "lastDesc": ["Air 13.3\" 2019款", "小米盒子"],
+        "lastPrice": ["4699元起", "299元"],
+        "lastPic": ["../static/images/c_products/znlast01.jpg", "../static/images/c_products/znlast02.jpg"],
+        "moreDesc": ["热门", "出行"]
+    },
+
+    {
+        "data_index": "2",
+        "nav_title": ["0", "1"],
+        "className": "c_dp",
+        "main_title": "搭配",
+        "banner": "../static/images/c_products/dpBanner.jpg",
+        "ad": ["../static/images/c_products/dpb01.jpg", "../static/images/c_products/dpb02.jpg"],
+        "pic": ["../static/images/c_products/dpp01.jpg", "../static/images/c_products/dpp02.jpg"],
+        "title": ["Redmi Note 8 Pro", "小米电视4A 32 英寸 "],
+        "desc": ["6400万全场景四摄", "人工智能系统，高清液晶屏"],
+        "price": ["1399元起", "699元起"],
+        "lastDesc": ["Air 13.3\" 2019款", "小米盒子"],
+        "lastPrice": ["4699元起", "299元"],
+        "lastPic": ["../static/images/c_products/znlast01.jpg", "../static/images/c_products/znlast02.jpg"],
+        "moreDesc": ["热门", "耳机音箱"]
+    },
+
+    {
+        "data_index": "3",
+        "nav_title": ["0", "1"],
+        "className": "c_pj",
+        "main_title": "配件",
+        "banner": "../static/images/c_products/pjBanner.jpg",
+        "ad": ["../static/images/c_products/pjb01.jpg", "../static/images/c_products/pjb02.jpg"],
+        "pic": ["../static/images/c_products/pjp01.jpg", "../static/images/c_products/pjp02.jpg"],
+        "title": ["Redmi Note 8 Pro", "小米电视4A 32 英寸 "],
+        "desc": ["6400万全场景四摄", "人工智能系统，高清液晶屏"],
+        "price": ["1399元起", "699元起"],
+        "lastDesc": ["Air 13.3\" 2019款", "小米盒子"],
+        "lastPrice": ["4699元起", "299元"],
+        "lastPic": ["../static/images/c_products/znlast01.jpg", "../static/images/c_products/znlast02.jpg"],
+        "moreDesc": ["热门", "保护套"]
+    },
+    {
+        "data_index": "4",
+        "nav_title": ["0", "1"],
+        "className": "c_zb",
+        "main_title": "周边",
+        "banner": "../static/images/c_products/zbBanner.jpg",
+        "ad": ["../static/images/c_products/zbb01.jpg", "../static/images/c_products/zbb02.jpg"],
+        "pic": ["../static/images/c_products/zbp01.jpg", "../static/images/c_products/zbp02.jpg"],
+        "title": ["Redmi Note 8 Pro", "小米电视4A 32 英寸 "],
+        "desc": ["6400万全场景四摄", "人工智能系统，高清液晶屏"],
+        "price": ["1399元起", "699元起"],
+        "lastDesc": ["Air 13.3\" 2019款", "小米盒子"],
+        "lastPrice": ["4699元起", "299元"],
+        "lastPic": ["../static/images/c_products/zblast01.jpg", "../static/images/c_products/znlast02.jpg"],
+        "moreDesc": ["热门", "出行"]
     }
 ]
