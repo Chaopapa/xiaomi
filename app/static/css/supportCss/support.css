@@ -244,7 +244,7 @@ body {
   height: 18px;
   width: 18px;
   text-align: center;
-  line-height: 18x;
+  line-height: 18px;
   background-color: #ff2200;
   color: #fff;
   margin-left: 4px;
@@ -338,6 +338,8 @@ body {
   line-height: 34px;
   background-color: #fff;
   font-weight: bold;
+  vertical-align: middle;
+  font-size: 14px;
 }
 .Z-supportWrap .supportWrap .detailConWrap .num .reduce {
   width: 36px;
@@ -345,8 +347,16 @@ body {
   color: #ddd;
 }
 .Z-supportWrap .supportWrap .detailConWrap .num .number {
-  min-width: 61px;
+  width: 61px;
   color: #333;
+  border: 1px solid #e6e6e6;
+  height: 34px;
+  line-height: 34px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  outline: none;
 }
 .Z-supportWrap .supportWrap .detailConWrap .num .add {
   width: 36px;

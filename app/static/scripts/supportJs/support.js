@@ -76,7 +76,7 @@
     let $reduce = $('.num .reduce');
     let $number = $('.num .number');
     let $add = $('.num .add');
-    let num = $number.text(); // 保存 数量 的值
+    let num = $number.val(); // 保存 数量 的值
     let sum = 1000; // 假设商品的总库存是 1000
 
     $reduce.click(function () {
@@ -90,7 +90,7 @@
         num == 1;
         return false;
       }
-      $number.text(num);
+      $number.val(num);
     });
 
     $add.click(function () {
@@ -102,7 +102,7 @@
         alert('库存不足');
         return false;
       }
-      $number.text(num);
+      $number.val(num);
     });
 
   })();
