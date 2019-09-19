@@ -21,8 +21,58 @@ $(function() {
                         $('.c-l').addClass('l-show');
                     }
                 }
-            })
+            });
         }
     }
     loginTab.bindEvent();
+    console.log($('#name'));
+    //表单提交改为ajax请求
+    var login = {
+        target: $('.n-l form'),
+        getIn: function() {
+            var self = this;
+            this.target.submit(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: "post",
+                    url: "../static/api/loginApi/login.php",
+                    dataType: 'json',
+                    data: {
+                        "name": $('#name').val(),
+                        "pwd": $('#password').val()
+                    },
+                    cache: false,
+                    complete: function(data) {
+                        var json = data.responseText;
+                        console.log(json);
+                        if (JSON.parse(json)) {
+                            json = JSON.parse(json);
+                            console.log(json);
+                            self.setCookie('nickName', json.nickName);
+                            window.location.href = "./mi.html";
+                        } else {
+                            alert('用户名或密码错误');
+                            $('#name').val('');
+                            $('#password').val('');
+                        }
+                    }
+                });
+            }.bind(this));
+
+        },
+        //设置cookie
+        setCookie: function(key, value, day) {
+            var d = new Date();
+            if (day) {
+                d.setDate(d.getDate() + day);
+                document.cookie = key + "=" + value + " ;expires=" + d;
+            } else {
+                document.cookie = key + "=" + value;
+            }
+        }
+
+
+    }
+    login.getIn();
+
 })

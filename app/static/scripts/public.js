@@ -2,6 +2,30 @@
  * 公用JS效果(基于jQuery)
  */
 (function() {
+
+    //从cookie中加载用户信息
+    var loadUser = {
+        target: $('.c-login'),
+
+        getCookie: function(key) {
+            var cookies = document.cookie.split('; ');
+            for (var i = 0; i < cookies.length; i++) {
+                var arr = cookies[i].split('=');
+                if (arr[0] == key) {
+                    return arr[1];
+                }
+            }
+            return null;
+        },
+
+        getNickName: function() {
+
+            if (this.getCookie('nickName')) {
+                $('<a style="color:#ff6700">你好，' + this.getCookie('nickName') + '</a>').replaceAll('.c-login');
+            }
+        }
+    };
+    loadUser.getNickName();
     //鼠标放上浮动特效
     /**
      * 单页轮播图效果
