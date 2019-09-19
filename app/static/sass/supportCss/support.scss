@@ -43,8 +43,6 @@ $red: #c00000;
 // 距离
 $marginR: 35px;
 
-// 小图标的在线地址:url(https://shop.io.mi-img.com/static/h5/static3/media/yp-icons.2bf57ccf.png)
-
 
 /* 商品支持部分 */
 .Z-supportWrap {
@@ -54,7 +52,6 @@ $marginR: 35px;
   // 支持的盒子
   .supportWrap {
     height: 674px;
-    background-color: pink;
 
 
     // 左边图片详情
@@ -151,7 +148,6 @@ $marginR: 35px;
     .detailConWrap {
       width: 568px;
       height: 674px;
-      background-color: skyblue;
 
       // 标题部分
       .title {
@@ -281,7 +277,75 @@ $marginR: 35px;
         width: 568px;
         height: 94px;
         color: #333;
-        background-color: pink;
+        background-color:#fff;
+
+        // 支持人数
+        .suppNumWrap {
+          font-size: 14px;
+          color: #333;
+
+          .left {
+
+            .personNum {
+              font-size: 20px;
+              line-height: 24px;
+              color: $red;
+              margin-right: 4px;
+            }
+            .hot {
+              display: inline-block;
+              border-radius: 4px;
+              height: 18px;
+              width: 18px;
+              text-align: center;
+              line-height: 18x;
+              background-color: #ff2200;
+              color: #fff; 
+              margin-left: 4px;
+            }
+
+          }
+
+          .right {
+            height: 24px;
+            line-height: 24px;
+            .percentNum {
+              color: $red;
+              font-size: 20px;
+              margin-left: 4px;
+            }
+          }
+        }
+
+        // 百分比条
+        .percentBar {
+          width: 568px;
+          height: 5px;
+          margin: 2px 0 12px;
+          background: -webkit-linear-gradient(left, orange, red);
+        }
+
+        // 已筹人数
+        .collNumWrap {
+          font-size: 14px;
+          color: #333;
+
+          .left {
+            .collNum {
+              font-size: 14px;
+              color: #c42323;
+              margin-right: 4px;
+            }
+          }
+          .right {
+            .dayNum {
+              font-size: 14px;
+              color: #c42323;
+              margin-left: 10px;
+            }
+          }
+        }
+
       }
 
       // 型号部分
@@ -346,26 +410,89 @@ $marginR: 35px;
           margin-right: $marginR;
         }
 
-        .reduce {
+        a {
           display: inline-block;
-          width: 36px;
           height: 34px;
           border: 1px solid #e6e6e6;
+          text-align: center;
+          line-height: 34px;
+          background-color: #fff;
+          font-weight: bold;
+        }
+
+        .reduce { 
+          width: 36px;
           border-right: none;
+          color: #ddd;
         }
         .number {
-          display: inline-block;
-          width: 61px;
-          height: 32px;
-          border: 1px solid #e6e6e6;
+          min-width: 61px;
+          color: #333;
         }
         .add {
-          display: inline-block;
           width: 36px;
-          height: 34px;
-          border: 1px solid #e6e6e6;
           border-left: none;
+          color: #5f2f07;  
         }
+
+      }
+
+      // 立即支持部分
+      .rightnow {
+        margin-top: 40px;
+
+        a {
+          display: inline-block;
+          height: 52px;
+          border-radius: 4px;
+          text-align: center;
+          background-color: #fff;
+          &:hover {
+            background-color: #6c3f18;
+            color: white;
+          }
+        }
+
+        // 立即支持
+        .suppnow {
+          width: 168px;
+          line-height: 52px;
+          border: 1px solid #6c3f18;      
+          color: #6c3f18;
+          font-size: 18px;
+          vertical-align: middle;
+        }
+
+        // 收藏
+        .collect, .online { 
+          width: 54px;
+          border: 1px solid #a1a1a1;
+          vertical-align: middle;
+
+          span {
+            display: block;
+            margin: 5px auto;
+            width: 20px;
+            height: 20px;
+          }
+
+        }
+
+        .collect {
+          margin: 0 14px;
+          span {
+            background: url('../../images/supportImg/shoucang.png') no-repeat center;
+            background-size: contain;
+          }
+        }
+
+        .online {     
+            span {
+              background: url('../../images/supportImg/icon-test.png') no-repeat center;
+              background-size: contain;
+            }
+        }
+
 
       }
 

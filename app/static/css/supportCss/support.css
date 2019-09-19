@@ -28,7 +28,6 @@ body {
 }
 .Z-supportWrap .supportWrap {
   height: 674px;
-  background-color: pink;
 }
 .Z-supportWrap .supportWrap .detailImgWrap {
   width: 470px;
@@ -121,7 +120,6 @@ body {
 .Z-supportWrap .supportWrap .detailConWrap {
   width: 568px;
   height: 674px;
-  background-color: skyblue;
 }
 .Z-supportWrap .supportWrap .detailConWrap .title {
   font-size: 20px;
@@ -228,7 +226,57 @@ body {
   width: 568px;
   height: 94px;
   color: #333;
-  background-color: pink;
+  background-color: #fff;
+}
+.Z-supportWrap .supportWrap .detailConWrap .percentWrap .suppNumWrap {
+  font-size: 14px;
+  color: #333;
+}
+.Z-supportWrap .supportWrap .detailConWrap .percentWrap .suppNumWrap .left .personNum {
+  font-size: 20px;
+  line-height: 24px;
+  color: #c00000;
+  margin-right: 4px;
+}
+.Z-supportWrap .supportWrap .detailConWrap .percentWrap .suppNumWrap .left .hot {
+  display: inline-block;
+  border-radius: 4px;
+  height: 18px;
+  width: 18px;
+  text-align: center;
+  line-height: 18x;
+  background-color: #ff2200;
+  color: #fff;
+  margin-left: 4px;
+}
+.Z-supportWrap .supportWrap .detailConWrap .percentWrap .suppNumWrap .right {
+  height: 24px;
+  line-height: 24px;
+}
+.Z-supportWrap .supportWrap .detailConWrap .percentWrap .suppNumWrap .right .percentNum {
+  color: #c00000;
+  font-size: 20px;
+  margin-left: 4px;
+}
+.Z-supportWrap .supportWrap .detailConWrap .percentWrap .percentBar {
+  width: 568px;
+  height: 5px;
+  margin: 2px 0 12px;
+  background: -webkit-linear-gradient(left, orange, red);
+}
+.Z-supportWrap .supportWrap .detailConWrap .percentWrap .collNumWrap {
+  font-size: 14px;
+  color: #333;
+}
+.Z-supportWrap .supportWrap .detailConWrap .percentWrap .collNumWrap .left .collNum {
+  font-size: 14px;
+  color: #c42323;
+  margin-right: 4px;
+}
+.Z-supportWrap .supportWrap .detailConWrap .percentWrap .collNumWrap .right .dayNum {
+  font-size: 14px;
+  color: #c42323;
+  margin-left: 10px;
 }
 .Z-supportWrap .supportWrap .detailConWrap .model {
   height: 34px;
@@ -282,23 +330,70 @@ body {
 .Z-supportWrap .supportWrap .detailConWrap .num .tit {
   margin-right: 35px;
 }
-.Z-supportWrap .supportWrap .detailConWrap .num .reduce {
+.Z-supportWrap .supportWrap .detailConWrap .num a {
   display: inline-block;
-  width: 36px;
   height: 34px;
   border: 1px solid #e6e6e6;
+  text-align: center;
+  line-height: 34px;
+  background-color: #fff;
+  font-weight: bold;
+}
+.Z-supportWrap .supportWrap .detailConWrap .num .reduce {
+  width: 36px;
   border-right: none;
+  color: #ddd;
 }
 .Z-supportWrap .supportWrap .detailConWrap .num .number {
-  display: inline-block;
-  width: 61px;
-  height: 32px;
-  border: 1px solid #e6e6e6;
+  min-width: 61px;
+  color: #333;
 }
 .Z-supportWrap .supportWrap .detailConWrap .num .add {
-  display: inline-block;
   width: 36px;
-  height: 34px;
-  border: 1px solid #e6e6e6;
   border-left: none;
+  color: #5f2f07;
+}
+.Z-supportWrap .supportWrap .detailConWrap .rightnow {
+  margin-top: 40px;
+}
+.Z-supportWrap .supportWrap .detailConWrap .rightnow a {
+  display: inline-block;
+  height: 52px;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #fff;
+}
+.Z-supportWrap .supportWrap .detailConWrap .rightnow a:hover {
+  background-color: #6c3f18;
+  color: white;
+}
+.Z-supportWrap .supportWrap .detailConWrap .rightnow .suppnow {
+  width: 168px;
+  line-height: 52px;
+  border: 1px solid #6c3f18;
+  color: #6c3f18;
+  font-size: 18px;
+  vertical-align: middle;
+}
+.Z-supportWrap .supportWrap .detailConWrap .rightnow .collect, .Z-supportWrap .supportWrap .detailConWrap .rightnow .online {
+  width: 54px;
+  border: 1px solid #a1a1a1;
+  vertical-align: middle;
+}
+.Z-supportWrap .supportWrap .detailConWrap .rightnow .collect span, .Z-supportWrap .supportWrap .detailConWrap .rightnow .online span {
+  display: block;
+  margin: 5px auto;
+  width: 20px;
+  height: 20px;
+}
+.Z-supportWrap .supportWrap .detailConWrap .rightnow .collect {
+  margin: 0 14px;
+}
+.Z-supportWrap .supportWrap .detailConWrap .rightnow .collect span {
+  background: url("../../images/supportImg/shoucang.png") no-repeat center;
+  background-size: contain;
+}
+.Z-supportWrap .supportWrap .detailConWrap .rightnow .online span {
+  background: url("../../images/supportImg/icon-test.png") no-repeat center;
+  background-size: contain;
 }

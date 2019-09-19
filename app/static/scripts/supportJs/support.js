@@ -70,6 +70,59 @@
 
   })();
 
-  
+  // 数量的点击事件
+  (function() {
+    // 点击数量 + 1
+    let $reduce = $('.num .reduce');
+    let $number = $('.num .number');
+    let $add = $('.num .add');
+    let num = $number.text(); // 保存 数量 的值
+    let sum = 1000; // 假设商品的总库存是 1000
+
+    $reduce.click(function () {
+      num --;
+      // 当数量为 1 的时候，减法的颜色恢复
+      if (num == 1) {
+        $reduce.css('color', '#ddd');
+      }
+      if (num <= 0) {
+        $reduce.css('cursor', 'not-allowed');
+        num == 1;
+        return false;
+      }
+      $number.text(num);
+    });
+
+    $add.click(function () {
+      // 当数量不为 1 的时候，减法的颜色变成可点击的颜色
+      $reduce.css('color', '#5f2f07');
+      num ++;
+      if (num > sum) {
+        num == sum;
+        alert('库存不足');
+        return false;
+      }
+      $number.text(num);
+    });
+
+  })();
+
+  // 型号的点击事件
+  (function() {
+    let $white =$('.model .white');
+    let $black =$('.model .black');
+
+    // 当点击的时候改变边框颜色
+    $white.click(function() {
+      $(this).css('border', '1px solid #5f2f07');
+      $black.css('border','1px solid #e4e4e4');
+    });
+
+    $black.click(function() {
+      $(this).css('border', '1px solid #5f2f07');
+      $white.css('border','1px solid #e4e4e4');
+    });
+
+  })();
 
 })();
