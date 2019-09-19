@@ -1,40 +1,91 @@
-body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,input,textarea,fieldset,legend,option,th,td,hr,button{margin:0; padding: 0;}
-body{
-	font:14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
-}
-li{
-	list-style: none;
-}
-a{text-decoration: none; color:#666;}
-img{
-	border:none;
-	display: block;
-	/*vertical-align: top;*/	
-}
-h1,h2,h3,h4,h5,h6,b,strong{font-weight: normal;}
-i,em{font-style: normal;}
-input,textarea,select,area,button{
-	outline: none;
-}
-
-.fl{
-	float:left;
-}
-.fr{
-	float:right;
-}
-
-.border0{
-	border:none;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+input,
+textarea,
+fieldset,
+legend,
+option,
+th,
+td,
+hr,
+button {
+    margin: 0;
+    padding: 0;
 }
 
-.clear:after{
-	content: " ";
-	display: block;
-	clear: both;
-	height: 0;
-	visibility: hidden;
+body {
+    font: 12px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 }
-.clear{
-	zoom:1;
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+img {
+    border: none;
+    /* display: block; */
+    /*vertical-align: top;*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    font-weight: normal;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+input,
+textarea,
+select,
+area,
+button {
+    outline: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.border0 {
+    border: none;
+}
+
+.clear:after {
+    content: " ";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+
+.clear {
+    zoom: 1;
 }

@@ -5,14 +5,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>商品详情</title>
+    <link rel="stylesheet" href="../static/sass/layout.css">
+    <link rel="stylesheet" href="../static/sass/main.css">
     <link rel="stylesheet" href="../static/sass/serverStyle/reset.css">
     <link rel="stylesheet" href="../static/sass/serverStyle/swiper.min.css">
     <link rel="stylesheet" href="../static/css/serverStyle/prod_view1_1.css">
 </head>
 
 <body>
-    <div class="header"></div>
+    <!-- 公用顶部模板 -->
+    <div class="all-top">
+        <div class="container clearfix">
+            <ul class="">
+                <li><a href="./mi.html">小米商城</a></li>
+                <li><a href="">MIUI</a></li>
+                <li><a href="">loT</a></li>
+                <li><a href="">云服务</a></li>
+                <li><a href="">金融</a></li>
+                <li><a href="./youping.html">有品</a></li>
+                <li><a href="">小爱开发平台</a></li>
+                <li><a href="">企业团购</a></li>
+                <li><a href="">资质证照</a></li>
+                <li><a href="">协议规则</a></li>
+                <li>
+                    <a href="">下载app</a>
+                    <div class="app-code">
+                        <img src="../static/images/appCode.jpg" alt="">
+                    </div>
+                </li>
+                <li><a href="">Select Location</a></li>
+            </ul>
+            <div class="userInfo">
+                <a href="">登录</a>
+                <a href="">注册</a>
+                <a href="">消息通知</a>
+                <span class="shoppingCart">购物车(<i>0</i>)</span>
+                <div class="cart-show">
+                    <span>购物车中还没有商品，赶紧选购吧！</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 公用头部导航 -->
+    <div class="all-header">
+        <div class="container clearfix">
+            <div class="slider"></div>
+            <div class="all-header-nav">
+                <ul class="ahn-list">
+                    <li data-index="0">
+                        <a href="">小米手机</a>
+                    </li>
+                    <li data-index="1"><a href="">Redmi红米</a></li>
+                    <li data-index="2"><a href="">电视</a></li>
+                    <li data-index="3"><a href="">笔记本</a></li>
+                    <li data-index="4"><a href="">家电</a></li>
+                    <li data-index="5"><a href="">路由器</a></li>
+                    <li data-index="6"><a href="">智能硬件</a></li>
+                    <li data-index="7"><a href="">服务</a></li>
+                    <li data-index="8"><a href="">社区</a></li>
+                </ul>
+            </div>
+            <div class="all-header-search">
+                <form action="">
+                    <input type="text">
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+        <div class="ah-list">
+            <div class="container clearfix">
+                <ul class="ac-list clearfix">
+                    <li>
+                        <img src="../static/images/headerList/phone.png" alt="">
+                        <div class="title">小米CC9</div>
+                        <p class="price">1799元起</p>
+
+                    </li>
+                    <li>
+                        <img src="../static/images/headerList/phone.png" alt="">
+                        <div class="title">小米CC9</div>
+                        <p class="price">1799元起</p>
+                    </li>
+                    <li>
+                        <img src="../static/images/headerList/phone.png" alt="">
+                        <div class="title">小米CC9</div>
+                        <p class="price">1799元起</p>
+                    </li>
+                    <li>
+                        <img src="../static/images/headerList/phone.png" alt="">
+                        <div class="title">小米CC9</div>
+                        <p class="price">1799元起</p>
+                    </li>
+                    <li>
+                        <img src="../static/images/headerList/phone.png" alt="">
+                        <div class="title">小米CC9</div>
+                        <p class="price">1799元起</p>
+                    </li>
+                    <li>
+                        <img src="../static/images/headerList/phone.png" alt="">
+                        <div class="title">小米CC9</div>
+                        <p class="price">1799元起</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="prodHeader">
         <div class="prodHeader-rela">
             <div class="prod-contian">
@@ -136,9 +235,7 @@
                 <p>提速 37%，充电超级快！</p>
             </div>
             <div class="text-fr webfont2">
-                <p>“放上去，就充电”很方便，漫长的充电等待却让人望而却步。小米9 创新性地提高功率，将以往
-                    数小时的时间，提速至 90 分钟充满，这个速度与小米8 的有线快充一致。有线充电同步提速，
-                    27W 功率 60 分钟充满*。</p>
+                <p>“放上去，就充电”很方便，漫长的充电等待却让人望而却步。小米9 创新性地提高功率，将以往 数小时的时间，提速至 90 分钟充满，这个速度与小米8 的有线快充一致。有线充电同步提速， 27W 功率 60 分钟充满*。</p>
             </div>
             <div class="p2-t">
                 <p>* 通过小米实验室模拟18个月老化使用，实验证明 MI Turbo 可有效降低卡顿35%。以上数据均为我司实验室数据，</p>
@@ -167,17 +264,13 @@
                 <p>4 倍超精细分辨率，细节放大依然清晰</p>
             </div>
             <div class="text-fr webfont2">
-                <p>惊艳的照片经得起放大再放大的考验。搭载 1/2'' 超大感光元件，1.6μm 超大像素，进一
-                    步提升了画质。丰富的细节，震撼的肌理质感，全部由这部像素超过4K 高清电视 5 倍的
-                    小米9 为你精彩呈现。</p>
+                <p>惊艳的照片经得起放大再放大的考验。搭载 1/2'' 超大感光元件，1.6μm 超大像素，进一 步提升了画质。丰富的细节，震撼的肌理质感，全部由这部像素超过4K 高清电视 5 倍的 小米9 为你精彩呈现。</p>
             </div>
             <div class="video text-fr">
-                <video src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/35b1b0164ba9c2c36ed390d8596954ad.mp4" autoplay="autoplay"
-                    loop="loop" muted="muted"></video>
+                <video src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/35b1b0164ba9c2c36ed390d8596954ad.mp4" autoplay="autoplay" loop="loop" muted="muted"></video>
             </div>
             <div class="p2-t">
-                <p>拍照评分领先，源自 DxOMark 手机相机评分，详情见链接：<a href="https://www.dxomark.com/cn/"
-                        target="_blank">https://www.dxomark.com/cn/</a>。 排名有效期截止至2019年2月20日</p>
+                <p>拍照评分领先，源自 DxOMark 手机相机评分，详情见链接：<a href="https://www.dxomark.com/cn/" target="_blank">https://www.dxomark.com/cn/</a>。 排名有效期截止至2019年2月20日</p>
             </div>
         </div>
     </div>
@@ -189,9 +282,8 @@
                 <p>还有微距拍摄的独特视角</p>
             </div>
             <div class="text-fr webfont2">
-                <p>想知道专业摄影师的诀窍？三颗必备镜头：标准、长焦、广角。双摄基础上增加一颗广角镜头，令拍
-                    摄视野直接翻倍。大风景、大合影，画面更震撼，还支持智能瘦脸、瘦身、瘦腿，它还能拍摄微距，
-                    实现更多照片乐趣。全焦段覆盖，开启手机摄影非凡视野。</p>
+                <p>想知道专业摄影师的诀窍？三颗必备镜头：标准、长焦、广角。双摄基础上增加一颗广角镜头，令拍 摄视野直接翻倍。大风景、大合影，画面更震撼，还支持智能瘦脸、瘦身、瘦腿，它还能拍摄微距， 实现更多照片乐趣。全焦段覆盖，开启手机摄影非凡视野。
+                </p>
             </div>
             <div class="vice text-fr" id="toggleVice">
                 <div class="icon1 item">
@@ -206,12 +298,10 @@
 
             <div class="video text-fr" id="toggleVideo">
                 <div class="video1 item">
-                    <video autoplay="autoplay" loop="loop" muted="muted"
-                        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/bb4348b89916bd399f63a543d6a63630.mp4"></video>
+                    <video autoplay="autoplay" loop="loop" muted="muted" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/bb4348b89916bd399f63a543d6a63630.mp4"></video>
                 </div>
                 <div class="video2 item">
-                    <video autoplay="autoplay" loop="loop" muted="muted"
-                        src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/dc77f8a89d5187c8b968544dfde92fdd.mp4"></video>
+                    <video autoplay="autoplay" loop="loop" muted="muted" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/dc77f8a89d5187c8b968544dfde92fdd.mp4"></video>
                 </div>
             </div>
             <div class="togglebtn">
@@ -233,9 +323,8 @@
                 <p>还有微距拍摄的独特视角</p>
             </div>
             <div class="text-fr webfont2">
-                <p>凭借1/2" 感光元件和四合一 1.6μm 超大感光像素，备受赞誉的小米超级夜景模式在小米9
-                    上再次进化。更有神奇的月亮模式，放大看，月球纹理都可以拍摄清晰。这是小米有史以来
-                    最浪漫的相机！</p>
+                <p>凭借1/2" 感光元件和四合一 1.6μm 超大感光像素，备受赞誉的小米超级夜景模式在小米9 上再次进化。更有神奇的月亮模式，放大看，月球纹理都可以拍摄清晰。这是小米有史以来 最浪漫的相机！
+                </p>
             </div>
             <div class="p2-t">
                 <p>在初期销售批次手机中系统未搭载月亮模式，后续都将通过OTA升级，最终以 MIUI 官网公布（www.miui.com）、MIUI稳定版功能更新为准。</p>
@@ -252,8 +341,7 @@
                 <p>2000 万美颜自拍，前置 AI 背景虚化</p>
             </div>
             <div class="text-fr webfont2">
-                <p>这是一部超高解析力的高像素自拍相机！不只阳光下拍照美，通过 1.8μm 智能合成
-                    大像素技术，暗光自拍也清晰。它还支持 AI 背景虚化与 AI 美颜算法。</p>
+                <p>这是一部超高解析力的高像素自拍相机！不只阳光下拍照美，通过 1.8μm 智能合成 大像素技术，暗光自拍也清晰。它还支持 AI 背景虚化与 AI 美颜算法。</p>
             </div>
 
             <div class="img text-fr">
@@ -283,8 +371,7 @@
                 <p>极具未来感，随着光线的流转而变幻</p>
             </div>
             <div class="text-fr webfont2">
-                <p>如果你喜欢变幻万千的神秘星空，那么你必定会爱上这款手机。以纳米级激光全息工艺，将光中所有
-                    色彩汇聚于小米9 机身之上。光线流转，机身绽现一道优美的人鱼线，泛起让人着迷的梦幻光感。</p>
+                <p>如果你喜欢变幻万千的神秘星空，那么你必定会爱上这款手机。以纳米级激光全息工艺，将光中所有 色彩汇聚于小米9 机身之上。光线流转，机身绽现一道优美的人鱼线，泛起让人着迷的梦幻光感。</p>
             </div>
             <div class="text-fr img">
                 <div class="swiper-container" id="swiper-temp">
@@ -307,8 +394,8 @@
                 <p>还是一种难以言喻的曼妙手感</p>
             </div>
             <div class="text-fr webfont2">
-                <p>它是小米手机工艺的最新代表作 - 小米第一款全曲面玻璃机身。背部就是一个圆润的曲面，
-                    不仅看起来柔美，握在手中那种与手掌贴合的默契感受，宛若静静躺在手中。</p>
+                <p>它是小米手机工艺的最新代表作 - 小米第一款全曲面玻璃机身。背部就是一个圆润的曲面， 不仅看起来柔美，握在手中那种与手掌贴合的默契感受，宛若静静躺在手中。
+                </p>
             </div>
 
             <div class="img text-fr">
@@ -324,8 +411,7 @@
                 <p>90.7% 高屏占比，3.6mm 超窄下巴</p>
             </div>
             <div class="text-fr webfont2">
-                <p>屏幕之美，源自对极致的追求 - 屏幕更大、下巴更窄。通过重新定制小型元器件：
-                    更小相机模组、超声波距离感应器，最终带来了高达 90.7% 的超高屏占比。</p>
+                <p>屏幕之美，源自对极致的追求 - 屏幕更大、下巴更窄。通过重新定制小型元器件： 更小相机模组、超声波距离感应器，最终带来了高达 90.7% 的超高屏占比。</p>
             </div>
 
             <div class="img text-fr">
@@ -342,8 +428,7 @@
                 <p>243mm2 一整块蓝宝石玻璃镜片</p>
             </div>
             <div class="text-fr webfont2">
-                <p>小米9 的美不仅源自光影，更因坚韧。康宁大猩猩 6 代玻璃，给予屏幕超强保护。不计成本地用
-                    一整块蓝宝石玻璃覆盖 3 颗镜头，提升透光率，同时更长久地保护镜头。</p>
+                <p>小米9 的美不仅源自光影，更因坚韧。康宁大猩猩 6 代玻璃，给予屏幕超强保护。不计成本地用 一整块蓝宝石玻璃覆盖 3 颗镜头，提升透光率，同时更长久地保护镜头。</p>
             </div>
         </div>
 
@@ -380,8 +465,8 @@
                 <p>解锁超灵敏，全方位解决解锁难题</p>
             </div>
             <div class="text-fr webfont2">
-                <p>新一代光学指纹识别模组，特别优化强光、干手指等情景下解锁体验，
-                    不仅解锁超灵敏，成功率也大幅提升。</p>
+                <p>新一代光学指纹识别模组，特别优化强光、干手指等情景下解锁体验， 不仅解锁超灵敏，成功率也大幅提升。
+                </p>
             </div>
             <div class="img text-fr">
                 <img src="../static/images/prod_view1_1/finger.jpg" alt="">
@@ -396,8 +481,7 @@
                 <P>还有王源 24小时悉心陪伴</P>
             </div>
             <div class="text-fr webfont2">
-                <p>这是一个“用惯了就离不开”的键！长按唤醒小爱，短按唤醒全新小爱捷径，自定义设置，可一
-                    键看视频，一键导航等。更惊喜的是，你还能与“王源”对话，让他与你 24 小时陪伴。</p>
+                <p>这是一个“用惯了就离不开”的键！长按唤醒小爱，短按唤醒全新小爱捷径，自定义设置，可一 键看视频，一键导航等。更惊喜的是，你还能与“王源”对话，让他与你 24 小时陪伴。</p>
             </div>
             <div class="img text-fr pos-img">
                 <img src="../static/images/prod_view1_1/ai.png" alt="" class="ai">
@@ -412,7 +496,7 @@
     <div class="section section-more">
         <div class="txt">
             <div class="m-wrap">
-                <div class="m-top text-fr clear" >
+                <div class="m-top text-fr clear">
                     <div class="m-l fl">
                         <img src="../static/images/prod_view1_1/pay.jpg" alt="">
                     </div>
@@ -439,45 +523,111 @@
     <div class="section section-video">
         <div class="video-wrap">
             <div class="layer"></div>
-            <video src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9372971ba76adb3f5b9b9443beff465e.mp4"  autoplay="autoplay" muted="muted" loop="loop"></video>
+            <video src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9372971ba76adb3f5b9b9443beff465e.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
             <div class="play">
                 <img src="../static/images/prod_view1_1/play.png" alt="">
             </div>
         </div>
     </div>
     <div class="section section-calcu section-part14">
-            <div class="txt">
-                <div class="text-fr webfont1">
-                    <p class="p1">全新 小米9 透明版</p>
-                    <p class="p2">8GB 大内存+256GB 大容量</p>
-                </div>
-                <div class="text-fr webfont2">
-                    <p>8GB 大内存+256GB 大容量</p>
-                    <p>拥有与透明尊享版一样的透明机甲机身，</p>
-                    <p>极具未来感的外观设计兼顾大内存与大容量，给你一次体验上的超快感表现。</p>
-                </div>
-                <div class="img text-fr">
-                    <img src="../static/images/prod_view1_1/dear.jpg" alt="">
-                </div>
+        <div class="txt">
+            <div class="text-fr webfont1">
+                <p class="p1">全新 小米9 透明版</p>
+                <p class="p2">8GB 大内存+256GB 大容量</p>
+            </div>
+            <div class="text-fr webfont2">
+                <p>8GB 大内存+256GB 大容量</p>
+                <p>拥有与透明尊享版一样的透明机甲机身，</p>
+                <p>极具未来感的外观设计兼顾大内存与大容量，给你一次体验上的超快感表现。</p>
+            </div>
+            <div class="img text-fr">
+                <img src="../static/images/prod_view1_1/dear.jpg" alt="">
             </div>
         </div>
-        <div class="section section-image">
-            <img src="../static/images/prod_view1_1/look.jpg" alt="">
-            <div class="bottom">
-                <img src="../static/images/prod_view1_1/bottom.jpg" alt="">
-                <a href="">查看参数 ></a>
-            </div>
+    </div>
+    <div class="section section-image">
+        <img src="../static/images/prod_view1_1/look.jpg" alt="">
+        <div class="bottom">
+            <img src="../static/images/prod_view1_1/bottom.jpg" alt="">
+            <a href="">查看参数 ></a>
         </div>
+    </div>
     <script src="../static/scripts/jquery-1.8.3/jquery-1.8.3.min.js"></script>
     <script src="../static/scripts/serverJs/swiper.min.js"></script>
     <script src="../static/scripts/serverJs/prod_view1_1.js"></script>
     <div class="mi-popup">
-        
+
         <video id="fds" controls src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/74c1596d028aa98498a6015a87010b87.mp4"></video>
         <div class="play"></div>
         <div class="close">×</div>
     </div>
     <div class="layer-full"></div>
+    <!-- 公用底部信息 -->
+    <div class="all-info">
+        <div class="container clearfix">
+            <div class="ai-logo"></div>
+            <div class="ai-text">
+                <ul class="clearfix">
+                    <li>小米商城</li>
+                    <li>|</li>
+                    <li>MIUI</li>
+                    <li>|</li>
+                    <li>米家</li>
+                    <li>|</li>
+                    <li>米聊</li>
+                    <li>|</li>
+                    <li>多看</li>
+                    <li>|</li>
+                    <li>游戏</li>
+                    <li>|</li>
+                    <li>路由器</li>
+                    <li>|</li>
+                    <li>米粉卡</li>
+                    <li>|</li>
+                    <li>政企服务</li>
+                    <li>|</li>
+                    <li>小米天猫店</li>
+                    <li>|</li>
+                    <li>小米集团隐私政策</li>
+                    <li>|</li>
+                    <li>小米商城隐私政策</li>
+                    <li>|</li>
+                    <li>问题反馈</li>
+                    <li>|</li>
+                    <li>廉政举报</li>
+                    <li>|</li>
+                    <li>诚信合规</li>
+                    <li>|</li>
+                    <li>Select Location</li>
+                </ul>
+                <p>
+                    &copy; 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2017]1530-131号
+                    <br> （京）网械平台备字（2018）第00005号 互联网药品信息服务资格证 (京) -非经营性-2014-0090 营业执照 医疗器械公告
+                    <br> 增值电信业务许可证 &nbsp; 网络食品经营备案（京）【2018】WLSPJYBAHF-12 &nbsp;食品经营许可证
+                    <br> 违法和不良信息举报电话：185-0130-1238 知识产权侵权投诉 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+                </p>
+            </div>
+            <div class="ai-link">
+                <a href="">
+                    <img src="../static/images/footer/truste.png" alt="">
+                </a>
+                <a href="">
+                    <img src="../static/images/footer/v-logo-1.png" alt="">
+                </a>
+                <a href="">
+                    <img src="../static/images/footer/v-logo-2.png" alt="">
+                </a>
+                <a href="">
+                    <img src="../static/images/footer/v-logo-3.png" alt="">
+                </a>
+                <a href="">
+                    <img src="../static/images/footer/v-log-4.png" alt="">
+                </a>
+            </div>
+            <div class="ai-topic"></div>
+        </div>
+    </div>
+    <script src="../static/scripts/public.js"></script>
 </body>
 
 </html>

@@ -88,7 +88,7 @@ $(function() {
                         '</li>')
                 } else {
                     $li = $('<li class="box_float">' +
-                        '<a href="">' +
+                        '<a href="prod_view1_1.html">' +
                         '<div class="goods-pic">' +
                         '<img src="' + item.pic[index] + '" alt="">' +
                         '</div>' +
@@ -230,11 +230,12 @@ $(function() {
 
                     $.each(data, function(index, item) {
                         text += ' <div class="fcg-goods">' +
+                            '<a href="secondsKill.html">' +
                             '<img src="' + item.picture + '" alt="">' +
                             '<div class="fcg-g-title">' + item.title + '</div>' +
                             '<div class="fcg-g-desc">' + item.desc + '</div>' +
                             '<p><span>' + item.nowPrice + '</span>元<del>' + item.beforePrice + '</del></p>' +
-                            '</div>'
+                            '</div></a>';
                     });
                     self.box.html(text);
                 }
