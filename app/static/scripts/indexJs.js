@@ -39,7 +39,7 @@ $(function() {
                         //主要要内容
                         var $content = $(' <div class="cmp-content"></div>');
                         //小广告图
-                        var $ad = $(' <div class="cmpc-ad"><img src="' + item.ad[0] + '" alt=""><img src="' + item.ad[1] + '" alt=""></div>');
+                        var $ad = $(' <div class="cmpc-ad"><img class=" box_float" src="' + item.ad[0] + '" alt=""><img class="box_float" src="' + item.ad[1] + '" alt=""></div>');
                         var $listBox = $('<div class="cmpc-goodsList ' + item.className + '"></div>');
                         var $list = $('<ul class="clearfix "></ul>');
                         $listBox.append($list);
@@ -68,7 +68,7 @@ $(function() {
                 var $li = null;
                 if (i == 7) {
                     $li = $('<li class="gl-last">' +
-                        '<div class="gl-li-up gl-li">' +
+                        '<div class="gl-li-up  box_float gl-li">' +
                         '<div class="gll-desc">' +
                         item.lastDesc[index] +
                         '</div>' +
@@ -77,7 +77,7 @@ $(function() {
                         '<img src="' + item.lastPic[index] + '" alt="">' +
                         '</div>' +
                         '</div>' +
-                        '<div class="gl-li-bottom gl-li">' +
+                        '<div class="gl-li-bottom  box_float gl-li">' +
                         '<div class="more">' +
                         '浏览更多' +
                         '<p>' + item.moreDesc[index] + '</p>' +
@@ -87,7 +87,7 @@ $(function() {
                         '</div>' +
                         '</li>')
                 } else {
-                    $li = $('<li>' +
+                    $li = $('<li class="box_float">' +
                         '<a href="">' +
                         '<div class="goods-pic">' +
                         '<img src="' + item.pic[index] + '" alt="">' +
@@ -286,4 +286,17 @@ $(function() {
 
     }
     flashCarousel.init();
+
+    /**
+     * 元素块浮动效果
+     */
+    var boxFloat = {
+        target: $('.js_float'),
+
+        goFloat: function() {
+            $.each(this.target, function(index, item) {
+
+            });
+        }
+    }
 });

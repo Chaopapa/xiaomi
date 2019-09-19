@@ -50,9 +50,9 @@
 }
 
 .userInfo {
-    float: left;
+    float: right;
     line-height: 42px;
-    margin-left: 226px;
+    /* margin-left: 226px; */
     position: relative;
 }
 
