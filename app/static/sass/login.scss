@@ -1,0 +1,139 @@
+///登录也版心
+.login-container {
+    width: 1133px;
+    margin: 0 auto;
+}
+
+//头部
+.login-header {
+    height: 100px;
+}
+
+//主体
+.login-main {
+    height: 578px;
+    background: url(../../static/images/login-bg.jpg) -550px 0 no-repeat;
+    .login-container {
+        position: relative;
+    }
+    &-form {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 412px;
+        height: 560px;
+        background: #fff;
+        &-tab {
+            padding: 27px 0 24px 0;
+            text-align: center;
+            font-size: 24px;
+            color: #666;
+            .line {
+                width: 1px;
+                height: 24px;
+                margin: 0 35px 0 42px;
+                border: 1px solid #e0e0e0;
+            }
+            a:hover {
+                color: #f56600;
+            }
+        }
+        &-main {
+            .n-l {
+                width: 348px;
+                height: 415px;
+                margin: 0 auto;
+                display: none;
+                input {
+                    width: 318px;
+                    height: 22px;
+                    line-height: 22px;
+                    padding: 13px 16px 13px 14px;
+                    margin-bottom: 13px;
+                    outline: none;
+                    border: 1px solid #ccc;
+                }
+                #n-l-btn {
+                    padding: 0;
+                    background-color: #ff6700;
+                    width: 100%;
+                    height: 50px;
+                    line-height: 50px;
+                    display: block;
+                    margin-bottom: 14px;
+                    margin-top: 10px;
+                    text-align: center;
+                    font-size: 14px;
+                    color: #fff;
+                    cursor: pointer;
+                }
+                .other-opa {
+                    font-size: 12px;
+                    .phone-l-r {
+                        color: #ff6700;
+                        float: left;
+                    }
+                    span {
+                        color: #999;
+                        float: right;
+                    }
+                }
+                .other-login {
+                    color: #bbb;
+                    font-size: 14px;
+                    margin-top: 130px;
+                    fieldset {
+                        border: 0;
+                        border-top: 1px solid #e0e0e0;
+                        padding-top: 10px;
+                    }
+                    ul {
+                        margin-left: 29px;
+                        li {
+                            float: left;
+                            margin-left: 33px;
+                            img {
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+            .c-l {
+                display: none;
+            }
+            .l-show {
+                display: block;
+            }
+        }
+    }
+}
+
+//底部
+.login-bottom {
+    padding-top: 100px;
+    &-list {
+        font-size: 14px;
+        ul {
+            text-align: center;
+            margin: 0 auto;
+            li {
+                display: inline-block;
+                // padding: 5px;
+                a {
+                    color: #666;
+                    padding: 0 5px;
+                }
+                a:hover {
+                    color: #bbb;
+                }
+            }
+        }
+    }
+    &-copy {
+        margin-top: 10px;
+        font-size: 13px;
+        text-align: center;
+    }
+}
