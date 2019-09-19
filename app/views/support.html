@@ -13,6 +13,114 @@
 </head>
 
 <body>
+  <!-- z-headerWrap S-->
+  <div class="z-headerWrap" id="top">
+    <div class="header w1080 clearfix">
+      <div class="fr">
+        <div class="fl m-login">
+          <a href="javascript:;">登录</a>
+          <a href="javascript:;">注册</a>
+        </div>
+        <span class="fl m-line"></span>
+        <div class="fl m-help">
+          <a href="./mHelp.html">帮助中心</a>
+        </div>
+        <span class="fl m-line"></span>
+        <div class="fl m-download">
+          <span class="m-icons"></span>
+          <a href="javascript:;">下载 APP</a>
+        </div>
+        <span class="fl m-line"></span>
+        <div class="fl m-rules">
+          <!-- 头部的内容 -->
+          <div class="m-clause">
+            <a href="javascript:;">资质证照&nbsp;/&nbsp;协议规则</a>
+            <span class="m-icons"></span>
+          </div>
+          <!-- 隐藏的内容 -->
+          <div class="m-clause-con">
+            <ul>
+              <li>资质证照</li>
+              <li>协议规则</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- z-headerWrap E -->
+
+  <!-- z-navWrap S -->
+  <div class="z-navWrap">
+    <div class="navC w1080 clearfix">
+      <!-- logo -->
+      <div class="fl logo">
+        <h1>小米</h1>
+      </div>
+      <div class="classify fl">
+        <a href="javascript:;" class="types">分类<span class="m-icons"></span></a>
+        <!-- 导航列表 -->
+        <div class="navListCon fl">
+          <ul class="navListUl">
+            <!-- 模板 动态渲染 -->
+            <!--    <li class="listItem">
+              <h3 class="h3Item">
+                <a href="#">有品推荐</a>
+                <span>/</span>
+                <a href="#">家用电器</a>
+              </h3>
+              <div class="conItem">
+                <h5>有品推荐</h5>
+                <ul class="clearfix">
+                 <li>
+                    <img src="images/youpingImage/navItem1.png" alt="">
+                    <span>销量榜单</span>
+                  </li>
+                  <li>
+                    <img src="images/youpingImage/navItem2.png" alt="">
+                    <span>米粉热搜</span>
+                  </li>
+                  <li>
+                    <img src="images/youpingImage/navItem3.png" alt="">
+                    <span>清凉季</span>
+                  </li>
+                  <li>
+                    <img src="images/youpingImage/navItem4.png" alt="">
+                    <span>女生最爱</span>
+                  </li>
+                  <li>
+                    <img src="images/youpingImage/navItem5.png" alt="">
+                    <span>男生精选</span>
+                  </li>
+                </ul>
+              </div>
+            </li>-->
+          </ul>
+        </div>
+      </div>
+      <ul class="fl clearfix navUl">
+        <li>限时抢购</li>
+      </ul>
+      <div class="fr searchCon">
+        <div class="search_form fl">
+          <a href="#" class="searchIcon m-icons"></a>
+          <input type="text" placeholder="搜一搜" class="searchIpt">
+        </div>
+        <a href="#" class="cartIcon m-icons fr"></a>
+
+        <!-- 动态渲染搜索关键字 -->
+        <ul class="searchKeyCon">
+          <!-- 动态渲染模板 -->
+          <!-- <li>123</li> -->
+          <!-- <li class="noData">小主，暂无数据哦 ~</li> -->
+        </ul>
+
+      </div>
+    </div>
+  </div>
+  <!-- z-navWrap E -->
+
+
   <!-- 商品支持部分 -->
   <div class="Z-supportWrap">
     <div class="supportWrap w1080 clearfix">
@@ -26,8 +134,8 @@
 
         <!-- 选择图片的容器 -->
         <div class="selectWrap fr">
-            <span class="top">↑</span>
-            <span class="bottom">↓</span>
+          <span class="top">↑</span>
+          <span class="bottom">↓</span>
           <!-- 定位父元素 -->
           <div class="mainWrap">
             <ul class="imgsWrap">
@@ -61,7 +169,7 @@
 
         <h3 class="title">顺造x小米有品随手吸尘器 黑色 Z1pro（大吸力版）<span class="mark">筹款中</span></h3>
         <p class="info"><span>前10001-20000名全款支持用户抽50名半价名额！</span><a href="javascript:;">点击进入小家电会场</a></p>
-        
+
         <!-- 价格部分 -->
         <div class="priceWrap">
           <p class="sale">售价<span class="price">￥299</span></p>
@@ -70,8 +178,10 @@
               <p>服务<span>!</span></p>
             </div>
             <div class="serverRight fl">
-              <p><span class="right">√</span>满99包邮<span class="right">√</span>有品三方<span class="right">√</span>7天无理由<span class="right">√</span>有品配送</p>
-              <p><span class="right">√</span>由小米有品提供配送服务，北京顺造科技有限公司提供售后<a href="javascript:;" class="look">(查看商家资质)</a></p>
+              <p><span class="right">√</span>满99包邮<span class="right">√</span>有品三方<span class="right">√</span>7天无理由<span
+                  class="right">√</span>有品配送</p>
+              <p><span class="right">√</span>由小米有品提供配送服务，北京顺造科技有限公司提供售后<a href="javascript:;" class="look">(查看商家资质)</a>
+              </p>
             </div>
           </div>
         </div>
@@ -96,20 +206,83 @@
         </div>
 
         <!-- 型号部分 -->
-        <p class="model"><span class="tit">型号</span><a href="javascript:;" class="white">白色 Z1（标准版）</a><a href="javascript:;" class="black">黑色 Z1pro（大吸力版）</a></p>
+        <p class="model"><span class="tit">型号</span><a href="javascript:;" class="white">白色 Z1（标准版）</a><a
+            href="javascript:;" class="black">黑色 Z1pro（大吸力版）</a></p>
 
         <!-- 方式部分 -->
         <p class="way"><span class="tit">方式</span><a href="javascript:;" class="all">全款支持</a></p>
 
         <!-- 数量部分 -->
-        <p class="num"><span class="tit">数量</span><a href="javascript:;" class="reduce">-</a><input type="text" class="number" value="1"><a href="javascript:;" class="add">+</a></p>
+        <p class="num"><span class="tit">数量</span><a href="javascript:;" class="reduce">-</a><input type="text"
+            class="number" value="1"><a href="javascript:;" class="add">+</a></p>
 
         <!-- 立即支持部分 -->
-        <p class="rightnow"><a href="javascript:;" class="suppnow">立即支持</a><a href="javascript:;" class="collect"><span></span>收藏</a><a href="javascript:;" class="online"><span></span>客服</a></p>
+        <p class="rightnow"><a href="javascript:;" class="suppnow">立即支持</a><a href="javascript:;"
+            class="collect"><span></span>收藏</a><a href="javascript:;" class="online"><span></span>客服</a></p>
       </div>
 
     </div>
   </div>
+
+  <!-- Z-sideBar S -->
+  <ul class="sideBar">
+    <li class="contactUs">
+      <a href="javascript:;" class="sideHeader">
+        <span class="m-icons sideIcon"></span>
+        <span class="iconCon">联系客服</span>
+      </a>
+      <div class="sideContent">
+        <p class="sideInfo">小米有品平台问题，建议反馈，商户和物流问题投诉等请拨打 小米有品客服热线</p>
+        <p class="sidePhone">400-100-1199</p>
+        <p class="sideDay">(周一至周日 8：00-18：00)</p>
+        <p class="sideInfo">小米/米家自营品牌，手机电视智能硬件商品或订单发货/退款售后问题 请拨打小米自营客服热线</p>
+        <p class="sidePhone">400-100-5678</p>
+        <p class="sideDay">(周一至周日 8：00-18：00)</p>
+      </div>
+    </li>
+    <li class="upload">
+      <a href="javascript:;" class="sideHeader">
+        <span class="m-icons sideIcon"></span>
+        <span class="iconCon">下载</span></br>
+        <span class="iconCon">APP</span>
+      </a>
+      <div class="sideContent">
+        <img src="../static/images/youpingImage/uploadImg.png">
+        <p>下载小米有品APP</br>
+          得新人礼包</p>
+      </div>
+    </li>
+    <li class="personGifts">
+      <a href="javascript:;" class="sideHeader">
+        <span class="m-icons sideIcon"></span>
+        <span class="iconCon">新人有礼</span>
+      </a>
+      <div class="sideContent">
+        <div class="giftsImg"></div>
+        <img src="../static/images/youpingImage/uploadImg.png">
+        <p>立即扫码下载·小米有品 APP</p>
+      </div>
+    </li>
+    <li class="weixin">
+      <a href="javascript:;" class="sideHeader">
+        <span class="m-icons sideIcon"></span>
+        <span class="iconCon">关注微信</span>
+      </a>
+      <div class="sideContent">
+        <img src="../static/images/youpingImage/uploadImg.png">
+        <p>扫码关注【小米有品生活电商】微信服务号，赢取小爱mini活动哦</p>
+      </div>
+    </li>
+    <li class="toTop">
+      <!-- href="#top" -->
+      <a href="javascript:;" class="sideHeader">
+        <span class="m-icons sideIcon"></span>
+        <span class="iconCon">回到顶部</span>
+      </a>
+    </li>
+  </ul>
+  <!-- Z-sideBar E -->
+
 </body>
 
 </html>

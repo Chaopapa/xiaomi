@@ -35,6 +35,7 @@
   //  z-headerWrap S
 
   // 经过 m-rules 的时候显示 m-clause-con
+(function() {
   function showClause() {
     $('.m-rules').on('mouseover', function () {
       $('.m-clause-con').show();
@@ -228,6 +229,7 @@
     });
 
   }
+})();
 
   // banner 轮播图
   (function () {
