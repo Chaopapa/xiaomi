@@ -1,0 +1,132 @@
+.login-container {
+  width: 1133px;
+  margin: 0 auto;
+}
+
+.login-header {
+  height: 100px;
+}
+
+.login-main {
+  height: 578px;
+  background: url(../../static/images/login-bg.jpg) -550px 0 no-repeat;
+}
+.login-main .login-container {
+  position: relative;
+}
+.login-main-form {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 412px;
+  height: 560px;
+  background: #fff;
+}
+.login-main-form-tab {
+  padding: 27px 0 24px 0;
+  text-align: center;
+  font-size: 24px;
+  color: #666;
+}
+.login-main-form-tab .line {
+  width: 1px;
+  height: 24px;
+  margin: 0 35px 0 42px;
+  border: 1px solid #e0e0e0;
+}
+.login-main-form-tab a:hover {
+  color: #f56600;
+}
+.login-main-form-main .n-l {
+  width: 348px;
+  height: 415px;
+  margin: 0 auto;
+  display: none;
+}
+.login-main-form-main .n-l input {
+  width: 318px;
+  height: 22px;
+  line-height: 22px;
+  padding: 13px 16px 13px 14px;
+  margin-bottom: 13px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+.login-main-form-main .n-l #n-l-btn {
+  padding: 0;
+  background-color: #ff6700;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  margin-bottom: 14px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  cursor: pointer;
+}
+.login-main-form-main .n-l .other-opa {
+  font-size: 12px;
+}
+.login-main-form-main .n-l .other-opa .phone-l-r {
+  color: #ff6700;
+  float: left;
+}
+.login-main-form-main .n-l .other-opa span {
+  color: #999;
+  float: right;
+}
+.login-main-form-main .n-l .other-login {
+  color: #bbb;
+  font-size: 14px;
+  margin-top: 130px;
+}
+.login-main-form-main .n-l .other-login fieldset {
+  border: 0;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 10px;
+}
+.login-main-form-main .n-l .other-login ul {
+  margin-left: 29px;
+}
+.login-main-form-main .n-l .other-login ul li {
+  float: left;
+  margin-left: 33px;
+}
+.login-main-form-main .n-l .other-login ul li img {
+  width: 30px;
+  height: 30px;
+}
+.login-main-form-main .c-l {
+  display: none;
+}
+.login-main-form-main .l-show {
+  display: block;
+}
+
+.login-bottom {
+  padding-top: 100px;
+}
+.login-bottom-list {
+  font-size: 14px;
+}
+.login-bottom-list ul {
+  text-align: center;
+  margin: 0 auto;
+}
+.login-bottom-list ul li {
+  display: inline-block;
+}
+.login-bottom-list ul li a {
+  color: #666;
+  padding: 0 5px;
+}
+.login-bottom-list ul li a:hover {
+  color: #bbb;
+}
+.login-bottom-copy {
+  margin-top: 10px;
+  font-size: 13px;
+  text-align: center;
+}
