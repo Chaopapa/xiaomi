@@ -2,7 +2,7 @@
 
   // 公共js
 
-  // 点击图片部分，跟官网不太一样，有时间再改
+  // 图片的点击部分
   (function () {
     // 商品支持部分
     // 当点击图片容器的 li 时，获取到图片的 src，赋值给显示图片的 src
@@ -16,18 +16,32 @@
     let imgH = $('.imgsWrap li img').eq(0).width();
     let lis = $('.imgsWrap li');
     let index = 0; // 保存当前选中的 li
-    let liMB = lis.eq(0).css('margin-bottom'); // 获取元素的 margin-bottom 返回字符串 10px
-    let limitH = imgH * 3 + parseInt(liMB) * 2; // 保存元素开始滚动的长度
-    let imgsWrapH = $imgsWrap.height(); // 保存图片容器的高度
 
     // 事件委托，点击图片
     $imgsWrap.on('click', 'li', function () {
 
+      let scrollT = $mainWrap.scrollTop(); // 获取当前元素滚动条的 scrollTop
+
+      index = $(this).index();
+
+      // 需要判断 index 比之前的更
+
+      if (index <= lis.length - 4) {
+        $mainWrap.animate({
+          scrollTop: scrollT - imgH
+        });
+      }
+
+      if (index >= 3) {
+        $mainWrap.animate({
+          scrollTop: scrollT + imgH
+        });
+      }
+
+
       $(this).addClass('show').siblings().removeClass('show');
       let src = $(this).children('img').eq(0).attr('src');
       $showImg.attr('src', src);
-
-      index = $(this).index();
 
     });
 
